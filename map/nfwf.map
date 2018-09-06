@@ -1,0 +1,234 @@
+MAP
+    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+    # of the two lines below to enable this logging:
+     #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+    #DEBUG 5
+
+    # all temp files get prefixed with this string
+    NAME ms_nfwf
+
+    #jdm:added to accomodate map layers
+    #see http://trac.osgeo.org/mapserver/ticket/3055
+    MAXSIZE 3072
+
+    # background color of image if transparency
+    # is not requested
+    IMAGECOLOR 255 255 255
+
+    # default output image dimensions
+    SIZE 600 400
+
+    # always returns a map
+    STATUS ON
+
+    # set top level projection
+    PROJECTION
+        "init=epsg:3785"
+    END
+
+    # image format options
+    OUTPUTFORMAT
+        NAME "PNG"
+        DRIVER "GDAL/PNG"
+        MIMETYPE "image/png"
+        IMAGEMODE "RGB"
+        EXTENSION "png"
+    END
+
+    # minx miny maxx maxy
+    EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+    # # add def pointers for symbols
+    SYMBOLSET symbolset.txt
+    # FONTSET   "./fonts/fonts.list"
+
+    # Start of web interface definition
+    WEB
+
+      IMAGEPATH '/tmp/'
+      IMAGEURL '/tmp/'
+
+        HEADER "./templates/query_header.html"
+        FOOTER "./templates/query_footer.html"
+
+        METADATA
+            "ows_enable_request"     "*"
+            "wms_title"              "NEMAC NFWF WMS"
+            "wms_abstract"           "NEMAC NFWF WMS"
+            "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+            "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+			"wms_feature_info_mime_type" "text/plain"
+			"wms_feature_info_mime_type" "text/html"
+        END
+    END
+
+    QUERYMAP
+        STATUS ON
+    END
+
+    # set defaults for GetLegendGraphic requests
+    LEGEND
+        KEYSIZE 30 20
+		STATUS on
+    END
+
+    LAYER
+        NAME "HUbsIndexTiles"
+        PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     nfwf_hubs.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+    CLASS
+    NAME "Hubs"
+    EXPRESSION ""
+    COLOR 255 255 255
+    END #end class
+         CLASS
+      NAME "Low"
+      EXPRESSION ([pixel] = 1)
+     STYLE
+      COLOR 237 248 233
+     END #end style
+    END #end class
+        CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 2)
+    STYLE
+     COLOR 197 221 202
+    END #end style
+    END #end class
+        CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 3)
+     STYLE
+      COLOR 158 195 172
+    END #end style
+    END #end class
+        CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 4)
+     STYLE
+      COLOR 118 169 141
+    END #end style
+    END #end class
+        CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 5)
+     STYLE
+      COLOR 79 142 111
+    END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 6)
+     STYLE
+      COLOR 39 116 80
+    END #end style
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION ([pixel] = 7)
+     STYLE
+      COLOR 0 90 50
+    END #end style
+    END #end class
+      #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "HUBsTiles"
+            "wms_abstract"          "HUBsTiles"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+
+    LAYER
+        NAME "ExposureIndexTilesTest"
+        PROJECTION
+          "proj=aea"
+          "lat_1=29.5"
+          "lat_2=45.5"
+          "lat_0=37.5"
+          "lon_0=-96"
+          "x_0=0"
+          "y_0=0"
+          "datum=NAD83"
+          "units=m"
+          "no_defs"
+        END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     nfwf_exposure.tif
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+                CLASS
+                NAME "Exposure Index for tileing"
+                EXPRESSION ""
+                COLOR 255 255 255
+                END #end class
+         CLASS
+                  NAME "Low"
+                  EXPRESSION ([pixel] = 1)
+                 STYLE
+                        COLOR 36 131 145
+                 END #end style
+                END #end class
+        CLASS
+                  NAME ""
+                  EXPRESSION ([pixel] = 2)
+                STYLE
+                 COLOR 123 176 163
+                END #end style
+                END #end class
+        CLASS
+                  NAME ""
+                  EXPRESSION ([pixel] = 3)
+                 STYLE
+                        COLOR 212 230 184
+                END #end style
+                END #end class
+        CLASS
+                  NAME ""
+                  EXPRESSION ([pixel] = 4)
+                 STYLE
+                        COLOR 237 216 152
+                END #end style
+                END #end class
+        CLASS
+                  NAME ""
+                  EXPRESSION ([pixel] = 6)
+                 STYLE
+                        COLOR 196 144 84
+                END #end style
+                END #end class
+        CLASS
+                  NAME "High"
+                  EXPRESSION ([pixel] = 9)
+                 STYLE
+                        COLOR 156 85 31
+                END #end style
+                END #end class
+            #INCLUDE "cmaps/gapnat.cmap"
+        METADATA
+            "wms_title"             "ExposureIndexTilesTest"
+            "wms_abstract"          "ExposureIndexTilesTest"
+            "gml_include_items"     "value_0"
+        END  # end METADATA
+    END # end LAYER
+
+END # end MAP

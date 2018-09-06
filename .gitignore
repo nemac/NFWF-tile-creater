@@ -1,0 +1,10 @@
+cache/
+node_modules/
+map/*.tif
+map/*.shp
+map/*.shx
+map/*.prj
+airports/
+map/generic.map
+map/generic2.map
+map/nfwf_cloud4.map

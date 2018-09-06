@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <source name="ExposureIndexTilesTest" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>ExposureIndexTilesTest</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="ExposureIndexTilesTest">
+    <metadata>
+      <title>ExposureIndexTilesTest</title>
+    </metadata>
+    <source>ExposureIndexTilesTest</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AssetsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AssetsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="HubsIndexTiles">
+    <metadata>
+      <title>HubsIndexTiles</title>
+    </metadata>
+    <source>HubsIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="AssetsIndexTiles">
+    <metadata>
+      <title>AssetsIndexTiles</title>
+    </metadata>
+    <source>AssetsIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <format name="PNG_BEST" type ="PNG">
+    <compression>fast</compression>
+  </format>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>

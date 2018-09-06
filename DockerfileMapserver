@@ -1,0 +1,53 @@
+##
+# geodata/mapserver
+#
+# MapServer compiled with a broad range of options enabled including a
+# comprehensive GDAL library.
+#
+
+FROM geodata/gdal:latest
+
+MAINTAINER Homme Zwaagstra <hrz@geodata.soton.ac.uk>
+
+USER root
+
+RUN apt-get update && apt-get install -y \
+  cmake \
+  build-essential \
+  git \
+  libfcgi-dev \
+  fcgiwrap \
+  nginx \
+  libcairo2-dev \
+  libpixman-1-dev \
+  libfreetype6-dev \
+  libfribidi-dev \
+  libharfbuzz-dev \
+  libexempi-dev \
+  apache2-dev \
+  libapr1-dev \
+  libaprutil1-dev \
+  libxslt1-dev \
+  ruby-dev \
+  librsvg2-dev \
+  libprotoc8 \
+  libprotobuf8 \
+  protobuf-compiler \
+  libprotobuf-dev \
+  protobuf-c-compiler \
+  php5 \
+  php5-dev \
+  python-mapscript
+
+
+
+# Install the application.
+ADD ./mapserver-scripts/. /tmp/build/
+ADD ./map /map
+RUN /tmp/build/build.sh
+
+
+EXPOSE 80
+
+# Start the fcgi and web servers.
+CMD ["/usr/local/bin/run.sh"]
