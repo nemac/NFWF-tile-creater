@@ -73,7 +73,7 @@ ADD ./mapcache-configs/mapcache.xml $MAPCACHE_CONF
 
 #Uncomment or add shapefiles used limit tile creation
 # ADD ./limitshapefiles/usa_3857.* /
-# ADD ./limitshapefiles/usa_coastal_3857.* /
+ADD ./limitshapefiles/usa_coastal_3857.* /
 # ADD ./limitshapefiles/missing_nw_3857.* /
 
 RUN mkdir /var/www/html/mapcache/cache
