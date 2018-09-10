@@ -4,6 +4,12 @@ map/*.tif
 map/*.shp
 map/*.shx
 map/*.prj
+map/*.zip
+map/*.aux.xml
+cache/*.tif
+cache/*.shp
+cache/*.shx
+cache/*.prj
 airports/
 map/generic.map
 map/generic2.map

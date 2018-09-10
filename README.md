@@ -17,7 +17,7 @@ starts two docker machine one is mapserver other is mapcache
 
 ## run the seed for the levels you care about
 example:
-`mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t HUbsIndexTiles -z 1,10 -n 4 -d /usa_3857.shp`
+`mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t HUbsIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp`
 
 all caches are created in the cache folder with folder name = -t option in example HUbsIndexTiles get it from [mapcache.xml](mapcache-configs/mapcache.xml#L36) or update the mapcache.xml file.  This will need to be recopied from the docker container
 `docker exec -it mapcache-compose bash`
