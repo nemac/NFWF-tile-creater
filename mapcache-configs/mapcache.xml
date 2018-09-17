@@ -6,11 +6,11 @@
     <detect_blank/>
   </cache>
 
-  <source name="ExposureIndexTilesTest" type="wms">
+  <source name="ExposureIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>ExposureIndexTilesTest</LAYERS>
+        <LAYERS>ExposureIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
@@ -20,11 +20,11 @@
     </http>
   </source>
 
-  <tileset name="ExposureIndexTilesTest">
+  <tileset name="ExposureIndexTiles">
     <metadata>
-      <title>ExposureIndexTilesTest</title>
+      <title>ExposureIndexTiles</title>
     </metadata>
-    <source>ExposureIndexTilesTest</source>
+    <source>ExposureIndexTiles</source>
     <cache>tmpl</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -109,7 +109,6 @@
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
-
     <http>
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
@@ -120,70 +119,238 @@
 
 
 
-    <tileset name="AquaticIndexTiles">
-      <metadata>
-        <title>AquaticIndexTiles</title>
-      </metadata>
-      <source>AquaticIndexTiles</source>
-      <cache>tmpl</cache>
-      <format>PNG</format>
-      <grid>GoogleMapsCompatible</grid>
-      <metatile>1 1</metatile>
-      <expires>1</expires>
-    </tileset>
+  <tileset name="AquaticIndexTiles">
+    <metadata>
+      <title>AquaticIndexTiles</title>
+    </metadata>
+    <source>AquaticIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
 
-    <source name="AquaticIndexTiles" type="wms">
-      <getmap>
-        <params>
-          <FORMAT>image/png</FORMAT>
-          <LAYERS>AquaticIndexTiles</LAYERS>
-          <TRANSPARENT>TRUE</TRANSPARENT>
-        </params>
-      </getmap>
+  <source name="AquaticIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AquaticIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
 
-      <http>
-        <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
-      </http>
-    </source>
-    <service type="wms" enabled="true">
-      <resample_mode>bilinear</resample_mode>
-    </service>
+
+  <tileset name="TerrestrialIndexTiles">
+    <metadata>
+      <title>TerrestrialIndexTiles</title>
+    </metadata>
+    <source>TerrestrialIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TerrestrialIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TerrestrialIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
 
 
-    <tileset name="TerrestrialIndexTiles">
-      <metadata>
-        <title>TerrestrialIndexTiles</title>
-      </metadata>
-      <source>TerrestrialIndexTiles</source>
-      <cache>tmpl</cache>
-      <format>PNG</format>
-      <grid>GoogleMapsCompatible</grid>
-      <metatile>1 1</metatile>
-      <expires>1</expires>
-    </tileset>
+  <tileset name="CriticalFacilitiesIndexTiles">
+    <metadata>
+      <title>CriticalFacilitiesIndexTiles</title>
+    </metadata>
+    <source>CriticalFacilitiesIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
 
-    <source name="TerrestrialIndexTiles" type="wms">
-      <getmap>
-        <params>
-          <FORMAT>image/png</FORMAT>
-          <LAYERS>TerrestrialIndexTiles</LAYERS>
-          <TRANSPARENT>TRUE</TRANSPARENT>
-        </params>
-      </getmap>
+  <source name="CriticalFacilitiesIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CriticalFacilitiesIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
 
-      <http>
-        <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
-      </http>
-    </source>
-    <service type="wms" enabled="true">
-      <resample_mode>bilinear</resample_mode>
-    </service>
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <tileset name="CriticalInfrastructureIndexTiles">
+    <metadata>
+      <title>CriticalInfrastructureIndexTiles</title>
+    </metadata>
+    <source>CriticalInfrastructureIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="CriticalInfrastructureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CriticalInfrastructureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <tileset name="PopDensityIndexTiles">
+    <metadata>
+      <title>PopDensityIndexTiles</title>
+    </metadata>
+    <source>PopDensityIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PopDensityIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PopDensityIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="SocVulnIndexTiles">
+    <metadata>
+      <title>SocVulnIndexTiles</title>
+    </metadata>
+    <source>SocVulnIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="SocVulnIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>SocVulnIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+
+  <tileset name="DraingeIndexTiles">
+    <metadata>
+      <title>DraingeIndexTiles</title>
+    </metadata>
+    <source>DraingeIndexTiles</source>
+    <cache>tmpl</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="DraingeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>DraingeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="ErosionIndexTiles">
+    <metadata>
+      <title>ErosionIndexTiles</title>
+    </metadata>
+    <source>ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>ErosionIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+  </cache>
 
   <service type="wmts" enabled="true"/>
   <service type="tms" enabled="true"/>
   <service type="demo" enabled="true"/>
-
-
 
   <log_level>debug</log_level>
 

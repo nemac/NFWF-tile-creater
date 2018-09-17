@@ -734,4 +734,414 @@ MAP
                   "gml_include_items"     "value_0"
               END  # end METADATA
           END # end LAYER
+  LAYER
+    NAME CriticalInfrastructureIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     nfwf_criticalinfrastructure.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+
+    CLASS
+      EXPRESSION ([pixel] = 0)
+      NAME "Low"
+      STYLE
+        COLOR 247 251 255 #f7fbff
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 209 227 243 #d1e3f3
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME "Medium"
+      STYLE
+        COLOR 154 200 225 #9ac8e1
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME "Medium"
+      STYLE
+        COLOR 82 157 204 #529dcc
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME "High"
+      STYLE
+        COLOR 28 108 177 #1c6cb1
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 8 48 107 #08306b
+      END
+    END
+  END
+
+
+  LAYER
+    NAME CriticalFacilitiesIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     nfwf_criticalfacilities.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+
+    CLASS
+      EXPRESSION ([pixel] = 0)
+      NAME "Low"
+      STYLE
+        COLOR 247 251 255 #f7fbff
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 209 227 243 #d1e3f3
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME "Medium"
+      STYLE
+        COLOR 154 200 225 #9ac8e1
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME "Medium"
+      STYLE
+        COLOR 82 157 204 #529dcc
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME "High"
+      STYLE
+        COLOR 28 108 177 #1c6cb1
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 8 48 107 #08306b
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "SA_AIndex"
+      "wms_abstract"          "SA_AIndex"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME PopDensityIndexTiles
+     #9
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     nfwf_popdensity.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+
+    CLASS
+      EXPRESSION ([pixel] = 0)
+      NAME "Low"
+      STYLE
+        COLOR 247 251 255 #f7fbff
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 209 227 243 #d1e3f3
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME "Medium"
+      STYLE
+        COLOR 154 200 225 #9ac8e1
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME "Medium"
+      STYLE
+        COLOR 82 157 204 #529dcc
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME "High"
+      STYLE
+        COLOR 28 108 177 #1c6cb1
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 8 48 107 #08306b
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PopDensity"
+      "wms_abstract"          "PopDensity"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+    # 10
+  LAYER
+    NAME SocVulnIndexTiles
+     #9
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     nfwf_socvuln.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+
+    CLASS
+      EXPRESSION ([pixel] = 0)
+      NAME "Low"
+      STYLE
+        COLOR 247 251 255 #f7fbff
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 8 48 107 #08306b
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "SocVuln"
+      "wms_abstract"          "SocVuln"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME DraingeIndexTiles
+     #11
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     nfwf_drainage.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+
+    CLASS
+      EXPRESSION ([pixel] = 0)
+      NAME "Low"
+      STYLE
+        COLOR 255 245 240 #fff5f0
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 253 204 184 #fdccb8
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME "Medium"
+      STYLE
+        COLOR 252 143 111 #fc8f6f
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME "Medium"
+      STYLE
+        COLOR 244 77 55 #f44d37
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME "High"
+      STYLE
+        COLOR 197 22 27 #c5161b
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 103 0 13 #67000d
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "Drainge"
+      "wms_abstract"          "Drainge"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME ErosionIndexTiles
+     #12
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     nfwf_erosion.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+
+    CLASS
+      EXPRESSION ([pixel] = 0)
+      NAME "Low"
+      STYLE
+        COLOR 255 245 240 #fff5f0
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 253 204 184 #fdccb8
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME "Medium"
+      STYLE
+        COLOR 252 143 111 #fc8f6f
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME "Medium"
+      STYLE
+        COLOR 244 77 55 #f44d37
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME "High"
+      STYLE
+        COLOR 197 22 27 #c5161b
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 103 0 13 #67000d
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "Erosion"
+      "wms_abstract"          "Erosion"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+
 END # end MAP
