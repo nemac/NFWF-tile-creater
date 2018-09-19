@@ -90,7 +90,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     nfwf_hubs.tif
+        DATA     /tiledata/source/nfwf_hubs.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
     CLASS
@@ -173,7 +173,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     nfwf_exposure.tif
+        DATA     /tiledata/source/nfwf_exposure.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
                 CLASS
@@ -248,7 +248,7 @@ MAP
         END
         TYPE     RASTER
         STATUS   OFF
-        DATA     nfwf_assets.tif
+        DATA     /tiledata/source/nfwf_assets.tif
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -378,7 +378,7 @@ MAP
           TYPE     RASTER
           STATUS   OFF
           DUMP     TRUE
-          DATA     nfwf_threats.tif
+          DATA     /tiledata/source/nfwf_threats.tif
           HEADER   ./templates/layer_query_header.html
           TEMPLATE ./templates/layer_query_body.html
 
@@ -650,7 +650,7 @@ MAP
               TYPE     RASTER
               DUMP     TRUE
               STATUS   OFF
-              DATA     nfwf_aquatic.tif
+              DATA     /tiledata/source/nfwf_aquatic.tif
               HEADER   ./templates/layer_query_header.html
               TEMPLATE ./templates/layer_query_body.html
               CLASS
@@ -715,7 +715,7 @@ MAP
               TYPE     RASTER
               DUMP     TRUE
               STATUS   OFF
-              DATA     nfwf_terrestrial.tif
+              DATA     /tiledata/source/nfwf_terrestrial.tif
               HEADER   ./templates/layer_query_header.html
               TEMPLATE ./templates/layer_query_body.html
 
@@ -778,7 +778,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     nfwf_criticalinfrastructure.tif
+    DATA     /tiledata/source/nfwf_criticalinfrastructure.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -845,7 +845,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     nfwf_criticalfacilities.tif
+    DATA     /tiledata/source/nfwf_criticalfacilities.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -919,7 +919,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     nfwf_popdensity.tif
+    DATA     /tiledata/source/nfwf_popdensity.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -994,7 +994,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     nfwf_socvuln.tif
+    DATA     /tiledata/source/nfwf_socvuln.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -1040,7 +1040,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     nfwf_drainage.tif
+    DATA     /tiledata/source/nfwf_drainage.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -1114,7 +1114,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     nfwf_erosion.tif
+    DATA     /tiledata/source/nfwf_erosion.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapcache>
 
-  <cache name="tmpl" type="disk" layout="template">
-    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
-    <detect_blank/>
-  </cache>
-
   <source name="ExposureIndexTiles" type="wms">
     <getmap>
       <params>
@@ -25,7 +20,7 @@
       <title>ExposureIndexTiles</title>
     </metadata>
     <source>ExposureIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -51,7 +46,7 @@
       <title>AssetsIndexTiles</title>
     </metadata>
     <source>AssetsIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -67,7 +62,7 @@
       <title>HubsIndexTiles</title>
     </metadata>
     <source>HubsIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -94,7 +89,7 @@
       <title>ThreatsIndexTiles</title>
     </metadata>
     <source>ThreatsIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -124,7 +119,7 @@
       <title>AquaticIndexTiles</title>
     </metadata>
     <source>AquaticIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -153,7 +148,7 @@
       <title>TerrestrialIndexTiles</title>
     </metadata>
     <source>TerrestrialIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -182,7 +177,7 @@
       <title>CriticalFacilitiesIndexTiles</title>
     </metadata>
     <source>CriticalFacilitiesIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -211,7 +206,7 @@
       <title>CriticalInfrastructureIndexTiles</title>
     </metadata>
     <source>CriticalInfrastructureIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -226,7 +221,6 @@
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
-
     <http>
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
@@ -241,7 +235,7 @@
       <title>PopDensityIndexTiles</title>
     </metadata>
     <source>PopDensityIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -266,7 +260,7 @@
       <title>SocVulnIndexTiles</title>
     </metadata>
     <source>SocVulnIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -281,7 +275,6 @@
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
-
     <http>
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
@@ -293,7 +286,7 @@
       <title>DraingeIndexTiles</title>
     </metadata>
     <source>DraingeIndexTiles</source>
-    <cache>tmpl</cache>
+    <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
@@ -308,7 +301,6 @@
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
-
     <http>
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
@@ -334,7 +326,6 @@
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
-
     <http>
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
@@ -346,6 +337,12 @@
 
   <cache name="agolCompatible" type="disk" layout="template">
     <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
   </cache>
 
   <service type="wmts" enabled="true"/>
