@@ -108,11 +108,6 @@
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
   </source>
-  <service type="wms" enabled="true">
-    <resample_mode>bilinear</resample_mode>
-  </service>
-
-
 
   <tileset name="AquaticIndexTiles">
     <metadata>
@@ -138,10 +133,6 @@
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
   </source>
-  <service type="wms" enabled="true">
-    <resample_mode>bilinear</resample_mode>
-  </service>
-
 
   <tileset name="TerrestrialIndexTiles">
     <metadata>
@@ -167,10 +158,6 @@
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
   </source>
-  <service type="wms" enabled="true">
-    <resample_mode>bilinear</resample_mode>
-  </service>
-
 
   <tileset name="CriticalFacilitiesIndexTiles">
     <metadata>
@@ -197,10 +184,6 @@
     </http>
   </source>
 
-  <service type="wms" enabled="true">
-    <resample_mode>bilinear</resample_mode>
-  </service>
-
   <tileset name="CriticalInfrastructureIndexTiles">
     <metadata>
       <title>CriticalInfrastructureIndexTiles</title>
@@ -225,10 +208,6 @@
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
   </source>
-
-  <service type="wms" enabled="true">
-    <resample_mode>bilinear</resample_mode>
-  </service>
 
   <tileset name="PopDensityIndexTiles">
     <metadata>
@@ -330,6 +309,132 @@
       <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
     </http>
   </source>
+
+  <tileset name="FloodProneAreasIndexTiles">
+    <metadata>
+      <title>FloodProneAreasIndexTiles</title>
+    </metadata>
+    <source>FloodProneAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="FloodProneAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>FloodProneAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="GeoStressIndexTiles">
+    <metadata>
+      <title>GeoStressIndexTiles</title>
+    </metadata>
+    <source>GeoStressIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GeoStressIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GeoStressIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="SLRIndexTiles">
+    <metadata>
+      <title>SLRIndexTiles</title>
+    </metadata>
+    <source>SLRIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="SLRIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>SLRIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="SlopeIndexTiles">
+    <metadata>
+      <title>SlopeIndexTiles</title>
+    </metadata>
+    <source>SlopeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="SlopeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>SlopeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="StormSurgeIndexTiles">
+    <metadata>
+      <title>StormSurgeIndexTiles</title>
+    </metadata>
+    <source>StormSurgeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="StormSurgeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>StormSurgeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
 
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>

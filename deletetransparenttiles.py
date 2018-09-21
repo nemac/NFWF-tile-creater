@@ -53,7 +53,7 @@ from osgeo import gdal
 from osgeo import osr
 
 try:
-    from PIL import Image
+    #from PIL import Image
     import numpy
     import osgeo.gdal_array as gdalarray
     numpy_available = True

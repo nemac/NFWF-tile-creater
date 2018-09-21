@@ -49,6 +49,22 @@ services:
     shm_size: 25G
     volumes:
       - /tiledata/source/:/tiledata/source/
+      - /tiledata/cache/:/tiledata/cache/
+    stdin_open: true
+    networks:
+      net:
+        ipv4_address: 10.10.0.4
+    tty: true
+  gdal-python:
+    #build from https://github.com/ecarrara/docker-python-gdal/blob/master/2.2.1-python2.7/Dockerfile
+    image: gdalpython-image
+    container_name: gdalpython-compose
+    hostname: gdalpython_composer
+    privileged: true
+    shm_size: 25G
+    volumes:
+      - /tiledata/source/:/tiledata/source/
+      - /tiledata/cache/:/tiledata/cache/
     stdin_open: true
     networks:
       net:
