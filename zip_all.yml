@@ -66,7 +66,7 @@ zips:
       - nfwf_pacific_northwest_asset_inputs.zip
       - nfwf_pacific_northwest_threat_inputs.zip
 
-  - name: nfwf_fish_wildlife_fish_wildlife
+  - name: nfwf_all_fish_wildlife
     input_files:
       - nfwf_all_aquatic.zip
       - nfwf_all_terrestrial.zip

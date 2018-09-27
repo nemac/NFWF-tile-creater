@@ -113,5 +113,5 @@ def zipfile():
       #   print(file[zipindex]['input_files'][i])
 
 if __name__ == '__main__':
-  zipfile()
+  # zipfile()
   zipalls()
