@@ -27,6 +27,20 @@ the -d option will limit where tiles are created you will have to update the [Do
 
 # run python script to remove tiles that entirely transparent "blank".
 this will cause some file missing errors in the browser but it will greatly reduce the size of cache for some layers...
-`deletetransparenttiles.py cache/the tileset name/`
+`./deletetransparenttiles.py cache/the tileset name/`
 
 copy the folder to s3, make it public and you have TMS tile server on s3
+
+
+#making download zips
+build the docker image
+`docker build -t gdal-python -f DockerfileGDALPython .`
+
+run docker and open bash
+`docker run -it -v /tiledata/cache:/cache gdal-python bash`
+
+run the zip creator script.  this may require some edits to output to the different directory
+`./zipcreator.py`
+
+copy to aws dataset_bucket
+`aws s3 sync zips/ s3://nfwf-tool/nfwf_download_data --acl public-read --delete`
