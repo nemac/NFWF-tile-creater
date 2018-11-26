@@ -1,80 +1,77 @@
 MAP
-    # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
-    # of the two lines below to enable this logging:
-     #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
-    #DEBUG 5
+  # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+  # of the two lines below to enable this logging:
+  #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+  #DEBUG 5
 
-    # all temp files get prefixed with this string
-    NAME ms_nfwf
+  # all temp files get prefixed with this string
+  NAME ms_nfwf
 
-    #jdm:added to accomodate map layers
-    #see http://trac.osgeo.org/mapserver/ticket/3055
-    MAXSIZE 3072
+  #jdm:added to accomodate map layers
+  #see http://trac.osgeo.org/mapserver/ticket/3055
+  MAXSIZE 3072
 
-    # background color of image if transparency
-    # is not requested
-    IMAGECOLOR 255 255 255
+  # background color of image if transparency
+  # is not requested
+  IMAGECOLOR 255 255 255
 
-    # default output image dimensions
-    SIZE 600 400
+  # default output image dimensions
+  SIZE 600 400
 
-    # always returns a map
-    STATUS ON
+  # always returns a map
+  STATUS ON
 
-    # set top level projection
+  # set top level projection
+  PROJECTION
+    "init=epsg:3857"
+  END
+
+  # image format options
+  OUTPUTFORMAT
+    NAME "PNG"
+    DRIVER "GDAL/PNG"
+    MIMETYPE "image/png"
+    IMAGEMODE "RGB"
+    EXTENSION "png"
+  END
+
+  # minx miny maxx maxy
+  EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+  # # add def pointers for symbols
+  SYMBOLSET symbolset.txt
+  # FONTSET   "./fonts/fonts.list"
+
+  # Start of web interface definition
+  WEB
+
+    IMAGEPATH '/tmp/'
+    IMAGEURL '/tmp/'
+
+    HEADER "./templates/query_header.html"
+    FOOTER "./templates/query_footer.html"
+    TEMPLATE 'http://someurl/somescript.cgi?mapext=[mapext]'
+
+    METADATA
+      "ows_enable_request"     "*"
+      "wms_title"              "NEMAC NFWF WMS"
+      "wms_abstract"           "NEMAC NFWF WMS"
+      "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+      "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+      "wms_feature_info_mime_type" "text/plain"
+      "wms_feature_info_mime_type" "text/html"
+    END
+  END
+
+  # set defaults for GetLegendGraphic requests
+  LEGEND
+    KEYSIZE 30 20
+    STATUS on
+  END
+
+  LAYER
+    NAME "HubsIndexTiles"
     PROJECTION
-        "init=epsg:3785"
-    END
-
-    # image format options
-    OUTPUTFORMAT
-        NAME "PNG"
-        DRIVER "GDAL/PNG"
-        MIMETYPE "image/png"
-        IMAGEMODE "RGB"
-        EXTENSION "png"
-    END
-
-    # minx miny maxx maxy
-    EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
-
-    # # add def pointers for symbols
-    SYMBOLSET symbolset.txt
-    # FONTSET   "./fonts/fonts.list"
-
-    # Start of web interface definition
-    WEB
-
-      IMAGEPATH '/tmp/'
-      IMAGEURL '/tmp/'
-
-        HEADER "./templates/query_header.html"
-        FOOTER "./templates/query_footer.html"
-
-        METADATA
-            "ows_enable_request"     "*"
-            "wms_title"              "NEMAC NFWF WMS"
-            "wms_abstract"           "NEMAC NFWF WMS"
-            "wms_onlineresource"     "http://gis.nemac.org/nfwf"
-            "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
-			"wms_feature_info_mime_type" "text/plain"
-			"wms_feature_info_mime_type" "text/html"
-        END
-    END
-
-    QUERYMAP
-        STATUS ON
-    END
-
-    # set defaults for GetLegendGraphic requests
-    LEGEND
-        KEYSIZE 30 20
-		STATUS on
-    END
-
-    LAYER
-        NAME "HubsIndexTiles"
-        PROJECTION
       "proj=aea"
       "lat_1=29.5"
       "lat_2=45.5"
@@ -87,755 +84,579 @@ MAP
       "units=m"
       "no_defs"
     END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     /tiledata/source/nfwf_hubs.tif
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
+    TYPE     RASTER
+    DUMP     TRUE
+    STATUS   OFF
+    DATA     /tiledata/source/nfwf_hubs.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
     CLASS
-    NAME "Hubs"
-    EXPRESSION ""
-    COLOR 255 255 255
+      NAME "Hubs"
+      EXPRESSION ""
+      COLOR 255 255 255
     END #end class
-         CLASS
+    CLASS
       NAME "Low"
       EXPRESSION ([pixel] = 1)
-     STYLE
-      COLOR 237 248 233
-     END #end style
+      STYLE
+        COLOR 237 248 233
+      END #end style
     END #end class
-        CLASS
+    CLASS
       NAME ""
       EXPRESSION ([pixel] = 2)
-    STYLE
-     COLOR 197 221 202
-    END #end style
+      STYLE
+        COLOR 197 221 202
+      END #end style
     END #end class
-        CLASS
+    CLASS
       NAME ""
       EXPRESSION ([pixel] = 3)
-     STYLE
-      COLOR 158 195 172
-    END #end style
+      STYLE
+        COLOR 158 195 172
+      END #end style
     END #end class
-        CLASS
+    CLASS
       NAME ""
       EXPRESSION ([pixel] = 4)
-     STYLE
-      COLOR 118 169 141
-    END #end style
+      STYLE
+        COLOR 118 169 141
+      END #end style
     END #end class
-        CLASS
+    CLASS
       NAME ""
       EXPRESSION ([pixel] = 5)
-     STYLE
-      COLOR 79 142 111
-    END #end style
+      STYLE
+        COLOR 79 142 111
+      END #end style
     END #end class
     CLASS
       NAME ""
       EXPRESSION ([pixel] = 6)
-     STYLE
-      COLOR 39 116 80
-    END #end style
+      STYLE
+        COLOR 39 116 80
+      END #end style
     END #end class
     CLASS
       NAME "High"
       EXPRESSION ([pixel] = 7)
-     STYLE
-      COLOR 0 90 50
-    END #end style
+      STYLE
+        COLOR 0 90 50
+      END #end style
     END #end class
-      #INCLUDE "cmaps/gapnat.cmap"
-        METADATA
-            "wms_title"             "HUBsTiles"
-            "wms_abstract"          "HUBsTiles"
-            "gml_include_items"     "value_0"
-        END  # end METADATA
-    END # end LAYER
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "HUBsTiles"
+      "wms_abstract"          "HUBsTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
+  LAYER
+    NAME "ExposureIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/CONUS_ExposureIndex_10class_111918.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      NAME "Exposure Index for tileing"
+      EXPRESSION ""
+      COLOR 255 255 255
+    END #end class
+    CLASS
+      NAME "Low"
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 31 110 110
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 61 130 130
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 125 173 156
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 183 212 178
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 233 242 187
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 6)
+      STYLE
+        COLOR 245 233 169
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 7)
+      STYLE
+        COLOR 219 186 122
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 8)
+      STYLE
+        COLOR 176 128 66
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 9)
+      STYLE
+        COLOR 148 87 28
+      END #end style
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION ([pixel] = 10)
+      STYLE
+        COLOR 99 51 25
+      END #end style
+    END #end class
 
-    LAYER
-        NAME "ExposureIndexTiles"
-        PROJECTION
-          "proj=aea"
-          "lat_1=29.5"
-          "lat_2=45.5"
-          "lat_0=37.5"
-          "lon_0=-96"
-          "x_0=0"
-          "y_0=0"
-          "datum=NAD83"
-          "units=m"
-          "no_defs"
-        END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     /tiledata/source/nfwf_exposure.tif
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-                CLASS
-                NAME "Exposure Index for tileing"
-                EXPRESSION ""
-                COLOR 255 255 255
-                END #end class
-         CLASS
-                  NAME "Low"
-                  EXPRESSION ([pixel] = 1)
-                 STYLE
-                        COLOR 36 131 145
-                 END #end style
-                END #end class
-        CLASS
-                  NAME ""
-                  EXPRESSION ([pixel] = 2)
-                STYLE
-                 COLOR 123 176 163
-                END #end style
-                END #end class
-        CLASS
-                  NAME ""
-                  EXPRESSION ([pixel] = 3)
-                 STYLE
-                        COLOR 212 230 184
-                END #end style
-                END #end class
-        CLASS
-                  NAME ""
-                  EXPRESSION ([pixel] = 4)
-                 STYLE
-                        COLOR 237 216 152
-                END #end style
-                END #end class
-        CLASS
-                  NAME ""
-                  EXPRESSION ([pixel] = 6)
-                 STYLE
-                        COLOR 196 144 84
-                END #end style
-                END #end class
-        CLASS
-                  NAME "High"
-                  EXPRESSION ([pixel] = 9)
-                 STYLE
-                        COLOR 156 85 31
-                END #end style
-                END #end class
-            #INCLUDE "cmaps/gapnat.cmap"
-        METADATA
-            "wms_title"             "ExposureIndexTiles"
-            "wms_abstract"          "ExposureIndexTiles"
-            "gml_include_items"     "value_0"
-        END  # end METADATA
-    END # end LAYER
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "ExposureIndexTiles"
+      "wms_abstract"          "ExposureIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
-      LAYER
-        NAME AssetsIndexTiles
-        PROJECTION
-          "proj=aea"
-          "lat_1=29.5"
-          "lat_2=45.5"
-          "lat_0=37.5"
-          "lon_0=-96"
-          "x_0=0"
-          "y_0=0"
-          "ellps=GRS80"
-          "datum=NAD83"
-          "units=m"
-          "no_defs"
-        END
-        TYPE     RASTER
-        STATUS   OFF
-        DATA     /tiledata/source/nfwf_assets.tif
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
+  LAYER
+    NAME AssetsIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     "/tiledata/source/CONUS_AssetIndex_10class_111918.tif"
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
 
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 182 237 240
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 152 210 237
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 124 187 235
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 92 163 230
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME ""
+      STYLE
+        COLOR 54 141 227
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 6)
+      NAME ""
+      STYLE
+        COLOR 33 118 217
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 7)
+      NAME ""
+      STYLE
+        COLOR 34 89 199
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 8)
+      NAME ""
+      STYLE
+        COLOR 29 62 181
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 9)
+      NAME ""
+      STYLE
+        COLOR 23 39 163
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 10)
+      NAME "High"
+      STYLE
+        COLOR 9 9 145
+      END
+    END
 
-        CLASS
-          EXPRESSION ([pixel] = 0)
-          NAME "Low"
-          STYLE
-            COLOR 182 237 240
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 1)
-          NAME "Low"
-          STYLE
-            COLOR 161 218 237
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 2)
-          NAME "Medium"
-          STYLE
-            COLOR 142 202 237
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 3)
-          NAME "High"
-          STYLE
-            COLOR 122 186 235
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 4)
-          NAME "High"
-          STYLE
-            COLOR 100 170 232
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 5)
-          NAME "High"
-          STYLE
-            COLOR 76 153 230
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 6)
-          NAME "High"
-          STYLE
-            COLOR 50 138 227
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 7)
-          NAME "High"
-          STYLE
-            COLOR 33 123 219
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 8)
-          NAME "High"
-          STYLE
-            COLOR 33 102 207
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 9)
-          NAME "High"
-          STYLE
-            COLOR 33 84 194
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 10)
-          NAME "High"
-          STYLE
-            COLOR 29 64 181
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 11)
-          NAME "High"
-          STYLE
-            COLOR 25 47 168
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 12)
-          NAME "High"
-          STYLE
-            COLOR 19 31 158
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 13)
-          NAME "High"
-          STYLE
-            COLOR 9 9 145
-          END
-        END
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AssetsIndexTiles"
+      "wms_abstract"          "AssetsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
-        #INCLUDE "cmaps/gapnat.cmap"
-        METADATA
-          "wms_title"             "SA_AIndex"
-          "wms_abstract"          "SA_AIndex"
-          "gml_include_items"     "value_0"
-        END  # end METADATA
-      END # end LAYER
+  LAYER
+    NAME ThreatsIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DUMP     TRUE
+    DATA     /tiledata/source/CONUS_ThreatIndex_10class_111918.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
 
-        LAYER
-          NAME ThreatsIndexTiles
-          PROJECTION
-            "proj=aea"
-            "lat_1=29.5"
-            "lat_2=45.5"
-            "lat_0=37.5"
-            "lon_0=-96"
-            "x_0=0"
-            "y_0=0"
-            "ellps=GRS80"
-            "datum=NAD83"
-            "units=m"
-            "no_defs"
-          END
-          TYPE     RASTER
-          STATUS   OFF
-          DUMP     TRUE
-          DATA     /tiledata/source/nfwf_threats.tif
-          HEADER   ./templates/layer_query_header.html
-          TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 255 235 214
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME "Low"
+      STYLE
+        COLOR 247 215 188
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME "Low"
+      STYLE
+        COLOR 240 192 161
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME "Low"
+      STYLE
+        COLOR 235 169 136
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "Low"
+      STYLE
+        COLOR 227 144 111
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 6)
+      NAME "Low"
+      STYLE
+        COLOR 222 119 91
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 7)
+      NAME "Low"
+      STYLE
+        COLOR 214 93 69
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 8)
+      NAME "Medium"
+      STYLE
+        COLOR 209 64 48
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 9)
+      NAME "Medium"
+      STYLE
+        COLOR 201 37 28
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 10)
+      NAME "Medium"
+      STYLE
+        COLOR 196 10 10
+      END
+    END
 
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "ThreatsIndexTiles"
+      "wms_abstract"          "ThreatsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
-          CLASS
-            EXPRESSION ([pixel] = 0)
-            NAME "Low"
-            STYLE
-              COLOR 255 235 214
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 1)
-            NAME "Low"
-            STYLE
-              COLOR 252 229 207
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 2)
-            NAME "Low"
-            STYLE
-              COLOR 250 222 197
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 3)
-            NAME "Low"
-            STYLE
-              COLOR 247 215 188
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 4)
-            NAME "Low"
-            STYLE
-              COLOR 245 209 181
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 5)
-            NAME "Low"
-            STYLE
-              COLOR 245 203 174
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 6)
-            NAME "Low"
-            STYLE
-              COLOR 242 196 165
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 7)
-            NAME "Low"
-            STYLE
-              COLOR 240 188 156
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 8)
-            NAME "Medium"
-            STYLE
-              COLOR 237 182 149
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 9)
-            NAME "Medium"
-            STYLE
-              COLOR 235 174 141
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 10)
-            NAME "Medium"
-            STYLE
-              COLOR 235 167 134
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 11)
-            NAME "Medium"
-            STYLE
-              COLOR 232 161 128
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 12)
-            NAME "High"
-            STYLE
-              COLOR 230 152 119
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 13)
-            NAME "High"
-            STYLE
-              COLOR 227 144 111
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 14)
-            NAME "High"
-            STYLE
-              COLOR 224 136 103
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 15)
-            NAME "High"
-            STYLE
-              COLOR 224 128 99
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 16)
-            NAME "High"
-            STYLE
-              COLOR 222 119 91
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 17)
-            NAME "High"
-            STYLE
-              COLOR 219 111 83
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 18)
-            NAME "High"
-            STYLE
-              COLOR 217 102 76
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 19)
-            NAME "High"
-            STYLE
-              COLOR 214 95 71
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 20)
-            NAME "High"
-            STYLE
-              COLOR 214 87 64 #text to white
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 21)
-            NAME "High"
-            STYLE
-              COLOR 212 78 57
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 22)
-            NAME "High"
-            STYLE
-              COLOR 209 71 52
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 23)
-            NAME "High"
-            STYLE
-              COLOR 207 62 45
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 24)
-            NAME "High"
-            STYLE
-              COLOR 204 53 39
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 25)
-            NAME "High"
-            STYLE
-              COLOR 204 44 33
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 26)
-            NAME "High"
-            STYLE
-              COLOR 201 37 28
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 27)
-            NAME "High"
-            STYLE
-              COLOR 199 28 22
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 28)
-            NAME "High"
-            STYLE
-              COLOR 196 19 16
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 29)
-            NAME "High"
-            STYLE
-              COLOR 196 10 10
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 30)
-            NAME "High"
-            STYLE
-              COLOR 186 8 8
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 31)
-            NAME "High"
-            STYLE
-              COLOR 176 8 8
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 32)
-            NAME "High"
-            STYLE
-              COLOR 166 8 8
-            END
-          END
-          CLASS
-            EXPRESSION ([pixel] = 33)
-            NAME "High"
-            STYLE
-              COLOR 156 8 8
-            END
-          END
+  LAYER
+    NAME AquaticIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    DUMP     TRUE
+    STATUS   OFF
+    DATA     /tiledata/source/CONUS_AquaticIndex_clip_111218.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
 
-          #INCLUDE "cmaps/gapnat.cmap"
-          METADATA
-            "wms_title"             "SA_TIndex"
-            "wms_abstract"          "SA_TIndex"
-            "gml_include_items"     "value_0"
-          END  # end METADATA
-          END # end LAYER
+    CLASS
+      NAME "Low"
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 205 225 232
+      END #STYLE
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 130 188 209
+      END #STYLE
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 94 165 187
+      END #STYLE
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 0 126 145
+      END #STYLE
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 0 90 98
+      END #STYLE
+    END #end class
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "Aquatic Index"
+      "wms_abstract"          "Aquatic Index"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+  LAYER
+    NAME TerrestrialIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    DUMP     TRUE
+    STATUS   OFF
+    DATA     /tiledata/source/CONUS_TerrestrialIndex_clip_111218.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
 
+    CLASS
+      NAME "Low"
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 255 233 196
+      END #STYLE
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 223 200 120
+      END #STYLE
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 118 152 78
+      END #STYLE
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 56 91 35
+      END #STYLE
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 0 73 0
+      END #STYLE
+    END #end class
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "Terrestrial Index"
+      "wms_abstract"          "Terrestrial Index"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
+  LAYER
+    NAME CriticalInfrastructureIndexTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     /tiledata/source/CONUS_CritInfra_shift_111518.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
 
-          LAYER
-              NAME AquaticIndexTiles
-              PROJECTION
-      			"proj=aea"
-      			"lat_1=29.5"
-      			"lat_2=45.5"
-      			"lat_0=37.5"
-      			"lon_0=-96"
-      			"x_0=0"
-      			"y_0=0"
-      			"ellps=GRS80"
-      			"datum=NAD83"
-      			"units=m"
-      			"no_defs"
-      		END
-              TYPE     RASTER
-              DUMP     TRUE
-              STATUS   OFF
-              DATA     /tiledata/source/nfwf_aquatic.tif
-              HEADER   ./templates/layer_query_header.html
-              TEMPLATE ./templates/layer_query_body.html
-              CLASS
-          		  NAME "Low"
-          		  EXPRESSION ([pixel] = 1)
-          		  STYLE
-          			COLOR 204 226 232
-          		  END #STYLE
-          		END #end class
-              CLASS
-          		  NAME ""
-          		  EXPRESSION ([pixel] = 2)
-          		  STYLE
-          			COLOR 143 200 214
-          		  END #STYLE
-          		END #end class
-              CLASS
-          		  NAME ""
-          		  EXPRESSION ([pixel] = 3)
-          		  STYLE
-          			COLOR 94 164 186
-          		  END #STYLE
-          		END #end class
-              CLASS
-          		  NAME ""
-          		  EXPRESSION ([pixel] = 4)
-          		  STYLE
-          			COLOR 4 126 145
-          		  END #STYLE
-          		END #end class
-              CLASS
-          		  NAME "High"
-          		  EXPRESSION ([pixel] = 5)
-          		  STYLE
-          			COLOR 9 90 98
-          		  END #STYLE
-          		END #end class
-      	    #INCLUDE "cmaps/gapnat.cmap"
-              METADATA
-                  "wms_title"             "Aquatic Index"
-                  "wms_abstract"          "Aquatic Index"
-                  "gml_include_items"     "value_0"
-              END  # end METADATA
-          END # end LAYER
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 204 209 210
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 53 92 89
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 232 177 109
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 177 90 60
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 173 53 65
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 6)
+      NAME "High"
+      STYLE
+        COLOR 123 23 51
+      END
+    END
 
-
-          LAYER
-              NAME TerrestrialIndexTiles
-              PROJECTION
-      			"proj=aea"
-      			"lat_1=29.5"
-      			"lat_2=45.5"
-      			"lat_0=37.5"
-      			"lon_0=-96"
-      			"x_0=0"
-      			"y_0=0"
-      			"ellps=GRS80"
-      			"datum=NAD83"
-      			"units=m"
-      			"no_defs"
-      		END
-              TYPE     RASTER
-              DUMP     TRUE
-              STATUS   OFF
-              DATA     /tiledata/source/nfwf_terrestrial.tif
-              HEADER   ./templates/layer_query_header.html
-              TEMPLATE ./templates/layer_query_body.html
-
-          CLASS
-      		  NAME "Low"
-      		  EXPRESSION ([pixel] = 1)
-      		  STYLE
-      			COLOR 255 233 196
-      		  END #STYLE
-      		END #end class
-          CLASS
-      		  NAME ""
-      		  EXPRESSION ([pixel] = 2)
-      		  STYLE
-      			COLOR 224 200 121
-      		  END #STYLE
-      		END #end class
-          CLASS
-      		  NAME ""
-      		  EXPRESSION ([pixel] = 3)
-      		  STYLE
-      			COLOR 118 151 78
-      		  END #STYLE
-      		END #end class
-          CLASS
-      		  NAME ""
-      		  EXPRESSION ([pixel] = 4)
-      		  STYLE
-      			COLOR 56 91 36
-      		  END #STYLE
-      		END #end class
-          CLASS
-      		  NAME "High"
-      		  EXPRESSION ([pixel] = 5)
-      		  STYLE
-      			COLOR 0 73 8
-      		  END #STYLE
-      		END #end class
-      	    #INCLUDE "cmaps/gapnat.cmap"
-              METADATA
-                  "wms_title"             "Terrestrial Index"
-                  "wms_abstract"          "Terrestrial Index"
-                  "gml_include_items"     "value_0"
-              END  # end METADATA
-          END # end LAYER
-
-
-      LAYER
-        NAME CriticalInfrastructureIndexTiles
-        PROJECTION
-          "proj=aea"
-          "lat_1=29.5"
-          "lat_2=45.5"
-          "lat_0=37.5"
-          "lon_0=-96"
-          "x_0=0"
-          "y_0=0"
-          "ellps=GRS80"
-          "datum=NAD83"
-          "units=m"
-          "no_defs"
-        END
-        TYPE     RASTER
-        STATUS   OFF
-        DATA     /tiledata/source/nfwf_criticalinfrastructure.tif
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-
-
-        CLASS
-          EXPRESSION ([pixel] = 0)
-          NAME "Low"
-          STYLE
-            COLOR 247 251 255 #f7fbff
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 1)
-          NAME "Low"
-          STYLE
-            COLOR 209 227 243 #d1e3f3
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 2)
-          NAME "Medium"
-          STYLE
-            COLOR 154 200 225 #9ac8e1
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 3)
-          NAME "Medium"
-          STYLE
-            COLOR 82 157 204 #529dcc
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 4)
-          NAME "High"
-          STYLE
-            COLOR 28 108 177 #1c6cb1
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 5)
-          NAME "High"
-          STYLE
-            COLOR 8 48 107 #08306b
-          END
-        END
-
-        #INCLUDE "cmaps/gapnat.cmap"
-        METADATA
-          "wms_title"             "nfwf_criticalinfrastructure"
-          "wms_abstract"          "nfwf_criticalinfrastructure"
-          "gml_include_items"     "value_0"
-        END  # end METADATA
-      END # end LAYER
-
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "nfwf_criticalinfrastructure"
+      "wms_abstract"          "nfwf_criticalinfrastructure"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
 
 
@@ -856,65 +677,29 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_criticalfacilities.tif
+    DATA     /tiledata/source/CONUS_CritFac_shift_111918.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 247 251 255 #f7fbff
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 1)
-      NAME "Low"
-      STYLE
-        COLOR 209 227 243 #d1e3f3
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 2)
-      NAME "Medium"
-      STYLE
-        COLOR 154 200 225 #9ac8e1
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 3)
-      NAME "Medium"
-      STYLE
-        COLOR 82 157 204 #529dcc
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 4)
-      NAME "High"
-      STYLE
-        COLOR 28 108 177 #1c6cb1
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 8 48 107 #08306b
+        COLOR 0 132 168
       END
     END
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "SA_AIndex"
-      "wms_abstract"          "SA_AIndex"
+      "wms_title"             "nfwf_criticalfacilities"
+      "wms_abstract"          "nfwf_criticalfacilities"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
     NAME PopDensityIndexTiles
-     #9
+    #9
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -930,51 +715,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_popdensity.tif
+    DATA     /tiledata/source/CONUS_Population_shift_110718.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 247 251 255 #f7fbff
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 209 227 243 #d1e3f3
+        COLOR 255 246 208
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 154 200 225 #9ac8e1
+        COLOR 239 193 51
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 82 157 204 #529dcc
+        COLOR 158 172 55
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
-      NAME "High"
+      NAME ""
       STYLE
-        COLOR 28 108 177 #1c6cb1
+        COLOR 44 141 122
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 8 48 107 #08306b
+        COLOR 56 90 76
       END
     END
 
@@ -986,10 +763,8 @@ MAP
     END  # end METADATA
   END # end LAYER
 
-    # 10
   LAYER
     NAME SocVulnIndexTiles
-     #9
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1005,51 +780,29 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_socvuln.tif
+    DATA     /tiledata/source/CONUS_SocVul_shift_110718.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 247 251 255 #f7fbff
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 209 227 243 #d1e3f3
+        COLOR 171 210 250
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
       NAME "Medium"
       STYLE
-        COLOR 154 200 225 #9ac8e1
+        COLOR 118 146 255
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
       NAME "Medium"
       STYLE
-        COLOR 82 157 204 #529dcc
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 4)
-      NAME "High"
-      STYLE
-        COLOR 28 108 177 #1c6cb1
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 5)
-      NAME "High"
-      STYLE
-        COLOR 8 48 107 #08306b
+        COLOR 58 20 89
       END
     END
 
@@ -1063,7 +816,6 @@ MAP
 
   LAYER
     NAME DraingeIndexTiles
-     #11
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1079,51 +831,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_drainage.tif
+    DATA     /tiledata/source/CONUS_DrainDev_shift_111418.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 68 118 4
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
       NAME "Medium"
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 119 214 111
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
       NAME "Medium"
       STYLE
-        COLOR 244 77 55 #f44d37
+        COLOR 220 233 242
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
       NAME "High"
       STYLE
-        COLOR 197 22 27 #c5161b
+        COLOR 117 91 105
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 85 53 85
       END
     END
 
@@ -1137,7 +881,6 @@ MAP
 
   LAYER
     NAME ErosionIndexTiles
-     #12
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1153,51 +896,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_erosion.tif
+    DATA     /tiledata/source/CONUS_Erosion_111418.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 254 235 162
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
       NAME "Medium"
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 254 187 71
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
       NAME "Medium"
       STYLE
-        COLOR 244 77 55 #f44d37
+        COLOR 240 120 24
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
       NAME "High"
       STYLE
-        COLOR 197 22 27 #c5161b
+        COLOR 184 66 3
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 102 37 6
       END
     END
 
@@ -1211,7 +946,6 @@ MAP
 
   LAYER
     NAME FloodProneAreasIndexTiles
-     #12
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1227,51 +961,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_floodproneareas.tif
+    DATA     /tiledata/source/CONUS_Floodprone_shift_111418.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 226 226 239
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
       NAME "Medium"
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 182 182 216
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
       NAME "Medium"
       STYLE
-        COLOR 244 77 55 #f44d37
+        COLOR 134 131 189
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
       NAME "High"
       STYLE
-        COLOR 197 22 27 #c5161b
+        COLOR 97 64 155
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 63 0 125
       END
     END
 
@@ -1285,7 +1011,6 @@ MAP
 
   LAYER
     NAME GeoStressIndexTiles
-     #12
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1301,51 +1026,29 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_geostress.tif
+    DATA     /tiledata/source/CONUS_Geostress_shift_111518.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 251 172 185
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
       NAME "Medium"
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 205 35 143
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
       NAME "Medium"
       STYLE
-        COLOR 244 77 55 #f44d37
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 4)
-      NAME "High"
-      STYLE
-        COLOR 197 22 27 #c5161b
-      END
-    END
-    CLASS
-      EXPRESSION ([pixel] = 5)
-      NAME "High"
-      STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 73 0 106
       END
     END
 
@@ -1359,7 +1062,6 @@ MAP
 
   LAYER
     NAME SLRIndexTiles
-     #12
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1375,51 +1077,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_slr.tif
+    DATA     /tiledata/source/CONUS_SLR_shift_110918.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 219 216 234
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 153 185 217
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 244 77 55 #f44d37
+        COLOR 64 149 195
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
-      NAME "High"
+      NAME ""
       STYLE
-        COLOR 197 22 27 #c5161b
+        COLOR 2 121 118
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 1 70 54
       END
     END
 
@@ -1433,7 +1127,6 @@ MAP
 
   LAYER
     NAME SlopeIndexTiles
-     #12
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1449,51 +1142,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_slope.tif
+    DATA     /tiledata/source/CONUS_Slope_shift_111918.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 211 238 205
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 152 213 148
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 244 77 55 #f44d37
+        COLOR 75 176 98
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
-      NAME "High"
+      NAME ""
       STYLE
-        COLOR 197 22 27 #c5161b
+        COLOR 21 127 59
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 0 68 27
       END
     END
 
@@ -1505,10 +1190,8 @@ MAP
     END  # end METADATA
   END # end LAYER
 
-
   LAYER
     NAME StormSurgeIndexTiles
-     #12
     PROJECTION
       "proj=aea"
       "lat_1=29.5"
@@ -1524,51 +1207,43 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_stormsurge.tif
+    DATA     /tiledata/source/CONUS_StormSurge_shift_111618.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
-
-    CLASS
-      EXPRESSION ([pixel] = 0)
-      NAME "Low"
-      STYLE
-        COLOR 255 245 240 #fff5f0
-      END
-    END
     CLASS
       EXPRESSION ([pixel] = 1)
       NAME "Low"
       STYLE
-        COLOR 253 204 184 #fdccb8
+        COLOR 214 239 179
       END
     END
     CLASS
       EXPRESSION ([pixel] = 2)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 252 143 111 #fc8f6f
+        COLOR 115 200 189
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
-      NAME "Medium"
+      NAME ""
       STYLE
-        COLOR 244 77 55 #f44d37
+        COLOR 36 152 193
       END
     END
     CLASS
       EXPRESSION ([pixel] = 4)
-      NAME "High"
+      NAME ""
       STYLE
-        COLOR 197 22 27 #c5161b
+        COLOR 35 77 160
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       NAME "High"
       STYLE
-        COLOR 103 0 13 #67000d
+        COLOR 8 29 88
       END
     END
 
@@ -1579,7 +1254,5 @@ MAP
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
-
-
 
 END # end MAP

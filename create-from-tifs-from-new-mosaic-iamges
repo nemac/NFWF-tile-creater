@@ -46,3 +46,27 @@ mv /tiledata/source/CONUS_sovi_shift_102218.tif  /tiledata/source/nfwf_socvuln.t
 chmod 664 /tiledata/source/conus_popdens_shift_102218.tif
 sudo chown root:root /tiledata/source/conus_popdens_shift_102218.tif
 mv /tiledata/source/conus_popdens_shift_102218.tif  /tiledata/source/nfwf_popdensity.tif
+
+
+
+
+
+
+
+
+mv CONUS_ThreatIndex_10class_111918.tif conus_threatindex.tif
+mv CONUS_TerrestrialIndex_clip_111218.tif conus_terrestrialndex.tif 
+CONUS_StormSurge_shift_111618.tif
+CONUS_SocVul_shift_110718.tif
+CONUS_Slope_shift_111918.tif
+CONUS_SLR_shift_110918.tif
+CONUS_Population_shift_110718.tif
+CONUS_Geostress_shift_111518.tif
+CONUS_Floodprone_shift_111418.tif
+CONUS_ExposureIndex_10class_111918.tif
+CONUS_Erosion_111418.tif
+CONUS_DrainDev_shift_111418.tif
+CONUS_CritInfra_shift_111518.tif
+CONUS_CritFac_shift_111918.tif
+CONUS_AssetIndex_10class_111918.tif
+CONUS_AquaticIndex_clip_111218.tif
