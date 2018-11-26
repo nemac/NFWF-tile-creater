@@ -1,0 +1,48 @@
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_CritFac_shift_101818/Natl_CritFac_shift_101818.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_CritInfra_shift_101818/Natl_CritInfra_shift_101818.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_DrainDev_shift_101718/Natl_DrainDev_shift_101718.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_Erosion_shift_101618/Natl_Erosion_shift_101618.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_Floodprone_shift_101618/Natl_Floodprone_shift_101618.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_Geostress_shift_101718_fix/Natl_Geostress_shift_101718_fix.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/CONUS_sovi_shift_102218/CONUS_sovi_shift_102218.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/Natl_StormSurge_shift_101818/Natl_StormSurge_shift_101818.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/CONUS_sovi_shift_102218/CONUS_sovi_shift_102218.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+scp -i ./Downloads/nfwftilemaker.pem Downloads/conus_popdens_shift_102218/conus_popdens_shift_102218.tif  ec2-user@ec2-54-175-10-222.compute-1.amazonaws.com:/tiledata/source/. &
+
+
+
+chmod 664 /tiledata/source/Natl_CritFac_shift_101818.tif
+sudo chown root:root /tiledata/source/Natl_CritFac_shift_101818.tif
+mv /tiledata/source/Natl_CritFac_shift_101818.tif  /tiledata/source/nfwf_criticalfacilities.tif
+
+chmod 664 /tiledata/source/Natl_CritInfra_shift_101818.tif
+sudo chown root:root /tiledata/source/Natl_CritInfra_shift_101818.tif
+mv /tiledata/source/Natl_CritInfra_shift_101818.tif  /tiledata/source/nfwf_criticalinfrastructure.tif
+
+chmod 664 /tiledata/source/Natl_DrainDev_shift_101718.tif
+sudo chown root:root /tiledata/source/Natl_DrainDev_shift_101718.tif
+mv /tiledata/source/Natl_DrainDev_shift_101718.tif  /tiledata/source/nfwf_drainage.tif
+
+chmod 664 /tiledata/source/Natl_Erosion_shift_101618.tif
+sudo chown root:root /tiledata/source/Natl_Erosion_shift_101618.tif
+mv /tiledata/source/Natl_Erosion_shift_101618.tif  /tiledata/source/nfwf_erosion.tif
+
+chmod 664 /tiledata/source/Natl_Floodprone_shift_101618.tif
+sudo chown root:root /tiledata/source/Natl_Floodprone_shift_101618.tif
+mv /tiledata/source/Natl_Floodprone_shift_101618.tif  /tiledata/source/nfwf_floodproneareas.tif
+
+chmod 664 /tiledata/source/Natl_Geostress_shift_101718_fix.tif
+sudo chown root:root /tiledata/source/Natl_Geostress_shift_101718_fix.tif
+mv /tiledata/source/Natl_Geostress_shift_101718_fix.tif  /tiledata/source/nfwf_geostress.tif
+
+chmod 664 /tiledata/source/Natl_StormSurge_shift_101818.tif
+sudo chown root:root /tiledata/source/Natl_StormSurge_shift_101818.tif
+mv /tiledata/source/Natl_StormSurge_shift_101818.tif  /tiledata/source/nfwf_stormsurge.tif
+
+chmod 664 /tiledata/source/CONUS_sovi_shift_102218.tif
+sudo chown root:root /tiledata/source/CONUS_sovi_shift_102218.tif
+mv /tiledata/source/CONUS_sovi_shift_102218.tif  /tiledata/source/nfwf_socvuln.tif
+
+chmod 664 /tiledata/source/conus_popdens_shift_102218.tif
+sudo chown root:root /tiledata/source/conus_popdens_shift_102218.tif
+mv /tiledata/source/conus_popdens_shift_102218.tif  /tiledata/source/nfwf_popdensity.tif
