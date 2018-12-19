@@ -1,0 +1,97 @@
+zips:
+  - name: nfwf_all_data
+    input_files:
+      - nfwf_all_exposure.zip
+      - nfwf_all_asset.zip
+      - nfwf_all_threat.zip
+      - nfwf_all_aquatic.zip
+      - nfwf_all_terrestrial.zip
+      - nfwf_all_hubs.zip
+      - nfwf_all_asset_inputs.zip
+      - nfwf_all_threat_inputs.zip
+
+  - name: nfwf_north_atlantic
+    input_files:
+      - nfwf_north_atlantic_exposure.zip
+      - nfwf_north_atlantic_asset.zip
+      - nfwf_north_atlantic_threat.zip
+      - nfwf_north_atlantic_aquatic.zip
+      - nfwf_north_atlantic_terrestrial.zip
+      - nfwf_north_atlantic_hubs.zip
+      - nfwf_north_atlantic_asset_inputs.zip
+      - nfwf_north_atlantic_threat_inputs.zip
+
+
+  - name: nfwf_south_atlantic
+    input_files:
+      - nfwf_south_atlantic_exposure.zip
+      - nfwf_south_atlantic_asset.zip
+      - nfwf_south_atlantic_threat.zip
+      - nfwf_south_atlantic_aquatic.zip
+      - nfwf_south_atlantic_terrestrial.zip
+      - nfwf_south_atlantic_hubs.zip
+      - nfwf_south_atlantic_asset_inputs.zip
+      - nfwf_south_atlantic_threat_inputs.zip
+
+  - name: nfwf_gulf
+    input_files:
+      - nfwf_gulf_exposure.zip
+      - nfwf_gulf_asset.zip
+      - nfwf_gulf_threat.zip
+      - nfwf_gulf_aquatic.zip
+      - nfwf_gulf_terrestrial.zip
+      - nfwf_gulf_hubs.zip
+      - nfwf_gulf_asset_inputs.zip
+      - nfwf_gulf_threat_inputs.zip
+
+  - name: nfwf_california
+    input_files:
+      - nfwf_california_exposure.zip
+      - nfwf_california_asset.zip
+      - nfwf_california_threat.zip
+      - nfwf_california_aquatic.zip
+      - nfwf_california_terrestrial.zip
+      - nfwf_california_hubs.zip
+      - nfwf_california_asset_inputs.zip
+      - nfwf_california_threat_inputs.zip
+
+  - name: nfwf_pacific_northwest
+    input_files:
+      - nfwf_pacific_northwest_exposure.zip
+      - nfwf_pacific_northwest_asset.zip
+      - nfwf_pacific_northwest_threat.zip
+      - nfwf_pacific_northwest_aquatic.zip
+      - nfwf_pacific_northwest_terrestrial.zip
+      - nfwf_pacific_northwest_hubs.zip
+      - nfwf_pacific_northwest_asset_inputs.zip
+      - nfwf_pacific_northwest_threat_inputs.zip
+
+  - name: nfwf_all_fish_wildlife
+    input_files:
+      - nfwf_all_aquatic.zip
+      - nfwf_all_terrestrial.zip
+
+  - name: nfwf_north_atlantic_fish_wildlife
+    input_files:
+      - nfwf_north_atlantic_aquatic.zip
+      - nfwf_north_atlantic_terrestrial.zip
+
+  - name: nfwf_south_atlantic_fish_wildlife
+    input_files:
+      - nfwf_south_atlantic_aquatic.zip
+      - nfwf_south_atlantic_terrestrial.zip
+
+  - name: nfwf_gulf_fish_wildlife
+    input_files:
+      - nfwf_gulf_aquatic.zip
+      - nfwf_gulf_terrestrial.zip
+
+  - name: nfwf_california_fish_wildlife
+    input_files:
+      - nfwf_california_aquatic.zip
+      - nfwf_california_terrestrial.zip
+
+  - name: nfwf_pacific_northwest_fish_wildlife
+    input_files:
+      - nfwf_pacific_northwest_aquatic.zip
+      - nfwf_pacific_northwest_terrestrial.zip

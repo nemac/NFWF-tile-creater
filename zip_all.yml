@@ -1,97 +1,68 @@
 zips:
-  - name: nfwf_all_data
-    input_files:
-      - nfwf_all_exposure.zip
-      - nfwf_all_asset.zip
-      - nfwf_all_threat.zip
-      - nfwf_all_aquatic.zip
-      - nfwf_all_terrestrial.zip
-      - nfwf_all_hubs.zip
-      - nfwf_all_asset_inputs.zip
-      - nfwf_all_threat_inputs.zip
+  # - name: nfwf_conus_hubs
+  #   input_files:
+  #     - nfwf_conus_hubs.tif
 
-  - name: nfwf_north_atlantic
+  - name: nfwf_conus_exposure
     input_files:
-      - nfwf_north_atlantic_exposure.zip
-      - nfwf_north_atlantic_asset.zip
-      - nfwf_north_atlantic_threat.zip
-      - nfwf_north_atlantic_aquatic.zip
-      - nfwf_north_atlantic_terrestrial.zip
-      - nfwf_north_atlantic_hubs.zip
-      - nfwf_north_atlantic_asset_inputs.zip
-      - nfwf_north_atlantic_threat_inputs.zip
+      - CONUS_ExposureIndex.tif
 
-
-  - name: nfwf_south_atlantic
+  - name: nfwf_conus_asset
     input_files:
-      - nfwf_south_atlantic_exposure.zip
-      - nfwf_south_atlantic_asset.zip
-      - nfwf_south_atlantic_threat.zip
-      - nfwf_south_atlantic_aquatic.zip
-      - nfwf_south_atlantic_terrestrial.zip
-      - nfwf_south_atlantic_hubs.zip
-      - nfwf_south_atlantic_asset_inputs.zip
-      - nfwf_south_atlantic_threat_inputs.zip
+      - CONUS_AssetIndex.tif
 
-  - name: nfwf_gulf
+  - name: nfwf_conus_threat
     input_files:
-      - nfwf_gulf_exposure.zip
-      - nfwf_gulf_asset.zip
-      - nfwf_gulf_threat.zip
-      - nfwf_gulf_aquatic.zip
-      - nfwf_gulf_terrestrial.zip
-      - nfwf_gulf_hubs.zip
-      - nfwf_gulf_asset_inputs.zip
-      - nfwf_gulf_threat_inputs.zip
+      - CONUS_ThreatIndex.tif
 
-  - name: nfwf_california
+  - name: nfwf_conus_aquatic
     input_files:
-      - nfwf_california_exposure.zip
-      - nfwf_california_asset.zip
-      - nfwf_california_threat.zip
-      - nfwf_california_aquatic.zip
-      - nfwf_california_terrestrial.zip
-      - nfwf_california_hubs.zip
-      - nfwf_california_asset_inputs.zip
-      - nfwf_california_threat_inputs.zip
+      - CONUS_AquaticIndex.tif
 
-  - name: nfwf_pacific_northwest
+  - name: nfwf_conus_terrestrial
     input_files:
-      - nfwf_pacific_northwest_exposure.zip
-      - nfwf_pacific_northwest_asset.zip
-      - nfwf_pacific_northwest_threat.zip
-      - nfwf_pacific_northwest_aquatic.zip
-      - nfwf_pacific_northwest_terrestrial.zip
-      - nfwf_pacific_northwest_hubs.zip
-      - nfwf_pacific_northwest_asset_inputs.zip
-      - nfwf_pacific_northwest_threat_inputs.zip
+      - CONUS_TerrestrialIndex.tif
 
-  - name: nfwf_all_fish_wildlife
+  - name: nfwf_conus_asset_criticalfacilities_inputs
     input_files:
-      - nfwf_all_aquatic.zip
-      - nfwf_all_terrestrial.zip
+      - CONUS_CritFac.tif
 
-  - name: nfwf_north_atlantic_fish_wildlife
+  - name: nfwf_conus_asset_criticalinfrastructure_inputs
     input_files:
-      - nfwf_north_atlantic_aquatic.zip
-      - nfwf_north_atlantic_terrestrial.zip
+      - CONUS_CritInfra.tif
 
-  - name: nfwf_south_atlantic_fish_wildlife
+  - name: nfwf_conus_asset_populationdensity_inputs
     input_files:
-      - nfwf_south_atlantic_aquatic.zip
-      - nfwf_south_atlantic_terrestrial.zip
+      - CONUS_Population.tif
 
-  - name: nfwf_gulf_fish_wildlife
+  - name: nfwf_conus_asset_socialvulnerability_inputs
     input_files:
-      - nfwf_gulf_aquatic.zip
-      - nfwf_gulf_terrestrial.zip
+      - CONUS_SocVul.tif
 
-  - name: nfwf_california_fish_wildlife
+  - name: nfwf_conus_threat_drainage
     input_files:
-      - nfwf_california_aquatic.zip
-      - nfwf_california_terrestrial.zip
+      - CONUS_Drain.tif
 
-  - name: nfwf_pacific_northwest_fish_wildlife
+  - name: nfwf_conus_threat_erosion
     input_files:
-      - nfwf_pacific_northwest_aquatic.zip
-      - nfwf_pacific_northwest_terrestrial.zip
+      - CONUS_Erosion.tif
+
+  - name: nfwf_conus_threat_floodproneareas
+    input_files:
+      - CONUS_Floodprone.tif
+
+  - name: nfwf_conus_threat_sealevelrise
+    input_files:
+      - CONUS_SLR.tif
+
+  - name: nfwf_conus_threat_stormsurge
+    input_files:
+      - CONUS_StormSurge.tif
+
+  - name: nfwf_conus_threat_geostress
+    input_files:
+      - CONUS_Geostress.tif
+
+  - name: nfwf_conus_threat_slope
+    input_files:
+      - CONUS_Slope.tif

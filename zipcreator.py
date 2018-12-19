@@ -15,7 +15,7 @@ import urllib2
 from zipfile import ZipFile
 
 baseurl = 'https://s3.amazonaws.com/nfwf-tool/'
-basefolder = 'zips'
+basefolder = '/Users/daveism/Downloads/conous-10classes/tifs-for-s3'
 
 def get_config():
   with open('zipcreator.yml') as f:

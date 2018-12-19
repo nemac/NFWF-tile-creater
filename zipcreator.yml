@@ -4,327 +4,47 @@ dataset_bucket: nfwf-tool/
 user_shapes_bucket: nfwf-tool-user-shapes
 
 datasets:
-  - name: nfwf_all_exposure
+  - name: nfwf_conus_exposure
     input_files:
-      - CA_ExposureIndex_070218.tif
-      - Gulf_ExposureIndex_062018.tif
-      - NA_ExposureIndex_070218.tif
-      - PNW_ExposureIndex_071118.tif
-      - SA_v2_ExposureIndex_071018.tif
+      - CONUS_ExposureIndex.tif
 
-  - name: nfwf_all_asset
+  - name: nfwf_conus_asset
     input_files:
-      - CA_AssetIndex_111317.tif
-      - Gulf_AssetIndex_100317.tif
-      - NA_AssetIndex_100217.tif
-      - PNW_AssetIndex_040618.tif
-      - SA_v2_AssetIndex_053118.tif
+      - CONUS_AssetIndex.tif
 
-  - name: nfwf_all_threat
+  - name: nfwf_conus_threat
     input_files:
-      - CA_ThreatIndex_070218.tif
-      - Gulf_ThreatIndex_062018.tif
-      - NA_ThreatIndex_070218.tif
-      - PNW_ThreatIndex_071118.tif
-      - SA_v2_ThreatIndex_071018.tif
+      - CONUS_ThreatIndex.tif
 
-  - name: nfwf_all_aquatic
+  - name: nfwf_conus_aquatic
     input_files:
-      - CA_HUC10_AquaticIndex_071018.tif
-      - Gulf_HUC10_AquaticIndex_070918.tif
-      - NA_HUC10_AquaticIndex_070918_2.tif
-      - PNW_HUC10_AquaticIndex_071018.tif
-      - SA_v2_AquaticIndex_053118.tif
+      - CONUS_AquaticIndex.tif
 
-  - name: nfwf_all_terrestrial
+  - name: nfwf_conus_terrestrial
     input_files:
-      - CA_HUC10_TerrestrialIndex_071018.tif
-      - Gulf_HUC10_TerrestrialIndex_070918.tif
-      - NA_HUC10_TerrestrialIndex_070918.tif
-      - PNW_HUC10_TerrestrialIndex_071018.tif
-      - SA_v2_TerrestrialIndex_053118.tif
+      - CONUS_TerrestrialIndex.tif
 
-  - name: nfwf_all_hubs
-    input_files:
-      - WestCoastHubs_081718.tif
-      - EastCoastHubs_081718.tif
+  # - name: nfwf_conus_hubs
+  #   input_files:
+  #     - WestCoastHubs_081718.tif
+  #     - EastCoastHubs_081718.tif
 
-  - name: nfwf_all_asset_inputs
+  - name: nfwf_conus_asset_inputs
     folder: asset-inputs
     input_files:
-      - CA_CritInfra_Shift_111317.tif
-      - Gulf_CritInfra_shift_100317.tif
-      - NA_CriticalInfrastructure_100217.tif
-      - PNW_CritInfrastructure_shift_040618.tif
-      - SA_v2_CritInfrastructure_shift_053118.tif
-      - CA_CriticalFacilities_shift_102617.tif
-      - Gulf_CritFac5_shift_091817.tif
-      - NA_CritFac_Recl5.tif
-      - PNW_CriticalFacilities_shift.tif
-      - SA_v2_CriticalFacilities_shift_053018.tif
-      - CA_PopDensity_shift_071117.tif
-      - Gulf_PopDensity_shift_061517.tif
-      - NA_CPopDens.tif
-      - PNW_PopDensity_shift_031918.tif
-      - SA_v2_PopDensity_shift_053018.tif
-      - CA_SocVuln_shift_102617.tif
-      - Gulf_SoVl_050917.tif
-      - NA_SoVl_shift.tif
-      - PNW_SocVulnerability_shift_031918.tif
-      - SA_v2_SocVuln_shift_053018.tif
+      - CONUS_CritFac.tif
+      - CONUS_CritInfra.tif
+      - CONUS_Population.tif
+      - CONUS_SocVul.tif
 
-  - name: nfwf_all_threat_inputs
+  - name: nfwf_conus_threat_inputs
     folder: threat-inputs
     input_files:
-      - CA_DrainageDev_shift_021318.tif
-      - Gulf_DrainageDev_Reclass_062018.tif
-      - NA_DrainDev_Reclass_070218.tif
-      - PNW_DrainDev_Reclass_NEW.tif
-      - SA_v2_DrainDev_shift_071018.tif
-      - CA_ErosionB_shift_051018.tif
-      - Gulf_ErosionB_shift_051018.tif
-      - NA_ErosionB_050817.tif
-      - PNW_ErosionB_shift_051018.tif
-      - SA_v2_ErosionB_shift_053018.tif
-      - CA_FloodproneAreas_shift_071417.tif
-      - Gulf_Floodprone_shift_062217.tif
-      - NA_Floodprone_5_8_17.tif
-      - PNW_FloodproneAreas_shift_041118.tif
-      - SA_v2_FloodproneAreas_shift_053018.tif
-      - CA_Geostress_shift_051118.tif
-      - Gulf_Geostress_shift_051118.tif
-      - NA_geostress_050818.tif
-      - PNW_Geostress_shift_051118.tif
-      - CA_SLR_shift_071717.tif
-      - Gulf_SLRshift.tif
-      - NA_SLR_5_8_17.tif
-      - PNW_SLR_shift_041318.tif
-      - SA_v2_SLR_shift_053018.tif
-      - CA_Slope_Shift_071117.tif
-      - Gulf_Slope_050917.tif
-      - NA_Slope_5_8_17.tif
-      - PNW_Slope_shift_031918.tif
-      - SA_v2_Slope_shift_053018.tif
-      - Gulf_StormSurge_shift_121117.tif
-      - NA_StormSurge_shift_121117.tif
-      - SA_v2_StormSurge_shift_053018.tif
-
-
-  - name: nfwf_north_atlantic_exposure
-    input_files:
-      - NA_ExposureIndex_070218.tif
-
-  - name: nfwf_north_atlantic_asset
-    input_files:
-      - NA_AssetIndex_100217.tif
-
-  - name: nfwf_north_atlantic_threat
-    input_files:
-      - NA_ThreatIndex_070218.tif
-
-  - name: nfwf_north_atlantic_aquatic
-    input_files:
-      - NA_HUC10_AquaticIndex_070918_2.tif
-
-  - name: nfwf_north_atlantic_terrestrial
-    input_files:
-      - NA_HUC10_TerrestrialIndex_070918.tif
-
-  - name: nfwf_north_atlantic_hubs
-    input_files:
-      - EastCoastHubs_081718.tif
-
-  - name: nfwf_north_atlantic_asset_inputs
-    folder: asset-inputs
-    input_files:
-      - NA_CriticalInfrastructure_100217.tif
-      - NA_CritFac_Recl5.tif
-      - NA_CPopDens.tif
-      - NA_SoVl_shift.tif
-
-  - name: nfwf_north_atlantic_threat_inputs
-    folder: threat-inputs
-    input_files:
-      - NA_DrainDev_Reclass_070218.tif
-      - NA_ErosionB_050817.tif
-      - NA_Floodprone_5_8_17.tif
-      - NA_geostress_050818.tif
-      - NA_SLR_5_8_17.tif
-      - NA_Slope_5_8_17.tif
-      - NA_StormSurge_shift_121117.tif
-
-
-
-  - name: nfwf_south_atlantic_exposure
-    input_files:
-      - SA_v2_ExposureIndex_071018.tif
-
-  - name: nfwf_south_atlantic_asset
-    input_files:
-      - SA_v2_AssetIndex_053118.tif
-
-  - name: nfwf_south_atlantic_threat
-    input_files:
-      - SA_v2_ThreatIndex_071018.tif
-
-  - name: nfwf_south_atlantic_aquatic
-    input_files:
-      - SA_v2_AquaticIndex_053118.tif
-
-  - name: nfwf_south_atlantic_terrestrial
-    input_files:
-      - SA_v2_TerrestrialIndex_053118.tif
-
-  - name: nfwf_south_atlantic_hubs
-    input_files:
-      - EastCoastHubs_081718.tif
-
-  - name: nfwf_south_atlantic_asset_inputs
-    folder: asset-inputs
-    input_files:
-      - SA_v2_CritInfrastructure_shift_053118.tif
-      - SA_v2_CriticalFacilities_shift_053018.tif
-      - SA_v2_PopDensity_shift_053018.tif
-      - SA_v2_SocVuln_shift_053018.tif
-
-  - name: nfwf_south_atlantic_threat_inputs
-    folder: threat-inputs
-    input_files:
-      - SA_v2_DrainDev_shift_071018.tif
-      - SA_v2_ErosionB_shift_053018.tif
-      - SA_v2_FloodproneAreas_shift_053018.tif
-      - SA_v2_SLR_shift_053018.tif
-      - SA_v2_Slope_shift_053018.tif
-      - SA_v2_StormSurge_shift_053018.tif
-
-
-  - name: nfwf_gulf_exposure
-    input_files:
-      - Gulf_ExposureIndex_062018.tif
-
-  - name: nfwf_gulf_asset
-    input_files:
-      - Gulf_AssetIndex_100317.tif
-
-  - name: nfwf_gulf_threat
-    input_files:
-      - Gulf_ThreatIndex_062018.tif
-
-  - name: nfwf_gulf_aquatic
-    input_files:
-      - Gulf_HUC10_AquaticIndex_070918.tif
-
-  - name: nfwf_gulf_terrestrial
-    input_files:
-      - Gulf_HUC10_TerrestrialIndex_070918.tif
-
-  - name: nfwf_gulf_hubs
-    input_files:
-      - EastCoastHubs_081718.tif
-
-  - name: nfwf_gulf_asset_inputs
-    folder: asset-inputs
-    input_files:
-      - Gulf_CritInfra_shift_100317.tif
-      - Gulf_CritFac5_shift_091817.tif
-      - Gulf_PopDensity_shift_061517.tif
-      - Gulf_SoVl_050917.tif
-
-  - name: nfwf_gulf_threat_inputs
-    folder: threat-inputs
-    input_files:
-      - Gulf_DrainageDev_Reclass_062018.tif
-      - Gulf_ErosionB_shift_051018.tif
-      - NA_ErosionB_050817.tif
-      - Gulf_Floodprone_shift_062217.tif
-      - Gulf_Geostress_shift_051118.tif
-      - Gulf_SLRshift.tif
-      - Gulf_Slope_050917.tif
-      - Gulf_StormSurge_shift_121117.tif
-
-
-
-  - name: nfwf_california_exposure
-    input_files:
-      - CA_ExposureIndex_070218.tif
-
-  - name: nfwf_california_asset
-    input_files:
-      - CA_AssetIndex_111317.tif
-
-  - name: nfwf_california_threat
-    input_files:
-      - CA_ThreatIndex_070218.tif
-
-  - name: nfwf_california_aquatic
-    input_files:
-      - CA_HUC10_AquaticIndex_071018.tif
-
-  - name: nfwf_california_terrestrial
-    input_files:
-      - CA_HUC10_TerrestrialIndex_071018.tif
-
-  - name: nfwf_california_hubs
-    input_files:
-      - WestCoastHubs_081718.tif
-
-  - name: nfwf_california_asset_inputs
-    folder: asset-inputs
-    input_files:
-      - CA_CritInfra_Shift_111317.tif
-      - CA_CriticalFacilities_shift_102617.tif
-      - CA_PopDensity_shift_071117.tif
-      - CA_SocVuln_shift_102617.tif
-
-  - name: nfwf_california_threat_inputs
-    folder: threat-inputs
-    input_files:
-      - CA_DrainageDev_shift_021318.tif
-      - CA_ErosionB_shift_051018.tif
-      - CA_FloodproneAreas_shift_071417.tif
-      - CA_Geostress_shift_051118.tif
-      - CA_SLR_shift_071717.tif
-      - CA_Slope_Shift_071117.tif
-
-
-  - name: nfwf_pacific_northwest_exposure
-    input_files:
-      - PNW_ExposureIndex_071118.tif
-
-  - name: nfwf_pacific_northwest_asset
-    input_files:
-      - PNW_AssetIndex_040618.tif
-
-  - name: nfwf_pacific_northwest_threat
-    input_files:
-      - PNW_ThreatIndex_071118.tif
-
-  - name: nfwf_pacific_northwest_aquatic
-    input_files:
-      - PNW_HUC10_AquaticIndex_071018.tif
-
-  - name: nfwf_pacific_northwest_terrestrial
-    input_files:
-      - PNW_HUC10_TerrestrialIndex_071018.tif
-
-  - name: nfwf_pacific_northwest_hubs
-    input_files:
-      - WestCoastHubs_081718.tif
-
-  - name: nfwf_pacific_northwest_asset_inputs
-    folder: asset-inputs
-    input_files:
-      - PNW_CritInfrastructure_shift_040618.tif
-      - PNW_CriticalFacilities_shift.tif
-      - PNW_PopDensity_shift_031918.tif
-      - PNW_SocVulnerability_shift_031918.tif
-
-  - name: nfwf_pacific_northwest_threat_inputs
-    folder: threat-inputs
-    input_files:
-      - PNW_DrainDev_Reclass_NEW.tif
-      - PNW_ErosionB_shift_051018.tif
-      - PNW_FloodproneAreas_shift_041118.tif
-      - PNW_Geostress_shift_051118.tif
-      - PNW_SLR_shift_041318.tif
-      - PNW_Slope_shift_031918.tif
+      - CONUS_Drain.tif
+      - CONUS_Erosion.tif
+      - CONUS_ExposureIndex.tif
+      - CONUS_Floodprone.tif
+      - CONUS_Geostress.tif
+      - CONUS_SLR.tif
+      - CONUS_Slope.tif
+      - CONUS_StormSurge.tif
