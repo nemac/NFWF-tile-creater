@@ -4,6 +4,10 @@ dataset_bucket: nfwf-tool/
 user_shapes_bucket: nfwf-tool-user-shapes
 
 datasets:
+  - name: nfwf_conus_resiliencehubs
+    input_files:
+      - CONUS_ResilienceHubs.tif
+
   - name: nfwf_conus_exposure
     input_files:
       - CONUS_ExposureIndex.tif

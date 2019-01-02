@@ -3,6 +3,10 @@ zips:
   #   input_files:
   #     - nfwf_conus_hubs.tif
 
+  - name: nfwf_conus_resiliencehubs
+    input_files:
+      - CONUS_ResilienceHubs.tif
+      
   - name: nfwf_conus_exposure
     input_files:
       - CONUS_ExposureIndex.tif

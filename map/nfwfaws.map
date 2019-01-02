@@ -87,7 +87,7 @@ MAP
     TYPE     RASTER
     DUMP     TRUE
     STATUS   OFF
-    DATA     /tiledata/source/nfwf_hubs.tif
+    DATA     /tiledata/source/CONUS_ResilienceHubs_121918.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
     CLASS
