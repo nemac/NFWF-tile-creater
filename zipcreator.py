@@ -13,6 +13,7 @@ import yaml
 import sys
 import urllib2
 from zipfile import ZipFile
+from os.path import basename
 
 baseurl = 'https://s3.amazonaws.com/nfwf-tool/'
 basefolder = '/Users/daveism/Downloads/conous-10classes/tifs-for-s3'
@@ -48,8 +49,8 @@ def zipalls():
         with ZipFile(zipnamepath,'w') as zip:
             for filetobeziped in zipfiles:
                 filetobezipedpath = os.path.join(basefolder, filetobeziped)
-                print('  zipping ' + filetobezipedpath )
-                zip.write(filetobezipedpath)
+                print('  zipping ' + basename(filetobezipedpath) )
+                zip.write(filetobezipedpath, basename(filetobezipedpath))
 
         print('')
 
@@ -99,8 +100,8 @@ def zipfile():
       with ZipFile(zipnamepath,'w') as zip:
           for filetobeziped in zipfiles:
               filetobezipedpath = os.path.join(basefolder, filetobeziped)
-              print('  zipping ' + filetobezipedpath )
-              zip.write(filetobezipedpath)
+              print('  zipping ' + basename(filetobezipedpath) )
+              zip.write(filetobezipedpath, basename(filetobezipedpath))
 
       for filetobeziped in zipfiles:
           filetobezipedpath = os.path.join(basefolder, filetobeziped)
