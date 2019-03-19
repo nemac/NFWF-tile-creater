@@ -436,6 +436,131 @@
   </source>
 
 
+  <tileset name="TargetedWatershedHubsTiles">
+    <metadata>
+      <title>TargetedWatershedHubsTiles</title>
+    </metadata>
+    <source>TargetedWatershedHubsTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedHubsTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedHubsTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedExposureTiles">
+    <metadata>
+      <title>TargetedWatershedExposureTiles</title>
+    </metadata>
+    <source>TargetedWatershedExposureTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedExposureTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedExposureTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedAssetTiles">
+    <metadata>
+      <title>TargetedWatershedAssetTiles</title>
+    </metadata>
+    <source>TargetedWatershedAssetTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedAssetTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedAssetTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedThreatTiles">
+    <metadata>
+      <title>TargetedWatershedThreatTiles</title>
+    </metadata>
+    <source>TargetedWatershedThreatTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedThreatTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedThreatTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedFishandWildlifeTiles">
+    <metadata>
+      <title>TargetedWatershedFishandWildlifeTiles</title>
+    </metadata>
+    <source>TargetedWatershedFishandWildlifeTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedFishandWildlifeTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedFishandWildlifeTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf.map</url>
+    </http>
+  </source>
+
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>
   </service>

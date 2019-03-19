@@ -1277,4 +1277,331 @@ MAP
     END  # end METADATA
   END # end LAYER
 
+  LAYER
+    NAME TargetedWatershedHubsTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     /tiledata/source/TargetedWatershedHubs.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 255 197 0
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 242 160 0
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 227 121 0
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 211 81 0
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 194 21 0
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "TargetedWatershedHubs"
+      "wms_abstract"          "TargetedWatershedHubs"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME TargetedWatershedExposureTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     /tiledata/source/TargetedWatershedExposure.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 31 110 110
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 146 170 140
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 245 233 169
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 172 137 92
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 99 51 25
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "TargetedWatershedExposure"
+      "wms_abstract"          "TargetedWatershedExposure"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME TargetedWatershedFishandWildlifeTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     /tiledata/source/TargetedWatershedFishandWildlife.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 238 231 248
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 230 187 206
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 219 144 166
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 175 98 168
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 126 51 168
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "TargetedWatershedFishandWildlife"
+      "wms_abstract"          "TargetedWatershedFishandWildlife"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME TargetedWatershedAssetTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     /tiledata/source/TargetedWatershedAsset.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 182 237 240
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 130 188 234
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 54 141 227
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 46 79 186
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 9 9 145
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "TargetedWatershedAsset"
+      "wms_abstract"          "TargetedWatershedAsset"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME TargetedWatershedThreatTiles
+    PROJECTION
+      "proj=aea"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "x_0=0"
+      "y_0=0"
+      "ellps=GRS80"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+    TYPE     RASTER
+    STATUS   OFF
+    DATA     /tiledata/source/TargetedWatershedThreat.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      NAME "Low"
+      STYLE
+        COLOR 255 235 214
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      NAME ""
+      STYLE
+        COLOR 245 188 161
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      NAME ""
+      STYLE
+        COLOR 232 142 110
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      NAME ""
+      STYLE
+        COLOR 216 91 61
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      NAME "High"
+      STYLE
+        COLOR 196 10 10
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "TargetedWatershedThreat"
+      "wms_abstract"          "TargetedWatershedThreat"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+
+
 END # end MAP
