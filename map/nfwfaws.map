@@ -1294,7 +1294,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/TargetedWatershedHubs.tif
+    DATA     /tiledata/source/TargetedWatershedHubs8.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -1359,7 +1359,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/TargetedWatershedExposure.tif
+    DATA     /tiledata/source/TargetedWatershedExposure8.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -1424,7 +1424,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/TargetedWatershedFishandWildlife.tif
+    DATA     /tiledata/source/TargetedWatershedFishandWildlife8.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -1489,7 +1489,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/TargetedWatershedAsset.tif
+    DATA     /tiledata/source/TargetedWatershedAsset8.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
@@ -1554,7 +1554,7 @@ MAP
     END
     TYPE     RASTER
     STATUS   OFF
-    DATA     /tiledata/source/TargetedWatershedThreat.tif
+    DATA     /tiledata/source/TargetedWatershedThreat8.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
 
