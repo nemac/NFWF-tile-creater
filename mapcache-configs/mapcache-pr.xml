@@ -2,6 +2,31 @@
 <mapcache>
 
 
+  <source name="PR_AssetsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_AssetsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_AssetsIndexTiles">
+    <metadata>
+      <title>PR_AssetsIndexTiles</title>
+    </metadata>
+    <source>PR_AssetsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
 
   <source name="PR_CombinedWildlife" type="wms">
     <getmap>
@@ -13,7 +38,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -39,7 +64,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -65,7 +90,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -85,39 +110,13 @@
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PRExposureIndexTiles</LAYERS>
-        <TRANSPARENT>TRUE</TRANSPARENT>
-      </params>
-    </getmap>
-
-    <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
-    </http>
-  </source>
-
-  <tileset name="PR_ErosionIndexTiles">
-    <metadata>
-      <title>PR_ErosionIndexTiles</title>
-    </metadata>
-    <source>PR_ErosionIndexTiles</source>
-    <cache>agolCompatible</cache>
-    <format>PNG</format>
-    <grid>GoogleMapsCompatible</grid>
-    <metatile>1 1</metatile>
-    <expires>1</expires>
-  </tileset>
-
-  <source name="PR_ErosionIndexTiles" type="wms">
-    <getmap>
-      <params>
-        <FORMAT>image/png</FORMAT>
         <LAYERS>PR_ErosionIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -143,7 +142,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -169,7 +168,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -195,7 +194,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -221,7 +220,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -247,7 +246,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -273,7 +272,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -299,7 +298,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -325,7 +324,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -351,7 +350,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -377,7 +376,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
@@ -403,7 +402,7 @@
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
     </http>
   </source>
 
