@@ -435,7 +435,6 @@
     </http>
   </source>
 
-
   <tileset name="TargetedWatershedHubsTiles">
     <metadata>
       <title>TargetedWatershedHubsTiles</title>
