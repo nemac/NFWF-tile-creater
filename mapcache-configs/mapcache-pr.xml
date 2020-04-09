@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+
+
+  <source name="PR_CombinedWildlife" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_CombinedWildlife</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_CombinedWildlife">
+    <metadata>
+      <title>PR_CombinedWildlife</title>
+    </metadata>
+    <source>PR_CombinedWildlife</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_CriticalFacilities" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_CriticalFacilities</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_CriticalFacilities">
+    <metadata>
+      <title>PR_CriticalFacilities</title>
+    </metadata>
+    <source>PR_CriticalFacilities</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_CriticalInfrastructure" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_CriticalInfrastructure</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_CriticalInfrastructure">
+    <metadata>
+      <title>PR_CriticalInfrastructure</title>
+    </metadata>
+    <source>PR_CriticalInfrastructure</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PRExposureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_ErosionIndexTiles">
+    <metadata>
+      <title>PR_ErosionIndexTiles</title>
+    </metadata>
+    <source>PR_ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_ErosionIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_ErosionIndexTiles">
+    <metadata>
+      <title>PR_ErosionIndexTiles</title>
+    </metadata>
+    <source>PR_ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_FloodProneAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_FloodProneAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_FloodProneAreasIndexTiles">
+    <metadata>
+      <title>PR_FloodProneAreasIndexTiles</title>
+    </metadata>
+    <source>PR_FloodProneAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_DraingeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_DraingeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_DraingeIndexTiles">
+    <metadata>
+      <title>PR_DraingeIndexTiles</title>
+    </metadata>
+    <source>PR_DraingeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_LandslideIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_LandslideIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_LandslideIndexTiles">
+    <metadata>
+      <title>PR_LandslideIndexTiles</title>
+    </metadata>
+    <source>PR_LandslideIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_SlopeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_SlopeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_SlopeIndexTiles">
+    <metadata>
+      <title>PR_SlopeIndexTiles</title>
+    </metadata>
+    <source>PR_SlopeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_AquaticIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_AquaticIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_AquaticIndexTiles">
+    <metadata>
+      <title>PR_AquaticIndexTiles</title>
+    </metadata>
+    <source>PR_AquaticIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_SLRIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_SLRIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_SLRIndexTiles">
+    <metadata>
+      <title>PR_SLRIndexTiles</title>
+    </metadata>
+    <source>PR_SLRIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_SocVulnIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_SocVulnIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_SocVulnIndexTiles">
+    <metadata>
+      <title>PR_SocVulnIndexTiles</title>
+    </metadata>
+    <source>PR_SocVulnIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_StormSurgeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_StormSurgeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_StormSurgeIndexTiles">
+    <metadata>
+      <title>PR_StormSurgeIndexTiles</title>
+    </metadata>
+    <source>PR_StormSurgeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_TerrestrialIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_TerrestrialIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_TerrestrialIndexTiles">
+    <metadata>
+      <title>PR_TerrestrialIndexTiles</title>
+    </metadata>
+    <source>PR_TerrestrialIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_ThreatsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_ThreatsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_ThreatsIndexTiles">
+    <metadata>
+      <title>PR_ThreatsIndexTiles</title>
+    </metadata>
+    <source>PR_ThreatsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_TsunamiIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_TsunamiIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-pr.map</url>
+    </http>
+  </source>
+
+  <tileset name="PR_TsunamiIndexTiles">
+    <metadata>
+      <title>PR_TsunamiIndexTiles</title>
+    </metadata>
+    <source>PR_TsunamiIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>

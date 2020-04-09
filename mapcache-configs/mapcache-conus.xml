@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+  <source name="ExposureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>ExposureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="ExposureIndexTiles">
+    <metadata>
+      <title>ExposureIndexTiles</title>
+    </metadata>
+    <source>ExposureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AssetsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AssetsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="AssetsIndexTiles">
+    <metadata>
+      <title>AssetsIndexTiles</title>
+    </metadata>
+    <source>AssetsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <format name="PNG_BEST" type ="PNG">
+    <compression>fast</compression>
+  </format>
+
+  <tileset name="HubsIndexTiles">
+    <metadata>
+      <title>HubsIndexTiles</title>
+    </metadata>
+    <source>HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+
+  <tileset name="ThreatsIndexTiles">
+    <metadata>
+      <title>ThreatsIndexTiles</title>
+    </metadata>
+    <source>ThreatsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="ThreatsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>ThreatsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="AquaticIndexTiles">
+    <metadata>
+      <title>AquaticIndexTiles</title>
+    </metadata>
+    <source>AquaticIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AquaticIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AquaticIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="TerrestrialIndexTiles">
+    <metadata>
+      <title>TerrestrialIndexTiles</title>
+    </metadata>
+    <source>TerrestrialIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TerrestrialIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TerrestrialIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="CriticalFacilitiesIndexTiles">
+    <metadata>
+      <title>CriticalFacilitiesIndexTiles</title>
+    </metadata>
+    <source>CriticalFacilitiesIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="CriticalFacilitiesIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CriticalFacilitiesIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="CriticalInfrastructureIndexTiles">
+    <metadata>
+      <title>CriticalInfrastructureIndexTiles</title>
+    </metadata>
+    <source>CriticalInfrastructureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="CriticalInfrastructureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CriticalInfrastructureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="PopDensityIndexTiles">
+    <metadata>
+      <title>PopDensityIndexTiles</title>
+    </metadata>
+    <source>PopDensityIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PopDensityIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PopDensityIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="SocVulnIndexTiles">
+    <metadata>
+      <title>SocVulnIndexTiles</title>
+    </metadata>
+    <source>SocVulnIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="SocVulnIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>SocVulnIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+
+  <tileset name="DraingeIndexTiles">
+    <metadata>
+      <title>DraingeIndexTiles</title>
+    </metadata>
+    <source>DraingeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="DraingeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>DraingeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="ErosionIndexTiles">
+    <metadata>
+      <title>ErosionIndexTiles</title>
+    </metadata>
+    <source>ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>ErosionIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="FloodProneAreasIndexTiles">
+    <metadata>
+      <title>FloodProneAreasIndexTiles</title>
+    </metadata>
+    <source>FloodProneAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="FloodProneAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>FloodProneAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="GeoStressIndexTiles">
+    <metadata>
+      <title>GeoStressIndexTiles</title>
+    </metadata>
+    <source>GeoStressIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GeoStressIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GeoStressIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="SLRIndexTiles">
+    <metadata>
+      <title>SLRIndexTiles</title>
+    </metadata>
+    <source>SLRIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="SLRIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>SLRIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="SlopeIndexTiles">
+    <metadata>
+      <title>SlopeIndexTiles</title>
+    </metadata>
+    <source>SlopeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="SlopeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>SlopeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="StormSurgeIndexTiles">
+    <metadata>
+      <title>StormSurgeIndexTiles</title>
+    </metadata>
+    <source>StormSurgeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="StormSurgeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>StormSurgeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+
+  <tileset name="TargetedWatershedHubsTiles">
+    <metadata>
+      <title>TargetedWatershedHubsTiles</title>
+    </metadata>
+    <source>TargetedWatershedHubsTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedHubsTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedHubsTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedExposureTiles">
+    <metadata>
+      <title>TargetedWatershedExposureTiles</title>
+    </metadata>
+    <source>TargetedWatershedExposureTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedExposureTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedExposureTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedAssetTiles">
+    <metadata>
+      <title>TargetedWatershedAssetTiles</title>
+    </metadata>
+    <source>TargetedWatershedAssetTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedAssetTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedAssetTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedThreatTiles">
+    <metadata>
+      <title>TargetedWatershedThreatTiles</title>
+    </metadata>
+    <source>TargetedWatershedThreatTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedThreatTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedThreatTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="TargetedWatershedFishandWildlifeTiles">
+    <metadata>
+      <title>TargetedWatershedFishandWildlifeTiles</title>
+    </metadata>
+    <source>TargetedWatershedFishandWildlifeTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="TargetedWatershedFishandWildlifeTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>TargetedWatershedFishandWildlifeTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>

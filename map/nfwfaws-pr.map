@@ -1,0 +1,1280 @@
+MAP
+  # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+  # of the two lines below to enable this logging:
+  #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+  #DEBUG 5
+
+  # all temp files get prefixed with this string
+  NAME ms_nfwf
+
+  #jdm:added to accomodate map layers
+  #see http://trac.osgeo.org/mapserver/ticket/3055
+  MAXSIZE 3072
+
+  # background color of image if transparency
+  # is not requested
+  IMAGECOLOR 255 255 255
+
+  # default output image dimensions
+  SIZE 600 400
+
+  # always returns a map
+  STATUS ON
+
+  # set top level projection
+  PROJECTION
+    "init=epsg:3857"
+  END
+
+  # image format options
+  OUTPUTFORMAT
+    NAME "PNG"
+    DRIVER "GDAL/PNG"
+    MIMETYPE "image/png"
+    IMAGEMODE "RGB"
+    EXTENSION "png"
+  END
+
+  # minx miny maxx maxy
+  EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+  # # add def pointers for symbols
+  SYMBOLSET symbolset.txt
+  # FONTSET   "./fonts/fonts.list"
+
+  # Start of web interface definition
+  WEB
+
+    IMAGEPATH '/tmp/'
+    IMAGEURL '/tmp/'
+
+    HEADER "./templates/query_header.html"
+    FOOTER "./templates/query_footer.html"
+    TEMPLATE 'http://someurl/somescript.cgi?mapext=[mapext]'
+
+    METADATA
+      "ows_enable_request"     "*"
+      "wms_title"              "NEMAC NFWF WMS"
+      "wms_abstract"           "NEMAC NFWF WMS"
+      "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+      "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+      "wms_feature_info_mime_type" "text/plain"
+      "wms_feature_info_mime_type" "text/html"
+    END
+  END
+
+  # set defaults for GetLegendGraphic requests
+  LEGEND
+    KEYSIZE 30 20
+    STATUS on
+  END
+
+  LAYER
+    NAME "PR_AssetsIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_AssetIndex_10class_021020_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 182 237 240
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 152 210 237
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 124 187 235
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 92 163 230
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME ""
+        STYLE
+          COLOR 54 141 227
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        NAME ""
+        STYLE
+          COLOR 33 118 217
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        NAME ""
+        STYLE
+          COLOR 34 89 199
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        NAME ""
+        STYLE
+          COLOR 29 62 181
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        NAME ""
+        STYLE
+          COLOR 23 39 163
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        NAME "High"
+        STYLE
+          COLOR 9 9 145
+        END
+      END
+
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_AssetsIndexTiles"
+      "wms_abstract"          "PR_AssetsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+
+  LAYER
+    NAME "PR_CombinedWildlifeIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CombinedWildlife_6class_040320.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 238 231 248
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 233 187 203
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 219 144 166
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 210 124 153
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 183 82 138
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        NAME "High"
+        STYLE
+          COLOR 126 51 168
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_CombinedWildlifeIndexTiles"
+      "wms_abstract"          "PR_CombinedWildlifeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_CriticalFacilitiesIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalFacilities_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME "Low"
+        STYLE
+          COLOR 158 187 215 #
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 0 132 168 #
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_CriticalFacilitiesIndexTiles"
+      "wms_abstract"          "PR_CriticalFacilitiesIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_CriticalInfrastructureIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalInfrastructure_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 204 209 210
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 119 176 153
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 53 92 89
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 205 177 109
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 189 125 70
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        NAME "High"
+        STYLE
+          COLOR 181 72 62
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        NAME "High"
+        STYLE
+          COLOR 168 43 65
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        NAME "High"
+        STYLE
+          COLOR 123 23 51
+        END
+      END
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_CriticalInfrastructureIndexTiles"
+      "wms_abstract"          "PR_CriticalInfrastructureIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_ExposureIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ExposureIndex_10class_021120_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      NAME "Exposure Index for tileing"
+      EXPRESSION ""
+      COLOR 255 255 255
+    END #end class
+    CLASS
+      NAME "Low"
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 31 110 110
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 61 130 130
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 125 173 156
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 183 212 178
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 233 242 187
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 6)
+      STYLE
+        COLOR 245 233 169
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 7)
+      STYLE
+        COLOR 219 186 122
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 8)
+      STYLE
+        COLOR 176 128 66
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 9)
+      STYLE
+        COLOR 148 87 28
+      END #end style
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION ([pixel] = 10)
+      STYLE
+        COLOR 99 51 25
+      END #end style
+    END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_ExposureIndexTiles"
+      "wms_abstract"          "PR_ExposureIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_ErosionIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ErodibleSoils_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 254 235 162
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME "Medium"
+        STYLE
+          COLOR 254 187 71
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME "Medium"
+        STYLE
+          COLOR 240 120 24
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME "High"
+        STYLE
+          COLOR 184 66 3
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 102 37 6
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_ErosionIndexTiles"
+      "wms_abstract"          "PR_ErosionIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_FloodProneAreasIndexTiles"
+    LAYER
+      NAME "PR_FloodProneAreasIndexTiles"
+      PROJECTION
+        "proj=lcc"
+        "lat_1=18.43333333333333"
+        "lat_2=18.03333333333333"
+        "lat_0=17.83333333333333"
+        "lon_0=-66.43333333333334"
+        "x_0=200000"
+        "y_0=200000"
+        "datum=NAD83"
+        "units=m"
+      END
+        TYPE     RASTER
+        DUMP     TRUE
+        STATUS   OFF
+        DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_FloodproneAreas_v2_clip.tif"
+        HEADER   ./templates/layer_query_header.html
+        TEMPLATE ./templates/layer_query_body.html
+
+        CLASS
+          EXPRESSION ([pixel] = 1)
+          NAME "Low"
+          STYLE
+            COLOR 226 226 239
+          END
+        END
+        CLASS
+          EXPRESSION ([pixel] = 2)
+          NAME "Medium"
+          STYLE
+            COLOR 182 182 216
+          END
+        END
+        CLASS
+          EXPRESSION ([pixel] = 3)
+          NAME "Medium"
+          STYLE
+            COLOR 134 131 189
+          END
+        END
+        CLASS
+          EXPRESSION ([pixel] = 4)
+          NAME "High"
+          STYLE
+            COLOR 97 64 155
+          END
+        END
+        CLASS
+          EXPRESSION ([pixel] = 5)
+          NAME "High"
+          STYLE
+            COLOR 63 0 125
+          END
+        END
+
+      #INCLUDE "cmaps/gapnat.cmap"
+      METADATA
+        "wms_title"             "PR_FloodProneAreasIndexTiles"
+        "wms_abstract"          "PR_FloodProneAreasIndexTiles"
+        "gml_include_items"     "value_0"
+      END  # end METADATA
+    END # end LAYER
+
+  LAYER
+    NAME "PR_DraingeIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Impermeable_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 68 118 4
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME "Medium"
+        STYLE
+          COLOR 119 214 111
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME "Medium"
+        STYLE
+          COLOR 220 233 242
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME "High"
+        STYLE
+          COLOR 117 91 105
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 85 53 85
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_DraingeIndexTiles"
+      "wms_abstract"          "PR_DraingeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_LandslideIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Landslides_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 251 172 185
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME "high"
+        STYLE
+          COLOR 205 35 143
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_LandslideIndexTiles"
+      "wms_abstract"          "PR_LandslideIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_SlopeIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_LowLyingAreas_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 211 238 205
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 152 213 148
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 75 176 98
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 21 127 59
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 0 68 27
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_SlopeIndexTiles"
+      "wms_abstract"          "PR_SlopeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_AquaticIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_MarineIndex_4class.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 205 225 232
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 130 188 209
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 0 126 145
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 0 90 88
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_AquaticIndexTiles"
+      "wms_abstract"          "PR_AquaticIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_SLRIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SLR_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 219 216 234
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 153 185 217
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 64 149 195
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 2 121 118
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 1 70 54
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_SLRIndexTiles"
+      "wms_abstract"          "PR_SLRIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_SocVulnIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SocialVulnerability_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 158 187 215
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 122 142 245
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 67 48 157
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 50 22 105
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 39 11 89
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_SocVulnIndexTiles"
+      "wms_abstract"          "PR_SocVulnIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_StormSurgeIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_StormSurge_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 214 239 179
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 115 200 189
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 36 152 193
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 35 77 160
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "High"
+        STYLE
+          COLOR 8 29 88
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_StormSurgeIndexTiles"
+      "wms_abstract"          "PR_StormSurgeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_TerrestrialIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_TerrestrialIndex_4class.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 255 233 196
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME ""
+        STYLE
+          COLOR 223 200 120
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME ""
+        STYLE
+          COLOR 56 91 35
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME ""
+        STYLE
+          COLOR 0 73 0
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_TerrestrialIndexTiles"
+      "wms_abstract"          "PR_TerrestrialIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_ThreatsIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ThreatIndex_10class_021120_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 255 235 214
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME "Low"
+        STYLE
+          COLOR 247 215 188
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME "Low"
+        STYLE
+          COLOR 240 192 161
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME "Low"
+        STYLE
+          COLOR 235 169 136
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "Low"
+        STYLE
+          COLOR 227 144 111
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        NAME "Low"
+        STYLE
+          COLOR 222 119 91
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        NAME "Low"
+        STYLE
+          COLOR 214 93 69
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        NAME "Medium"
+        STYLE
+          COLOR 209 64 48
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        NAME "Medium"
+        STYLE
+          COLOR 201 37 28
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        NAME "Medium"
+        STYLE
+          COLOR 196 10 10
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_ThreatsIndexTiles"
+      "wms_abstract"          "PR_ThreatsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_TsunamiIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Tsunami_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        NAME "Low"
+        STYLE
+          COLOR 255 235 214
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        NAME "Low"
+        STYLE
+          COLOR 247 215 188
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        NAME "Low"
+        STYLE
+          COLOR 240 192 161
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        NAME "Low"
+        STYLE
+          COLOR 235 169 136
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        NAME "Low"
+        STYLE
+          COLOR 227 144 111
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        NAME "Low"
+        STYLE
+          COLOR 222 119 91
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        NAME "Low"
+        STYLE
+          COLOR 214 93 69
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        NAME "Medium"
+        STYLE
+          COLOR 209 64 48
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        NAME "Medium"
+        STYLE
+          COLOR 201 37 28
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        NAME "Medium"
+        STYLE
+          COLOR 196 10 10
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_TsunamiIndexTiles"
+      "wms_abstract"          "PR_TsunamiIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+END # end MAP
