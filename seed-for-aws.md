@@ -239,7 +239,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CriticalFacili
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CriticalInfrastructureIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -255,7 +254,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityInde
 ### CONUS  examples zoom level 1-10
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcacmapcache-conushe.xml -t CombinedWildlifeIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 13,13 -n 4 -d /usa_coastal_3857.shp &
 ```
 
