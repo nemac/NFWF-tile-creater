@@ -560,6 +560,32 @@
     </http>
   </source>
 
+  <source name="CombinedWildlifeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CombinedWildlifeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-conus.map</url>
+    </http>
+  </source>
+
+  <tileset name="CombinedWildlifeIndexTiles">
+    <metadata>
+      <title>CombinedWildlifeIndexTiles</title>
+    </metadata>
+    <source>CombinedWildlifeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>
   </service>
