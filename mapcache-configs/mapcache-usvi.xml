@@ -2,25 +2,25 @@
 <mapcache>
 
 
-  <source name="PR_AssetsIndexTiles" type="wms">
+  <source name="USVI_AssetsIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_AssetsIndexTiles</LAYERS>
+        <LAYERS>USVI_AssetsIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_AssetsIndexTiles">
+  <tileset name="USVI_AssetsIndexTiles">
     <metadata>
-      <title>PR_AssetsIndexTiles</title>
+      <title>USVI_AssetsIndexTiles</title>
     </metadata>
-    <source>PR_AssetsIndexTiles</source>
+    <source>USVI_AssetsIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -28,25 +28,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_CombinedWildlifeIndexTiles" type="wms">
+  <source name="USVI_CombinedWildlifeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_CombinedWildlifeIndexTiles</LAYERS>
+        <LAYERS>USVI_CombinedWildlifeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_CombinedWildlifeIndexTiles">
+  <tileset name="USVI_CombinedWildlifeIndexTiles">
     <metadata>
-      <title>PR_CombinedWildlifeIndexTiles</title>
+      <title>USVI_CombinedWildlifeIndexTiles</title>
     </metadata>
-    <source>PR_CombinedWildlifeIndexTiles</source>
+    <source>USVI_CombinedWildlifeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -54,25 +54,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_CriticalFacilitiesIndexTiles" type="wms">
+  <source name="USVI_CriticalFacilitiesIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_CriticalFacilitiesIndexTiles</LAYERS>
+        <LAYERS>USVI_CriticalFacilitiesIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_CriticalFacilitiesIndexTiles">
+  <tileset name="USVI_CriticalFacilitiesIndexTiles">
     <metadata>
-      <title>PR_CriticalFacilitiesIndexTiles</title>
+      <title>USVI_CriticalFacilitiesIndexTiles</title>
     </metadata>
-    <source>PR_CriticalFacilitiesIndexTiles</source>
+    <source>USVI_CriticalFacilitiesIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -80,25 +80,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_CriticalInfrastructureIndexTiles" type="wms">
+  <source name="USVI_CriticalInfrastructureIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_CriticalInfrastructureIndexTiles</LAYERS>
+        <LAYERS>USVI_CriticalInfrastructureIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_CriticalInfrastructureIndexTiles">
+  <tileset name="USVI_CriticalInfrastructureIndexTiles">
     <metadata>
-      <title>PR_CriticalInfrastructureIndexTiles</title>
+      <title>USVI_CriticalInfrastructureIndexTiles</title>
     </metadata>
-    <source>PR_CriticalInfrastructureIndexTiles</source>
+    <source>USVI_CriticalInfrastructureIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -106,25 +106,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_ErosionIndexTiles" type="wms">
+  <source name="USVI_ErosionIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_ErosionIndexTiles</LAYERS>
+        <LAYERS>USVI_ErosionIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_ErosionIndexTiles">
+  <tileset name="USVI_ErosionIndexTiles">
     <metadata>
-      <title>PR_ErosionIndexTiles</title>
+      <title>USVI_ErosionIndexTiles</title>
     </metadata>
-    <source>PR_ErosionIndexTiles</source>
+    <source>USVI_ErosionIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -132,25 +132,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_ExposureIndexTiles" type="wms">
+  <source name="USVI_ExposureIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_ExposureIndexTiles</LAYERS>
+        <LAYERS>USVI_ExposureIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_ExposureIndexTiles">
+  <tileset name="USVI_ExposureIndexTiles">
     <metadata>
-      <title>PR_ExposureIndexTiles</title>
+      <title>USVI_ExposureIndexTiles</title>
     </metadata>
-    <source>PR_ExposureIndexTiles</source>
+    <source>USVI_ExposureIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -158,25 +158,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_FloodProneAreasIndexTiles" type="wms">
+  <source name="USVI_FloodProneAreasIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_FloodProneAreasIndexTiles</LAYERS>
+        <LAYERS>USVI_FloodProneAreasIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_FloodProneAreasIndexTiles">
+  <tileset name="USVI_FloodProneAreasIndexTiles">
     <metadata>
-      <title>PR_FloodProneAreasIndexTiles</title>
+      <title>USVI_FloodProneAreasIndexTiles</title>
     </metadata>
-    <source>PR_FloodProneAreasIndexTiles</source>
+    <source>USVI_FloodProneAreasIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -184,25 +184,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_DraingeIndexTiles" type="wms">
+  <source name="USVI_DraingeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_DraingeIndexTiles</LAYERS>
+        <LAYERS>USVI_DraingeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_DraingeIndexTiles">
+  <tileset name="USVI_DraingeIndexTiles">
     <metadata>
-      <title>PR_DraingeIndexTiles</title>
+      <title>USVI_DraingeIndexTiles</title>
     </metadata>
-    <source>PR_DraingeIndexTiles</source>
+    <source>USVI_DraingeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -210,25 +210,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_LandslideIndexTiles" type="wms">
+  <source name="USVI_SlopeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_LandslideIndexTiles</LAYERS>
+        <LAYERS>USVI_SlopeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_LandslideIndexTiles">
+  <tileset name="USVI_SlopeIndexTiles">
     <metadata>
-      <title>PR_LandslideIndexTiles</title>
+      <title>USVI_SlopeIndexTiles</title>
     </metadata>
-    <source>PR_LandslideIndexTiles</source>
+    <source>USVI_SlopeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -236,25 +236,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_SlopeIndexTiles" type="wms">
+  <source name="USVI_AquaticIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_SlopeIndexTiles</LAYERS>
+        <LAYERS>USVI_AquaticIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_SlopeIndexTiles">
+  <tileset name="USVI_AquaticIndexTiles">
     <metadata>
-      <title>PR_SlopeIndexTiles</title>
+      <title>USVI_AquaticIndexTiles</title>
     </metadata>
-    <source>PR_SlopeIndexTiles</source>
+    <source>USVI_AquaticIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -262,25 +262,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_AquaticIndexTiles" type="wms">
+  <source name="USVI_SLRIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_AquaticIndexTiles</LAYERS>
+        <LAYERS>USVI_SLRIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_AquaticIndexTiles">
+  <tileset name="USVI_SLRIndexTiles">
     <metadata>
-      <title>PR_AquaticIndexTiles</title>
+      <title>USVI_SLRIndexTiles</title>
     </metadata>
-    <source>PR_AquaticIndexTiles</source>
+    <source>USVI_SLRIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -288,25 +288,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_SLRIndexTiles" type="wms">
+  <source name="USVI_SocVulnIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_SLRIndexTiles</LAYERS>
+        <LAYERS>USVI_SocVulnIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_SLRIndexTiles">
+  <tileset name="USVI_SocVulnIndexTiles">
     <metadata>
-      <title>PR_SLRIndexTiles</title>
+      <title>USVI_SocVulnIndexTiles</title>
     </metadata>
-    <source>PR_SLRIndexTiles</source>
+    <source>USVI_SocVulnIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -314,25 +314,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_SocVulnIndexTiles" type="wms">
+  <source name="USVI_StormSurgeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_SocVulnIndexTiles</LAYERS>
+        <LAYERS>USVI_StormSurgeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_SocVulnIndexTiles">
+  <tileset name="USVI_StormSurgeIndexTiles">
     <metadata>
-      <title>PR_SocVulnIndexTiles</title>
+      <title>USVI_StormSurgeIndexTiles</title>
     </metadata>
-    <source>PR_SocVulnIndexTiles</source>
+    <source>USVI_StormSurgeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -340,25 +340,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_StormSurgeIndexTiles" type="wms">
+  <source name="USVI_TerrestrialIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_StormSurgeIndexTiles</LAYERS>
+        <LAYERS>USVI_TerrestrialIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_StormSurgeIndexTiles">
+  <tileset name="USVI_TerrestrialIndexTiles">
     <metadata>
-      <title>PR_StormSurgeIndexTiles</title>
+      <title>USVI_TerrestrialIndexTiles</title>
     </metadata>
-    <source>PR_StormSurgeIndexTiles</source>
+    <source>USVI_TerrestrialIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -366,25 +366,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_TerrestrialIndexTiles" type="wms">
+  <source name="USVI_ThreatsIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_TerrestrialIndexTiles</LAYERS>
+        <LAYERS>USVI_ThreatsIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_TerrestrialIndexTiles">
+  <tileset name="USVI_ThreatsIndexTiles">
     <metadata>
-      <title>PR_TerrestrialIndexTiles</title>
+      <title>USVI_ThreatsIndexTiles</title>
     </metadata>
-    <source>PR_TerrestrialIndexTiles</source>
+    <source>USVI_ThreatsIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -392,77 +392,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_ThreatsIndexTiles" type="wms">
+  <source name="USVI_PopDensityIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_ThreatsIndexTiles</LAYERS>
+        <LAYERS>USVI_PopDensityIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
     </http>
   </source>
 
-  <tileset name="PR_ThreatsIndexTiles">
+  <tileset name="USVI_PopDensityIndexTiles">
     <metadata>
-      <title>PR_ThreatsIndexTiles</title>
+      <title>USVI_PopDensityIndexTiles</title>
     </metadata>
-    <source>PR_ThreatsIndexTiles</source>
-    <cache>agolCompatible</cache>
-    <format>PNG</format>
-    <grid>GoogleMapsCompatible</grid>
-    <metatile>1 1</metatile>
-    <expires>1</expires>
-  </tileset>
-
-  <source name="PR_TsunamiIndexTiles" type="wms">
-    <getmap>
-      <params>
-        <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_TsunamiIndexTiles</LAYERS>
-        <TRANSPARENT>TRUE</TRANSPARENT>
-      </params>
-    </getmap>
-
-    <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
-    </http>
-  </source>
-
-  <tileset name="PR_TsunamiIndexTiles">
-    <metadata>
-      <title>PR_TsunamiIndexTiles</title>
-    </metadata>
-    <source>PR_TsunamiIndexTiles</source>
-    <cache>agolCompatible</cache>
-    <format>PNG</format>
-    <grid>GoogleMapsCompatible</grid>
-    <metatile>1 1</metatile>
-    <expires>1</expires>
-  </tileset>
-
-  <source name="PR_PopDensityIndexTiles" type="wms">
-    <getmap>
-      <params>
-        <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_PopDensityIndexTiles</LAYERS>
-        <TRANSPARENT>TRUE</TRANSPARENT>
-      </params>
-    </getmap>
-
-    <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
-    </http>
-  </source>
-
-  <tileset name="PR_PopDensityIndexTiles">
-    <metadata>
-      <title>PR_PopDensityIndexTiles</title>
-    </metadata>
-    <source>PR_PopDensityIndexTiles</source>
+    <source>USVI_PopDensityIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
