@@ -289,20 +289,64 @@ mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedHubsTil
 ### this use the gdal and python container
 ```bsh
 docker run -it -v /tiledata/cache:/cache gdal-python bash
+cd cache
 ./deletetransparenttiles.py TargetedWatershedFishandWildlifeTiles &
 ./deletetransparenttiles.py TargetedWatershedAssetTiles &
 ./deletetransparenttiles.py TargetedWatershedThreatTiles &
 ./deletetransparenttiles.py TargetedWatershedExposureTiles &
 ./deletetransparenttiles.py TargetedWatershedHubsTiles &
+./deletetransparenttiles.py CombinedWildlifeIndexTiles &
+
+./deletetransparenttiles.py USVI_AquaticIndexTiles &
+./deletetransparenttiles.py USVI_AssetsIndexTiles &
+./deletetransparenttiles.py USVI_CombinedWildlifeIndexTiles &
+./deletetransparenttiles.py USVI_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py USVI_CriticalInfrastructureIndexTiles &
+./deletetransparenttiles.py USVI_DraingeIndexTiles &
+./deletetransparenttiles.py USVI_AquaticIndexTiles &
+./deletetransparenttiles.py USVI_ErosionIndexTiles &
+./deletetransparenttiles.py USVI_ExposureIndexTiles &
+./deletetransparenttiles.py USVI_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py USVI_PopDensityIndexTiles &
+./deletetransparenttiles.py USVI_SLRIndexTiles &
+./deletetransparenttiles.py USVI_SlopeIndexTiles &
+./deletetransparenttiles.py USVI_SocVulnIndexTiles &
+./deletetransparenttiles.py USVI_StormSurgeIndexTiles &
+./deletetransparenttiles.py USVI_TerrestrialIndexTiles &
+./deletetransparenttiles.py USVI_ThreatsIndexTiles &
+
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
+from main aws instance Not any of the docker images
 ```bsh
+cd /tiledata/cache
 aws s3 sync TargetedWatershedFishandWildlifeTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedFishandWildlifeTiles  --acl public-read &
 aws s3 sync TargetedWatershedAssetTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedAssetTiles  --acl public-read &
 aws s3 sync TargetedWatershedThreatTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedThreatTiles  --acl public-read &
 aws s3 sync TargetedWatershedExposureTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedExposureTiles  --acl public-read &
 aws s3 sync TargetedWatershedHubsTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedHubsTiles  --acl public-read &
+
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/CombinedWildlifeIndexTiles  --acl public-read &
+
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AssetsIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CriticalInfrastructureIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_DraingeIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ErosionIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ExposureIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_PopDensityIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SLRIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SlopeIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SocVulnIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_StormSurgeIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_TerrestrialIndexTiles --acl public-read &
+aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --acl public-read &
+
 ```
 
 ### CONUS nature serve examples of coping zipped data for s3 download
