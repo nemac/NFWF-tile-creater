@@ -297,6 +297,26 @@ cd cache
 ./deletetransparenttiles.py TargetedWatershedHubsTiles &
 ./deletetransparenttiles.py CombinedWildlifeIndexTiles &
 
+./deletetransparenttiles.py PR_AquaticIndexTiles &
+./deletetransparenttiles.py PR_AssetsIndexTiles &
+./deletetransparenttiles.py PR_CombinedWildlifeIndexTiles &
+./deletetransparenttiles.py PR_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py PR_CriticalInfrastructureIndexTiles &
+./deletetransparenttiles.py PR_DraingeIndexTiles &
+./deletetransparenttiles.py PR_AquaticIndexTiles &
+./deletetransparenttiles.py PR_ErosionIndexTiles &
+./deletetransparenttiles.py PR_ExposureIndexTiles &
+./deletetransparenttiles.py PR_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py PR_PopDensityIndexTiles &
+./deletetransparenttiles.py PR_SLRIndexTiles &
+./deletetransparenttiles.py PR_SlopeIndexTiles &
+./deletetransparenttiles.py PR_SocVulnIndexTiles &
+./deletetransparenttiles.py PR_StormSurgeIndexTiles &
+./deletetransparenttiles.py PR_TerrestrialIndexTiles &
+./deletetransparenttiles.py PR_ThreatsIndexTiles &
+./deletetransparenttiles.py PR_LandslideIndexTiles &
+./deletetransparenttiles.py PR_TsunamiIndexTiles &
+
 ./deletetransparenttiles.py USVI_AquaticIndexTiles &
 ./deletetransparenttiles.py USVI_AssetsIndexTiles &
 ./deletetransparenttiles.py USVI_CombinedWildlifeIndexTiles &
@@ -329,23 +349,43 @@ aws s3 sync TargetedWatershedHubsTiles/ s3://tiles.resilientcoasts.org/TargetedW
 
 aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/CombinedWildlifeIndexTiles  --acl public-read &
 
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AssetsIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CombinedWildlifeIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CriticalFacilitiesIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CriticalInfrastructureIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_DraingeIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ErosionIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ExposureIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_FloodProneAreasIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_PopDensityIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SLRIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SlopeIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SocVulnIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_StormSurgeIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_TerrestrialIndexTiles --acl public-read &
-aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --acl public-read &
+aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
+aws s3 sync PR_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/PR_AssetsIndexTiles --acl public-read &
+aws s3 sync PR_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/PR_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync PR_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/PR_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync PR_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/PR_CriticalInfrastructureIndexTiles --acl public-read &
+aws s3 sync PR_DraingeIndexTiles/ s3://tiles.resilientcoasts.org/PR_DraingeIndexTiles --acl public-read &
+aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
+aws s3 sync PR_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/PR_ErosionIndexTiles --acl public-read &
+aws s3 sync PR_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/PR_ExposureIndexTiles --acl public-read &
+aws s3 sync PR_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/PR_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync PR_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/PR_PopDensityIndexTiles --acl public-read &
+aws s3 sync PR_SLRIndexTiles/ s3://tiles.resilientcoasts.org/PR_SLRIndexTiles --acl public-read &
+aws s3 sync PR_SlopeIndexTiles/ s3://tiles.resilientcoasts.org/PR_SlopeIndexTiles --acl public-read &
+aws s3 sync PR_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/PR_SocVulnIndexTiles --acl public-read &
+aws s3 sync PR_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/PR_StormSurgeIndexTiles --acl public-read &
+aws s3 sync PR_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/PR_TerrestrialIndexTiles --acl public-read &
+aws s3 sync PR_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/PR_ThreatsIndexTiles --acl public-read &
+aws s3 sync PR_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/PR_LandslideIndexTiles --acl public-read &
+aws s3 sync PR_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/PR_TsunamiIndexTiles --acl public-read &
+
+aws s3 sync USVI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
+aws s3 sync USVI_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AssetsIndexTiles --acl public-read &
+aws s3 sync USVI_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync USVI_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync USVI_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/USVI_CriticalInfrastructureIndexTiles --acl public-read &
+aws s3 sync USVI_DraingeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_DraingeIndexTiles --acl public-read &
+aws s3 sync USVI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
+aws s3 sync USVI_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ErosionIndexTiles --acl public-read &
+aws s3 sync USVI_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ExposureIndexTiles --acl public-read &
+aws s3 sync USVI_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/USVI_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync USVI_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/USVI_PopDensityIndexTiles --acl public-read &
+aws s3 sync USVI_SLRIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SLRIndexTiles --acl public-read &
+aws s3 sync USVI_SlopeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SlopeIndexTiles --acl public-read &
+aws s3 sync USVI_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SocVulnIndexTiles --acl public-read &
+aws s3 sync USVI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_StormSurgeIndexTiles --acl public-read &
+aws s3 sync USVI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/USVI_TerrestrialIndexTiles --acl public-read &
+aws s3 sync USVI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --acl public-read &
 
 ```
 
