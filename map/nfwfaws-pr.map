@@ -85,7 +85,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_AssetIndex_10class_021020_clip.tif"
+      DATA     "/tiledata/source/PR_AssetIndex_10class_021020_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -181,7 +181,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_CombinedWildlife_6class_040320.tif"
+      DATA     "/tiledata/source/PR_CombinedWildlife_6class_040320_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -253,7 +253,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_CriticalFacilities_v2_clip.tif"
+      DATA     "/tiledata/source/PR_CriticalFacilities_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -296,7 +296,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_CriticalInfrastructure_v2_clip.tif"
+      DATA     "/tiledata/source/PR_CriticalInfrastructure_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -380,7 +380,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_ExposureIndex_10class_021120_clip.tif"
+      DATA     "/tiledata/source/PR_ExposureIndex_10class_021120_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
     CLASS
@@ -482,7 +482,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_ErodibleSoils_v2_clip.tif"
+      DATA     "/tiledata/source/PR_ErodibleSoils_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -546,7 +546,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_FloodproneAreas_v2_clip.tif"
+      DATA     "/tiledata/source/PR_FloodproneAreas_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -610,7 +610,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_Impermeable_v2_clip.tif"
+      DATA     "/tiledata/source/PR_Impermeable_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -674,7 +674,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_Landslides_v2_clip.tif"
+      DATA     "/tiledata/source/PR_Landslides_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -717,7 +717,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_LowLyingAreas_v2_clip.tif"
+      DATA     "/tiledata/source/PR_LowLyingAreas_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -781,7 +781,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_MarineIndex_4class.tif"
+      DATA     "/tiledata/source/PR_MarineIndex_4class_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -838,7 +838,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_PopulationDensity_v2_clip.tif"
+      DATA     "/tiledata/source/PR_PopulationDensity_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -897,7 +897,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_SLR_v2_clip.tif"
+      DATA     "/tiledata/source/PR_SLR_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -961,7 +961,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_SocialVulnerability_v2_clip.tif"
+      DATA     "/tiledata/source/PR_SocialVulnerability_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1025,7 +1025,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_StormSurge_v2_clip.tif"
+      DATA     "/tiledata/source/PR_StormSurge_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1089,7 +1089,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_TerrestrialIndex_4class.tif"
+      DATA     "/tiledata/source/PR_TerrestrialIndex_4class_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1146,7 +1146,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_ThreatIndex_10class_021120_clip.tif"
+      DATA     "/tiledata/source/PR_ThreatIndex_10class_021120_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1245,7 +1245,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_Tsunami_v2_clip.tif"
+      DATA     "/tiledata/source/PR_Tsunami_v2_clip_8bit.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 

@@ -108,6 +108,42 @@ gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_SocialVulnerability_v2_clip
 gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_StormSurge_v2_clip.tif USVI_StormSurge_v2_clip_8bit.tif -co COMPRESS=LZW &
 gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_TerrestrialIndex_4class.tif USVI_TerrestrialIndex_4class_8bit.tif -co COMPRESS=LZW &
 gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_ThreatIndex_10class_021220_clip.tif USVI_ThreatIndex_10class_021220_clip_8bit.tif -co COMPRESS=LZW &
+
+rm PR_AssetIndex_10class_021020_clip.tif
+rm PR_CombinedWildlife_6class_040320.tif
+rm PR_CriticalFacilities_v2_clip.tif
+rm PR_CriticalInfrastructure_v2_clip.tif
+rm PR_ErodibleSoils_v2_clip.tif
+rm PR_ExposureIndex_10class_021120_clip.tif
+rm PR_FloodproneAreas_v2_clip.tif
+rm PR_Impermeable_v2_clip.tif
+rm PR_Landslides_v2_clip.tif
+rm PR_LowLyingAreas_v2_clip.tif
+rm PR_MarineIndex_4class.tif
+rm PR_PopulationDensity_v2_clip.tif
+rm PR_SLR_v2_clip.tif
+rm PR_SocialVulnerability_v2_clip.tif
+rm PR_StormSurge_v2_clip.tif
+rm PR_TerrestrialIndex_4class.tif
+rm PR_ThreatIndex_10class_021120_clip.tif
+rm PR_Tsunami_v2_clip.tif
+
+rm USVI_AssetIndex_10class_021020_clip.tif
+rm USVI_CombinedWildlife_6class_040320.tif
+rm USVI_CriticalFacilities_v2_clip.tif
+rm USVI_CriticalInfrastructure_v2_clip.tif
+rm USVI_ErodibleSoils_v2_clip.tif
+rm USVI_ExposureIndex_10class_021220_clip.tif
+rm USVI_FloodproneAreas_v2_clip.tif
+rm USVI_Impermeable_v2_clip.tif
+rm USVI_LowLyingAreas_v2_clip.tif
+rm USVI_MarineIndex_4class.tif
+rm USVI_PopulationDensity_v2_clip.tif
+rm USVI_SLR_v2_clip.tif
+rm USVI_SocialVulnerability_v2_clip.tif
+rm USVI_StormSurge_v2_clip.tif
+rm USVI_TerrestrialIndex_4class.tif
+rm USVI_ThreatIndex_10class_021220_clip.tif
 ```
 ## Copy Shapefiles that Limit the area tiles will be created, this helps to significantly decrease processingtime
 If needed: CONSU Shapefile that Limits Tile area, shapefile needs to be in projection 3857
