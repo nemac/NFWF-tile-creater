@@ -204,7 +204,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -226,7 +225,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -249,7 +247,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -271,7 +268,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -294,7 +290,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -316,7 +311,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -339,7 +333,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -361,7 +354,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -459,7 +451,7 @@ cd cache
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
-from main aws instance Not any of the docker images
+from main aws instance Not any of the docker images, delete old tiles if needed and also don't forget to for aws to refresh the could front so the tiles and caches are refreshed immediately.
 ```bsh
 cd /tiledata/cache
 aws s3 sync TargetedWatershedFishandWildlifeTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedFishandWildlifeTiles  --acl public-read &
@@ -469,6 +461,45 @@ aws s3 sync TargetedWatershedExposureTiles/ s3://tiles.resilientcoasts.org/Targe
 aws s3 sync TargetedWatershedHubsTiles/ s3://tiles.resilientcoasts.org/TargetedWatershedHubsTiles  --acl public-read &
 
 aws s3 sync CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/CombinedWildlifeIndexTiles  --acl public-read &
+
+
+aws s3 rm s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_AssetsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_CombinedWildlifeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_CriticalFacilitiesIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_CriticalInfrastructureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_DraingeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_ErosionIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_ExposureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_FloodProneAreasIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_PopDensityIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_SLRIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_SlopeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_SocVulnIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_StormSurgeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_TerrestrialIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_ThreatsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_LandslideIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_TsunamiIndexTiles --recursive --exclude "" &
+
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_AssetsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_CombinedWildlifeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_CriticalFacilitiesIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_CriticalInfrastructureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_DraingeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_ErosionIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_ExposureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_FloodProneAreasIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_PopDensityIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_SLRIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_SlopeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_SocVulnIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_StormSurgeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_TerrestrialIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --recursive --exclude "" &
 
 aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
 aws s3 sync PR_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/PR_AssetsIndexTiles --acl public-read &
@@ -508,6 +539,7 @@ aws s3 sync USVI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_Storm
 aws s3 sync USVI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/USVI_TerrestrialIndexTiles --acl public-read &
 aws s3 sync USVI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --acl public-read &
 
+aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
 
 ### CONUS nature serve examples of coping zipped data for s3 download
