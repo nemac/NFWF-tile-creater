@@ -85,7 +85,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_AssetIndex_10class_021020_clip.tif"
+      DATA     "/tiledata/source/PR_AssetIndex_10class_021020_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -181,7 +181,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CombinedWildlife_6class_040320.tif"
+      DATA     "/tiledata/source/PR_CombinedWildlife_6class_040320.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -253,7 +253,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalFacilities_v2_clip.tif"
+      DATA     "/tiledata/source/PR_CriticalFacilities_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -296,7 +296,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalInfrastructure_v2_clip.tif"
+      DATA     "/tiledata/source/PR_CriticalInfrastructure_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -380,7 +380,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ExposureIndex_10class_021120_clip.tif"
+      DATA     "/tiledata/source/PR_ExposureIndex_10class_021120_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
     CLASS
@@ -482,7 +482,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ErodibleSoils_v2_clip.tif"
+      DATA     "/tiledata/source/PR_ErodibleSoils_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -546,7 +546,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_FloodproneAreas_v2_clip.tif"
+      DATA     "/tiledata/source/PR_FloodproneAreas_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -610,7 +610,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Impermeable_v2_clip.tif"
+      DATA     "/tiledata/source/PR_Impermeable_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -674,7 +674,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Landslides_v2_clip.tif"
+      DATA     "/tiledata/source/PR_Landslides_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -717,7 +717,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_LowLyingAreas_v2_clip.tif"
+      DATA     "/tiledata/source/PR_LowLyingAreas_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -781,7 +781,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_MarineIndex_4class.tif"
+      DATA     "/tiledata/source/PR_MarineIndex_4class.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -838,7 +838,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_PopulationDensity_v2_clip.tif"
+      DATA     "/tiledata/source/PR_PopulationDensity_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -897,7 +897,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SLR_v2_clip.tif"
+      DATA     "/tiledata/source/PR_SLR_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -961,7 +961,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SocialVulnerability_v2_clip.tif"
+      DATA     "/tiledata/source/PR_SocialVulnerability_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1025,7 +1025,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_StormSurge_v2_clip.tif"
+      DATA     "/tiledata/source/PR_StormSurge_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1089,7 +1089,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_TerrestrialIndex_4class.tif"
+      DATA     "/tiledata/source/PR_TerrestrialIndex_4class.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1146,7 +1146,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ThreatIndex_10class_021120_clip.tif"
+      DATA     "/tiledata/source/PR_ThreatIndex_10class_021120_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1245,78 +1245,39 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Tsunami_v2_clip.tif"
+      DATA     "/tiledata/source/PR_Tsunami_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
       CLASS
         EXPRESSION ([pixel] = 1)
-
         STYLE
-          COLOR 255 235 214
+          COLOR 65  68 136
         END
       END
       CLASS
         EXPRESSION ([pixel] = 2)
 
         STYLE
-          COLOR 247 215 188
+          COLOR 42 121 143
         END
       END
       CLASS
         EXPRESSION ([pixel] = 3)
-
         STYLE
-          COLOR 240 192 161
+          COLOR 34 169 133
         END
       END
       CLASS
         EXPRESSION ([pixel] = 4)
-
         STYLE
-          COLOR 235 169 136
+          COLOR 22 210 81
         END
       END
       CLASS
         EXPRESSION ([pixel] = 5)
-
         STYLE
-          COLOR 227 144 111
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 6)
-
-        STYLE
-          COLOR 222 119 91
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 7)
-
-        STYLE
-          COLOR 214 93 69
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 8)
-
-        STYLE
-          COLOR 209 64 48
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 9)
-
-        STYLE
-          COLOR 201 37 28
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 10)
-
-        STYLE
-          COLOR 196 10 10
+          COLOR 254 232 37
         END
       END
 

@@ -70,7 +70,7 @@ MAP
   END
 
   LAYER
-    NAME "USVI_AssetsIndexTiles"
+    NAME "PR_AssetsIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -85,7 +85,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_AssetIndex_10class_021020_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_AssetIndex_10class_021020_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -158,15 +158,15 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_AssetsIndexTiles"
-      "wms_abstract"          "USVI_AssetsIndexTiles"
+      "wms_title"             "PR_AssetsIndexTiles"
+      "wms_abstract"          "PR_AssetsIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
 
   LAYER
-    NAME "USVI_CombinedWildlifeIndexTiles"
+    NAME "PR_CombinedWildlifeIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -181,7 +181,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_CombinedWildlife_6class_040320.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CombinedWildlife_6class_040320.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -230,14 +230,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_CombinedWildlifeIndexTiles"
-      "wms_abstract"          "USVI_CombinedWildlifeIndexTiles"
+      "wms_title"             "PR_CombinedWildlifeIndexTiles"
+      "wms_abstract"          "PR_CombinedWildlifeIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_CriticalFacilitiesIndexTiles"
+    NAME "PR_CriticalFacilitiesIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -253,28 +253,35 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_CriticalFacilities_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalFacilities_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
       CLASS
-        EXPRESSION ([pixel] = 5)
-        NAME "High"
+        EXPRESSION ([pixel] = 3)
+
         STYLE
-          COLOR 0 132 168
+          COLOR 158 187 215 #
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 0 132 168 #
         END
       END
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_CriticalFacilitiesIndexTiles"
-      "wms_abstract"          "USVI_CriticalFacilitiesIndexTiles"
+      "wms_title"             "PR_CriticalFacilitiesIndexTiles"
+      "wms_abstract"          "PR_CriticalFacilitiesIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_CriticalInfrastructureIndexTiles"
+    NAME "PR_CriticalInfrastructureIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -289,7 +296,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_CriticalInfrastructure_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalInfrastructure_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -351,14 +358,14 @@ MAP
       END
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_CriticalInfrastructureIndexTiles"
-      "wms_abstract"          "USVI_CriticalInfrastructureIndexTiles"
+      "wms_title"             "PR_CriticalInfrastructureIndexTiles"
+      "wms_abstract"          "PR_CriticalInfrastructureIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_ExposureIndexTiles"
+    NAME "PR_ExposureIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -373,7 +380,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_ExposureIndex_10class_021220_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ExposureIndex_10class_021120_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
     CLASS
@@ -453,14 +460,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_ExposureIndexTiles"
-      "wms_abstract"          "USVI_ExposureIndexTiles"
+      "wms_title"             "PR_ExposureIndexTiles"
+      "wms_abstract"          "PR_ExposureIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_ErosionIndexTiles"
+    NAME "PR_ErosionIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -475,7 +482,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_ErodibleSoils_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ErodibleSoils_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -517,14 +524,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_ErosionIndexTiles"
-      "wms_abstract"          "USVI_ErosionIndexTiles"
+      "wms_title"             "PR_ErosionIndexTiles"
+      "wms_abstract"          "PR_ErosionIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_FloodProneAreasIndexTiles"
+    NAME "PR_FloodProneAreasIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -539,7 +546,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_FloodproneAreas_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_FloodproneAreas_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -581,14 +588,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_FloodProneAreasIndexTiles"
-      "wms_abstract"          "USVI_FloodProneAreasIndexTiles"
+      "wms_title"             "PR_FloodProneAreasIndexTiles"
+      "wms_abstract"          "PR_FloodProneAreasIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_DraingeIndexTiles"
+    NAME "PR_DraingeIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -603,7 +610,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_Impermeable_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Impermeable_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -645,14 +652,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_DraingeIndexTiles"
-      "wms_abstract"          "USVI_DraingeIndexTiles"
+      "wms_title"             "PR_DraingeIndexTiles"
+      "wms_abstract"          "PR_DraingeIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_SlopeIndexTiles"
+    NAME "PR_LandslideIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -667,7 +674,50 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_LowLyingAreas_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Landslides_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 251 172 185
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 205 35 143
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_LandslideIndexTiles"
+      "wms_abstract"          "PR_LandslideIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_SlopeIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_LowLyingAreas_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -709,73 +759,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_SlopeIndexTiles"
-      "wms_abstract"          "USVI_SlopeIndexTiles"
+      "wms_title"             "PR_SlopeIndexTiles"
+      "wms_abstract"          "PR_SlopeIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
-    LAYER
-      NAME "USVI_PopDensityIndexTiles"
-      PROJECTION
-        "proj=lcc"
-        "lat_1=18.43333333333333"
-        "lat_2=18.03333333333333"
-        "lat_0=17.83333333333333"
-        "lon_0=-66.43333333333334"
-        "x_0=200000"
-        "y_0=200000"
-        "datum=NAD83"
-        "units=m"
-      END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     "/tiledata/source/USVI_PopulationDensity_v2_clip.tif"
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-
-        CLASS
-          EXPRESSION ([pixel] = 1)
-          STYLE
-            COLOR 255 246 208
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 2)
-          STYLE
-            COLOR 239 193 51
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 3)
-          STYLE
-            COLOR 158 172 55
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 4)
-          STYLE
-            COLOR 44 141 122
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 5)
-          STYLE
-            COLOR 56 90 76
-          END
-        END
-
-      #INCLUDE "cmaps/gapnat.cmap"
-      METADATA
-        "wms_title"             "USVI_PopDensityIndexTiles"
-        "wms_abstract"          "USVI_PopDensityIndexTiles"
-        "gml_include_items"     "value_0"
-      END  # end METADATA
-    END # end LAYER
-
   LAYER
-    NAME "USVI_AquaticIndexTiles"
+    NAME "PR_AquaticIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -790,7 +781,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_MarineIndex_4class.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_MarineIndex_4class.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -825,14 +816,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_AquaticIndexTiles"
-      "wms_abstract"          "USVI_AquaticIndexTiles"
+      "wms_title"             "PR_AquaticIndexTiles"
+      "wms_abstract"          "PR_AquaticIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_SLRIndexTiles"
+    NAME "PR_PopDensityIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -847,7 +838,66 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_SLR_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_PopulationDensity_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 255 246 208
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 239 193 51
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 158 172 55
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 44 141 122
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 56 90 76
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_PopDensityIndexTiles"
+      "wms_abstract"          "PR_PopDensityIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "PR_SLRIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SLR_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -889,14 +939,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_SLRIndexTiles"
-      "wms_abstract"          "USVI_SLRIndexTiles"
+      "wms_title"             "PR_SLRIndexTiles"
+      "wms_abstract"          "PR_SLRIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_SocVulnIndexTiles"
+    NAME "PR_SocVulnIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -911,7 +961,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_SocialVulnerability_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SocialVulnerability_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -953,14 +1003,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_SocVulnIndexTiles"
-      "wms_abstract"          "USVI_SocVulnIndexTiles"
+      "wms_title"             "PR_SocVulnIndexTiles"
+      "wms_abstract"          "PR_SocVulnIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_StormSurgeIndexTiles"
+    NAME "PR_StormSurgeIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -975,7 +1025,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_StormSurge_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_StormSurge_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1017,14 +1067,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_StormSurgeIndexTiles"
-      "wms_abstract"          "USVI_StormSurgeIndexTiles"
+      "wms_title"             "PR_StormSurgeIndexTiles"
+      "wms_abstract"          "PR_StormSurgeIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_TerrestrialIndexTiles"
+    NAME "PR_TerrestrialIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -1039,7 +1089,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_TerrestrialIndex_4class.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_TerrestrialIndex_4class.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1074,14 +1124,14 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_TerrestrialIndexTiles"
-      "wms_abstract"          "USVI_TerrestrialIndexTiles"
+      "wms_title"             "PR_TerrestrialIndexTiles"
+      "wms_abstract"          "PR_TerrestrialIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
   LAYER
-    NAME "USVI_ThreatsIndexTiles"
+    NAME "PR_ThreatsIndexTiles"
     PROJECTION
       "proj=lcc"
       "lat_1=18.43333333333333"
@@ -1096,7 +1146,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_ThreatIndex_10class_021220_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ThreatIndex_10class_021120_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1173,11 +1223,70 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "USVI_ThreatsIndexTiles"
-      "wms_abstract"          "USVI_ThreatsIndexTiles"
+      "wms_title"             "PR_ThreatsIndexTiles"
+      "wms_abstract"          "PR_ThreatsIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
 
+  LAYER
+    NAME "PR_TsunamiIndexTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_1=18.43333333333333"
+      "lat_2=18.03333333333333"
+      "lat_0=17.83333333333333"
+      "lon_0=-66.43333333333334"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Tsunami_v2_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 65  68 136
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 42 121 143
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 34 169 133
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 22 210 81
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 254 232 37
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_TsunamiIndexTiles"
+      "wms_abstract"          "PR_TsunamiIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
 END # end MAP

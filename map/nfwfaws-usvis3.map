@@ -85,7 +85,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_AssetIndex_10class_021020_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_AssetIndex_10class_021020_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -181,7 +181,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_CombinedWildlife_6class_040320.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_CombinedWildlife_6class_040320.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -253,7 +253,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_CriticalFacilities_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_CriticalFacilities_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -289,7 +289,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_CriticalInfrastructure_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_CriticalInfrastructure_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -373,7 +373,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_ExposureIndex_10class_021220_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_ExposureIndex_10class_021220_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
     CLASS
@@ -475,7 +475,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_ErodibleSoils_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_ErodibleSoils_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -539,7 +539,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_FloodproneAreas_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_FloodproneAreas_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -603,7 +603,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_Impermeable_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_Impermeable_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -667,7 +667,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_LowLyingAreas_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_LowLyingAreas_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -731,7 +731,7 @@ MAP
         TYPE     RASTER
         DUMP     TRUE
         STATUS   OFF
-        DATA     "/tiledata/source/USVI_PopulationDensity_v2_clip.tif"
+        DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_PopulationDensity_v2_clip.tif"
         HEADER   ./templates/layer_query_header.html
         TEMPLATE ./templates/layer_query_body.html
 
@@ -790,7 +790,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_MarineIndex_4class.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_MarineIndex_4class.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -847,7 +847,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_SLR_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_SLR_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -911,7 +911,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_SocialVulnerability_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_SocialVulnerability_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -975,7 +975,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_StormSurge_v2_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_StormSurge_v2_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1039,7 +1039,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_TerrestrialIndex_4class.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_TerrestrialIndex_4class.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1096,7 +1096,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/USVI_ThreatIndex_10class_021220_clip.tif"
+      DATA     "/vsicurl/https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_ThreatIndex_10class_021220_clip.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 

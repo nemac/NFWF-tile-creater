@@ -32,7 +32,83 @@ scp -i [YOUR PEM FILE] ec2-user@ec2-3-86-102-181.compute-1.amazonaws.com:/tileda
 scp -i [YOUR PEM FILE] ec2-user@ec2-3-86-102-181.compute-1.amazonaws.com:/tiledata/source/TargetedWatershedThreat8.tif .  &
 scp -i [YOUR PEM FILE] ec2-user@ec2-3-86-102-181.compute-1.amazonaws.com:/tiledata/source/TargetedWatershedFishandWildlife8.tif . &
 ```
+## get island images from s3
+```bash
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_AssetIndex_10class_021020_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CombinedWildlife_6class_040320.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalFacilities_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_CriticalInfrastructure_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ErodibleSoils_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ExposureIndex_10class_021120_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_FloodproneAreas_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Impermeable_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Landslides_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_LowLyingAreas_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_MarineIndex_4class.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_PopulationDensity_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SLR_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_SocialVulnerability_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_StormSurge_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_TerrestrialIndex_4class.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_ThreatIndex_10class_021120_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/puerto-rico/PR_Tsunami_v2_clip.tif &
 
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_AssetIndex_10class_021020_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_CombinedWildlife_6class_040320.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_CriticalFacilities_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_CriticalInfrastructure_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_ErodibleSoils_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_ExposureIndex_10class_021220_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_FloodproneAreas_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_Impermeable_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_LowLyingAreas_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_MarineIndex_4class.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_PopulationDensity_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_SLR_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_SocialVulnerability_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_StormSurge_v2_clip.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_TerrestrialIndex_4class.tif &
+wget https://nfwf-tool.s3.amazonaws.com/us-virgin-islands/USVI_ThreatIndex_10class_021220_clip.tif &
+```
+
+## make 8bit no data 255
+```bash
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_AssetIndex_10class_021020_clip.tif  PR_AssetIndex_10class_021020_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_CombinedWildlife_6class_040320.tif PR_CombinedWildlife_6class_040320_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_CriticalFacilities_v2_clip.tif PR_CriticalFacilities_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_CriticalInfrastructure_v2_clip.tif PR_CriticalInfrastructure_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_ErodibleSoils_v2_clip.tif PR_ErodibleSoils_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_ExposureIndex_10class_021120_clip.tif PR_ExposureIndex_10class_021120_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_FloodproneAreas_v2_clip.tif PR_FloodproneAreas_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_Impermeable_v2_clip.tif PR_Impermeable_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_Landslides_v2_clip.tif PR_Landslides_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_LowLyingAreas_v2_clip.tif PR_LowLyingAreas_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_MarineIndex_4class.tif PR_MarineIndex_4class_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_PopulationDensity_v2_clip.tif PR_PopulationDensity_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_SLR_v2_clip.tif PR_SLR_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_SocialVulnerability_v2_clip.tif PR_SocialVulnerability_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_StormSurge_v2_clip.tif PR_StormSurge_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_TerrestrialIndex_4class.tif PR_TerrestrialIndex_4class_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_ThreatIndex_10class_021120_clip.tif PR_ThreatIndex_10class_021120_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 PR_Tsunami_v2_clip.tif PR_Tsunami_v2_clip_8bit.tif -co COMPRESS=LZW &
+
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_AssetIndex_10class_021020_clip.tif USVI_AssetIndex_10class_021020_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_CombinedWildlife_6class_040320.tif USVI_CombinedWildlife_6class_040320_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_CriticalFacilities_v2_clip.tif USVI_CriticalFacilities_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_CriticalInfrastructure_v2_clip.tif USVI_CriticalInfrastructure_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_ErodibleSoils_v2_clip.tif USVI_ErodibleSoils_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_ExposureIndex_10class_021220_clip.tif USVI_ExposureIndex_10class_021220_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_FloodproneAreas_v2_clip.tif USVI_FloodproneAreas_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_Impermeable_v2_clip.tif USVI_Impermeable_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_LowLyingAreas_v2_clip.tif USVI_LowLyingAreas_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_MarineIndex_4class.tif USVI_MarineIndex_4class_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_PopulationDensity_v2_clip.tif USVI_PopulationDensity_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_SLR_v2_clip.tif USVI_SLR_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_SocialVulnerability_v2_clip.tif USVI_SocialVulnerability_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_StormSurge_v2_clip.tif USVI_StormSurge_v2_clip_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_TerrestrialIndex_4class.tif USVI_TerrestrialIndex_4class_8bit.tif -co COMPRESS=LZW &
+gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_ThreatIndex_10class_021220_clip.tif USVI_ThreatIndex_10class_021220_clip_8bit.tif -co COMPRESS=LZW &
+```
 ## Copy Shapefiles that Limit the area tiles will be created, this helps to significantly decrease processingtime
 If needed: CONSU Shapefile that Limits Tile area, shapefile needs to be in projection 3857
 ```bsh
@@ -92,6 +168,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -113,6 +190,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -135,6 +213,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -145,6 +224,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
+
 #### US Virgin Islands
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AssetsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -155,6 +235,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 11,12 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -177,6 +258,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -198,6 +280,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 13,13 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -220,6 +303,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -241,6 +325,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 14,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
