@@ -235,6 +235,28 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ThreatsIndexTi
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 ```
 
+
+#### CNMI
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AssetsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ExposureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ErosionIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SocVulnIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_StormSurgeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_3857.shp &
+```
+
+
 ### from seed server seed all level 11 - 12 tiles if you do too many you will get timeouts. starting at these zoom levels try not do all of them and -d option with limit shapefile is important for reducing blank images, we will remove blanks (completely transparent) latter.
 run repeatedly until you 0 tiles needed to be seeded, exiting
 ```bsh
