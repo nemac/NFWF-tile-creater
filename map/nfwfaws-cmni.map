@@ -1115,5 +1115,98 @@ MAP
     END  # end METADATA
   END # end LAYER
 
+  LAYER
+    NAME "CNMI_HubsIndexTiles"
+    PROJECTION
+      "proj=utm"
+      "zone=55"
+      "datum=WGS84"
+      "units=m"
+
+    END
+    TYPE     RASTER
+    DUMP     TRUE
+    STATUS   OFF
+    DATA     /tiledata/source/cnmi_combined_hub_group_070120.tif
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      NAME "Low"
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 255 197 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 249 181 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 243 164 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 237 148 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 231 131 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 6)
+      STYLE
+        COLOR 224 112 0
+      END #end style
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION ([pixel] = 7)
+      STYLE
+        COLOR 217 94 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 8)
+      STYLE
+        COLOR 209 76 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 9)
+      STYLE
+        COLOR 202 54 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION ([pixel] = 10)
+      STYLE
+        COLOR 194 21 0
+      END #end style
+    END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "CNMI_HubsIndexTiles"
+      "wms_abstract"          "CNMI_HubsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
 
 END # end MAP

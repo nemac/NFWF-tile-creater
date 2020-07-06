@@ -213,6 +213,8 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTi
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
 
 #### US Virgin Islands
@@ -233,6 +235,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_StormSurgeInde
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 ```
 
 
@@ -254,6 +257,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_TerrestrialInd
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 ```
 
 

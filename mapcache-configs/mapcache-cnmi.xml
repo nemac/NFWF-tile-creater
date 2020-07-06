@@ -418,6 +418,33 @@
     <expires>1</expires>
   </tileset>
 
+  <tileset name="CNMI_HubsIndexTiles">
+    <metadata>
+      <title>CNMI_HubsIndexTiles</title>
+    </metadata>
+    <source>CNMI_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="CNMI_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CNMI_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-cnmi.map</url>
+    </http>
+  </source>
+
+
 
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>

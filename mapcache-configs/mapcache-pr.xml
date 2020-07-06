@@ -470,6 +470,33 @@
     <expires>1</expires>
   </tileset>
 
+  <tileset name="PR_HubsIndexTiles">
+    <metadata>
+      <title>PR_HubsIndexTiles</title>
+    </metadata>
+    <source>PR_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+    </http>
+  </source>
+
+
 
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>

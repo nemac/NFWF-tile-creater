@@ -418,6 +418,33 @@
     <expires>1</expires>
   </tileset>
 
+  <tileset name="USVI_HubsIndexTiles">
+    <metadata>
+      <title>USVI_HubsIndexTiles</title>
+    </metadata>
+    <source>USVI_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="USVI_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>USVI_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-usvi.map</url>
+    </http>
+  </source>
+
+
 
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>
