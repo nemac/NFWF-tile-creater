@@ -517,6 +517,7 @@ cd cache
 ./deletetransparenttiles.py PR_ThreatsIndexTiles &
 ./deletetransparenttiles.py PR_LandslideIndexTiles &
 ./deletetransparenttiles.py PR_TsunamiIndexTiles &
+./deletetransparenttiles.py PR_HubsIndexTiles &
 
 ./deletetransparenttiles.py CNMI_AquaticIndexTiles &
 ./deletetransparenttiles.py CNMI_AssetsIndexTiles &
@@ -535,6 +536,9 @@ cd cache
 ./deletetransparenttiles.py CNMI_StormSurgeIndexTiles &
 ./deletetransparenttiles.py CNMI_TerrestrialIndexTiles &
 ./deletetransparenttiles.py CNMI_ThreatsIndexTiles &
+./deletetransparenttiles.py CNMI_HubsIndexTiles &
+./deletetransparenttiles.py USVI_HubsIndexTiles &
+
 
 ```
 
@@ -606,6 +610,7 @@ aws s3 rm s3://tiles.resilientcoasts.org/CNMI_SocVulnIndexTiles --recursive --ex
 aws s3 rm s3://tiles.resilientcoasts.org/CNMI_StormSurgeIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/CNMI_TerrestrialIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/CNMI_ThreatsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/PR_HubsIndexTiles --recursive --exclude "" &
 
 aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
 aws s3 sync PR_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/PR_AssetsIndexTiles --acl public-read &
@@ -626,6 +631,7 @@ aws s3 sync PR_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/PR_Terrestr
 aws s3 sync PR_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/PR_ThreatsIndexTiles --acl public-read &
 aws s3 sync PR_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/PR_LandslideIndexTiles --acl public-read &
 aws s3 sync PR_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/PR_TsunamiIndexTiles --acl public-read &
+aws s3 sync PR_HubsIndexTiles/ s3://tiles.resilientcoasts.org/PR_HubsIndexTiles --acl public-read &
 
 aws s3 sync USVI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AquaticIndexTiles --acl public-read &
 aws s3 sync USVI_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_AssetsIndexTiles --acl public-read &
@@ -644,6 +650,8 @@ aws s3 sync USVI_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/USVI_SocVulnI
 aws s3 sync USVI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/USVI_StormSurgeIndexTiles --acl public-read &
 aws s3 sync USVI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/USVI_TerrestrialIndexTiles --acl public-read &
 aws s3 sync USVI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --acl public-read &
+aws s3 sync USVI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_HubsIndexTiles --acl public-read &
+
 
 aws s3 sync CNMI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_AquaticIndexTiles --acl public-read &
 aws s3 sync CNMI_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_AssetsIndexTiles --acl public-read &
@@ -662,6 +670,7 @@ aws s3 sync CNMI_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_SocVulnI
 aws s3 sync CNMI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_StormSurgeIndexTiles --acl public-read &
 aws s3 sync CNMI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_TerrestrialIndexTiles --acl public-read &
 aws s3 sync CNMI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_ThreatsIndexTiles --acl public-read &
+aws s3 sync CNMI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_HubsIndexTiles --acl public-read &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
