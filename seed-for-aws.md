@@ -196,7 +196,6 @@ sudo cp limitshapefiles/PR_CREST_* source/.
 from seed server seed all level 1 - 10 tiles if you do too many you will get timeouts.  but you can rerun the script only creates tiles that do not exist yet.
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AssetsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ExposureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -209,12 +208,13 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SocVulnIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_StormSurgeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
 
 #### US Virgin Islands
@@ -265,7 +265,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_HubsIndexTiles
 run repeatedly until you 0 tiles needed to be seeded, exiting
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AssetsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalFacilitiesIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalInfrastructureIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ExposureIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -278,10 +277,11 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SocVulnIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_StormSurgeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 11,12 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
 
 #### US Virgin Islands
@@ -328,7 +328,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityInde
 We only do hubs, exposure, assets, threats to zoom level 13 to space and time. for the most part the data does not support the precsion of zoom level 13.
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AssetsIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalFacilitiesIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalInfrastructureIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ExposureIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -340,11 +339,12 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SocVulnIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_StormSurgeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 13,13 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
 
 #### CNMI
@@ -413,7 +413,6 @@ DO I NEED ZOOM 14?
 ### Do not do zoom level 14 for most CONUS layes it is not needed and will triple the space 100gb instead of the current 500mb. We don't zoom to that level in the viewer anyway and the data does not support that level of percsion in CONUS, islands however are small enough that its needed.
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AssetsIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalFacilitiesIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalInfrastructureIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ExposureIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
@@ -426,10 +425,11 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SocVulnIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_StormSurgeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 14,14 -n 4 -d  /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
 
 #### US Virgin Islands zoom level 14

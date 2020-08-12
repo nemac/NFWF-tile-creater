@@ -181,7 +181,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_CombinedWildlife_6class_040320_8bit.tif"
+      DATA     "/tiledata/source/PR_CombinedWildlife_6class_JulyNew.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1089,7 +1089,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/PR_TerrestrialIndex_4class_8bit.tif"
+      DATA     "/tiledata/source/PR_TerrestrialIndex_4class_JulyNew.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
