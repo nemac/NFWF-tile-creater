@@ -409,6 +409,96 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles 
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 14,14 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 ```
 
+#### Hawaii
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AssetsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SLRIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+```
+
+#### Hawaii
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AssetsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CombinedWildlifeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalFacilitiesIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalInfrastructureIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SLRIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 11,12 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+```
+
+
+#### Hawaii
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AssetsIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CombinedWildlifeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalFacilitiesIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalInfrastructureIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SLRIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 13,13 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+```
+
+
+#### Hawaii
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AssetsIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CombinedWildlifeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalFacilitiesIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalInfrastructureIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SLRIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 14,14 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+```
+
 DO I NEED ZOOM 14?
 ### Do not do zoom level 14 for most CONUS layes it is not needed and will triple the space 100gb instead of the current 500mb. We don't zoom to that level in the viewer anyway and the data does not support that level of percsion in CONUS, islands however are small enough that its needed.
 ```bsh

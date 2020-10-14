@@ -2,25 +2,25 @@
 <mapcache>
 
 
-  <source name="PR_AssetsIndexTiles" type="wms">
+  <source name="HI_AssetsIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_AssetsIndexTiles</LAYERS>
+        <LAYERS>HI_AssetsIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_AssetsIndexTiles">
+  <tileset name="HI_AssetsIndexTiles">
     <metadata>
-      <title>PR_AssetsIndexTiles</title>
+      <title>HI_AssetsIndexTiles</title>
     </metadata>
-    <source>PR_AssetsIndexTiles</source>
+    <source>HI_AssetsIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -28,25 +28,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_CombinedWildlifeIndexTiles" type="wms">
+  <source name="HI_CombinedWildlifeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_CombinedWildlifeIndexTiles</LAYERS>
+        <LAYERS>HI_CombinedWildlifeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_CombinedWildlifeIndexTiles">
+  <tileset name="HI_CombinedWildlifeIndexTiles">
     <metadata>
-      <title>PR_CombinedWildlifeIndexTiles</title>
+      <title>HI_CombinedWildlifeIndexTiles</title>
     </metadata>
-    <source>PR_CombinedWildlifeIndexTiles</source>
+    <source>HI_CombinedWildlifeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -54,25 +54,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_CriticalFacilitiesIndexTiles" type="wms">
+  <source name="HI_CriticalFacilitiesIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_CriticalFacilitiesIndexTiles</LAYERS>
+        <LAYERS>HI_CriticalFacilitiesIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_CriticalFacilitiesIndexTiles">
+  <tileset name="HI_CriticalFacilitiesIndexTiles">
     <metadata>
-      <title>PR_CriticalFacilitiesIndexTiles</title>
+      <title>HI_CriticalFacilitiesIndexTiles</title>
     </metadata>
-    <source>PR_CriticalFacilitiesIndexTiles</source>
+    <source>HI_CriticalFacilitiesIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -80,25 +80,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_CriticalInfrastructureIndexTiles" type="wms">
+  <source name="HI_CriticalInfrastructureIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_CriticalInfrastructureIndexTiles</LAYERS>
+        <LAYERS>HI_CriticalInfrastructureIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_CriticalInfrastructureIndexTiles">
+  <tileset name="HI_CriticalInfrastructureIndexTiles">
     <metadata>
-      <title>PR_CriticalInfrastructureIndexTiles</title>
+      <title>HI_CriticalInfrastructureIndexTiles</title>
     </metadata>
-    <source>PR_CriticalInfrastructureIndexTiles</source>
+    <source>HI_CriticalInfrastructureIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -106,25 +106,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_ErosionIndexTiles" type="wms">
+  <source name="HI_ErosionIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_ErosionIndexTiles</LAYERS>
+        <LAYERS>HI_ErosionIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_ErosionIndexTiles">
+  <tileset name="HI_ErosionIndexTiles">
     <metadata>
-      <title>PR_ErosionIndexTiles</title>
+      <title>HI_ErosionIndexTiles</title>
     </metadata>
-    <source>PR_ErosionIndexTiles</source>
+    <source>HI_ErosionIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -132,25 +132,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_ExposureIndexTiles" type="wms">
+  <source name="HI_ExposureIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_ExposureIndexTiles</LAYERS>
+        <LAYERS>HI_ExposureIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_ExposureIndexTiles">
+  <tileset name="HI_ExposureIndexTiles">
     <metadata>
-      <title>PR_ExposureIndexTiles</title>
+      <title>HI_ExposureIndexTiles</title>
     </metadata>
-    <source>PR_ExposureIndexTiles</source>
+    <source>HI_ExposureIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -158,25 +158,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_FloodProneAreasIndexTiles" type="wms">
+  <source name="HI_FloodProneAreasIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_FloodProneAreasIndexTiles</LAYERS>
+        <LAYERS>HI_FloodProneAreasIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_FloodProneAreasIndexTiles">
+  <tileset name="HI_FloodProneAreasIndexTiles">
     <metadata>
-      <title>PR_FloodProneAreasIndexTiles</title>
+      <title>HI_FloodProneAreasIndexTiles</title>
     </metadata>
-    <source>PR_FloodProneAreasIndexTiles</source>
+    <source>HI_FloodProneAreasIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -184,25 +184,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_DraingeIndexTiles" type="wms">
+  <source name="HI_DraingeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_DraingeIndexTiles</LAYERS>
+        <LAYERS>HI_DraingeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_DraingeIndexTiles">
+  <tileset name="HI_DraingeIndexTiles">
     <metadata>
-      <title>PR_DraingeIndexTiles</title>
+      <title>HI_DraingeIndexTiles</title>
     </metadata>
-    <source>PR_DraingeIndexTiles</source>
+    <source>HI_DraingeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -210,25 +210,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_LandslideIndexTiles" type="wms">
+  <source name="HI_LandslideIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_LandslideIndexTiles</LAYERS>
+        <LAYERS>HI_LandslideIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_LandslideIndexTiles">
+  <tileset name="HI_LandslideIndexTiles">
     <metadata>
-      <title>PR_LandslideIndexTiles</title>
+      <title>HI_LandslideIndexTiles</title>
     </metadata>
-    <source>PR_LandslideIndexTiles</source>
+    <source>HI_LandslideIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -236,25 +236,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_SlopeIndexTiles" type="wms">
+  <source name="HI_SlopeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_SlopeIndexTiles</LAYERS>
+        <LAYERS>HI_SlopeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_SlopeIndexTiles">
+  <tileset name="HI_SlopeIndexTiles">
     <metadata>
-      <title>PR_SlopeIndexTiles</title>
+      <title>HI_SlopeIndexTiles</title>
     </metadata>
-    <source>PR_SlopeIndexTiles</source>
+    <source>HI_SlopeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -262,25 +262,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_AquaticIndexTiles" type="wms">
+  <source name="HI_AquaticIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_AquaticIndexTiles</LAYERS>
+        <LAYERS>HI_AquaticIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_AquaticIndexTiles">
+  <tileset name="HI_AquaticIndexTiles">
     <metadata>
-      <title>PR_AquaticIndexTiles</title>
+      <title>HI_AquaticIndexTiles</title>
     </metadata>
-    <source>PR_AquaticIndexTiles</source>
+    <source>HI_AquaticIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -288,25 +288,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_SLRIndexTiles" type="wms">
+  <source name="HI_SLRIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_SLRIndexTiles</LAYERS>
+        <LAYERS>HI_SLRIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_SLRIndexTiles">
+  <tileset name="HI_SLRIndexTiles">
     <metadata>
-      <title>PR_SLRIndexTiles</title>
+      <title>HI_SLRIndexTiles</title>
     </metadata>
-    <source>PR_SLRIndexTiles</source>
+    <source>HI_SLRIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -314,25 +314,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_SocVulnIndexTiles" type="wms">
+  <source name="HI_SocVulnIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_SocVulnIndexTiles</LAYERS>
+        <LAYERS>HI_SocVulnIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_SocVulnIndexTiles">
+  <tileset name="HI_SocVulnIndexTiles">
     <metadata>
-      <title>PR_SocVulnIndexTiles</title>
+      <title>HI_SocVulnIndexTiles</title>
     </metadata>
-    <source>PR_SocVulnIndexTiles</source>
+    <source>HI_SocVulnIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -340,25 +340,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_StormSurgeIndexTiles" type="wms">
+  <source name="HI_StormSurgeIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_StormSurgeIndexTiles</LAYERS>
+        <LAYERS>HI_StormSurgeIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_StormSurgeIndexTiles">
+  <tileset name="HI_StormSurgeIndexTiles">
     <metadata>
-      <title>PR_StormSurgeIndexTiles</title>
+      <title>HI_StormSurgeIndexTiles</title>
     </metadata>
-    <source>PR_StormSurgeIndexTiles</source>
+    <source>HI_StormSurgeIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -366,25 +366,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_TerrestrialIndexTiles" type="wms">
+  <source name="HI_TerrestrialIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_TerrestrialIndexTiles</LAYERS>
+        <LAYERS>HI_TerrestrialIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_TerrestrialIndexTiles">
+  <tileset name="HI_TerrestrialIndexTiles">
     <metadata>
-      <title>PR_TerrestrialIndexTiles</title>
+      <title>HI_TerrestrialIndexTiles</title>
     </metadata>
-    <source>PR_TerrestrialIndexTiles</source>
+    <source>HI_TerrestrialIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -392,25 +392,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_ThreatsIndexTiles" type="wms">
+  <source name="HI_ThreatsIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_ThreatsIndexTiles</LAYERS>
+        <LAYERS>HI_ThreatsIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_ThreatsIndexTiles">
+  <tileset name="HI_ThreatsIndexTiles">
     <metadata>
-      <title>PR_ThreatsIndexTiles</title>
+      <title>HI_ThreatsIndexTiles</title>
     </metadata>
-    <source>PR_ThreatsIndexTiles</source>
+    <source>HI_ThreatsIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -418,25 +418,25 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_TsunamiIndexTiles" type="wms">
+  <source name="HI_TsunamiIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_TsunamiIndexTiles</LAYERS>
+        <LAYERS>HI_TsunamiIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_TsunamiIndexTiles">
+  <tileset name="HI_TsunamiIndexTiles">
     <metadata>
-      <title>PR_TsunamiIndexTiles</title>
+      <title>HI_TsunamiIndexTiles</title>
     </metadata>
-    <source>PR_TsunamiIndexTiles</source>
+    <source>HI_TsunamiIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -444,31 +444,58 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="PR_PopDensityIndexTiles" type="wms">
+  <source name="HI_PopDensityIndexTiles" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>PR_PopDensityIndexTiles</LAYERS>
+        <LAYERS>HI_PopDensityIndexTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
 
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-pr.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
     </http>
   </source>
 
-  <tileset name="PR_PopDensityIndexTiles">
+  <tileset name="HI_PopDensityIndexTiles">
     <metadata>
-      <title>PR_PopDensityIndexTiles</title>
+      <title>HI_PopDensityIndexTiles</title>
     </metadata>
-    <source>PR_PopDensityIndexTiles</source>
+    <source>HI_PopDensityIndexTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
     <expires>1</expires>
   </tileset>
+
+  <tileset name="HI_HubsIndexTiles">
+    <metadata>
+      <title>HI_HubsIndexTiles</title>
+    </metadata>
+    <source>HI_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="HI_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>HI_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-hawaii.map</url>
+    </http>
+  </source>
+
 
 
   <service type="wms" enabled="true">

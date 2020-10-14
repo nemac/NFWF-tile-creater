@@ -17,5 +17,6 @@ RUN apt-get install -y \
     supervisor \
     -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-COPY gdal-scipts/gdal-build.sh /tmp/gdal-build.sh
+ADD ./gdal-scripts/. /tmp/
+
 RUN sh /tmp/gdal-build.sh

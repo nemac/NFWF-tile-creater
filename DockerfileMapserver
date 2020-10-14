@@ -1,13 +1,6 @@
-##
-# geodata/mapserver
-#
-# MapServer compiled with a broad range of options enabled including a
-# comprehensive GDAL library.
-#
+FROM osgeo/gdal:ubuntu-full-3.1.0
 
-FROM geodata/gdal:latest
-
-MAINTAINER Homme Zwaagstra <hrz@geodata.soton.ac.uk>
+MAINTAINER daveism
 
 USER root
 
@@ -30,22 +23,35 @@ RUN apt-get update && apt-get install -y \
   libxslt1-dev \
   ruby-dev \
   librsvg2-dev \
-  libprotoc8 \
-  libprotobuf8 \
+  libpng-dev \
+  libjpeg-dev \
+  libgif-dev \
+  libprotoc17 \
+  libprotobuf17 \
   protobuf-compiler \
-  libprotobuf-dev \
+  libprotobuf-c-dev \
   protobuf-c-compiler \
-  php5 \
-  php5-dev \
-  python-mapscript
+  libpng-dev \
+  libjpeg-dev \
+  libgif-dev \
+  libcurl4-openssl-dev \
+  libgeos-dev \
+  python-dev \
+  curl \
+  php \
+  swig \
+  php-dev \
+  python3-mapscript
 
+RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
+RUN apt clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install the application.
 ADD ./mapserver-scripts/. /tmp/build/
 ADD ./map /map
 RUN /tmp/build/build.sh
-
 
 EXPOSE 80
 

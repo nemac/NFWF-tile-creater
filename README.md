@@ -8,6 +8,7 @@ use docker compose to start a mapserver server and mapcache seeder.
 
 `docker build -t mapcache-image -f DockerfileMapcache .`
 
+`docker build -t gdal-image -f DockerFileGDAL .`
 ## turn on docker machines
 starts two docker machine one is mapserver other is mapcache
 `docker-compose up`
