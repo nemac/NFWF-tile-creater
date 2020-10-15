@@ -9,12 +9,16 @@ use docker compose to start a mapserver server and mapcache seeder.
 `docker build -t mapcache-image -f DockerfileMapcache .`
 
 `docker build -t gdal-image -f DockerFileGDAL .`
+
+`docker build -t gdal-python -f DockerfileGDALPython .`
+
 ## turn on docker machines
 starts two docker machine one is mapserver other is mapcache
 `docker-compose up`
 
 ### place map file and associated Spatial files (shapefiles, rasters, etc) in the map directory
-### update [mapcache.xml](mapcache-configs/mapcache.xml)
+### update [mapcache.xml](mapcache-configs/mapcache.xml) for each region you should create a separate mapcache file for each region
+### update [nfwf.map](map/nfwf.map) for each region pay attention to the projection for each tiff, and you should create a separate map file for each region
 
 ## run the seed for the levels you care about
 example:

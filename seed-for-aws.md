@@ -630,6 +630,26 @@ cd cache
 ./deletetransparenttiles.py USVI_HubsIndexTiles &
 
 
+./deletetransparenttiles.py HI_AquaticIndexTiles &
+./deletetransparenttiles.py HI_AssetsIndexTiles &
+./deletetransparenttiles.py HI_CombinedWildlifeIndexTiles &
+./deletetransparenttiles.py HI_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py HI_CriticalInfrastructureIndexTiles &
+./deletetransparenttiles.py HI_DraingeIndexTiles &
+./deletetransparenttiles.py HI_AquaticIndexTiles &
+./deletetransparenttiles.py HI_ErosionIndexTiles &
+./deletetransparenttiles.py HI_ExposureIndexTiles &
+./deletetransparenttiles.py HI_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py HI_PopDensityIndexTiles &
+./deletetransparenttiles.py HI_SLRIndexTiles &
+./deletetransparenttiles.py HI_SlopeIndexTiles &
+./deletetransparenttiles.py HI_SocVulnIndexTiles &
+./deletetransparenttiles.py HI_StormSurgeIndexTiles &
+./deletetransparenttiles.py HI_TerrestrialIndexTiles &
+./deletetransparenttiles.py HI_ThreatsIndexTiles &
+./deletetransparenttiles.py HI_HubsIndexTiles &
+./deletetransparenttiles.py HI_HubsIndexTiles &
+
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
@@ -761,6 +781,25 @@ aws s3 sync CNMI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_Storm
 aws s3 sync CNMI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_TerrestrialIndexTiles --acl public-read &
 aws s3 sync CNMI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_ThreatsIndexTiles --acl public-read &
 aws s3 sync CNMI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_HubsIndexTiles --acl public-read &
+
+aws s3 sync HI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/HI_AquaticIndexTiles --acl public-read &
+aws s3 sync HI_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/HI_AssetsIndexTiles --acl public-read &
+aws s3 sync HI_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/HI_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync HI_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/HI_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync HI_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/HI_CriticalInfrastructureIndexTiles --acl public-read &
+aws s3 sync HI_DraingeIndexTiles/ s3://tiles.resilientcoasts.org/HI_DraingeIndexTiles --acl public-read &
+aws s3 sync HI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/HI_AquaticIndexTiles --acl public-read &
+aws s3 sync HI_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/HI_ErosionIndexTiles --acl public-read &
+aws s3 sync HI_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/HI_ExposureIndexTiles --acl public-read &
+aws s3 sync HI_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/HI_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync HI_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/HI_PopDensityIndexTiles --acl public-read &
+aws s3 sync HI_SLRIndexTiles/ s3://tiles.resilientcoasts.org/HI_SLRIndexTiles --acl public-read &
+aws s3 sync HI_SlopeIndexTiles/ s3://tiles.resilientcoasts.org/HI_SlopeIndexTiles --acl public-read &
+aws s3 sync HI_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/HI_SocVulnIndexTiles --acl public-read &
+aws s3 sync HI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/HI_StormSurgeIndexTiles --acl public-read &
+aws s3 sync HI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/HI_TerrestrialIndexTiles --acl public-read &
+aws s3 sync HI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/HI_ThreatsIndexTiles --acl public-read &
+aws s3 sync HI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/HI_HubsIndexTiles --acl public-read &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```

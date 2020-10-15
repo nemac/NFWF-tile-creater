@@ -72,13 +72,8 @@ MAP
   LAYER
     NAME "HI_AssetsIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -168,13 +163,8 @@ MAP
   LAYER
     NAME "HI_CombinedWildlifeIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -239,13 +229,8 @@ MAP
   LAYER
     NAME "HI_CriticalFacilitiesIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -283,13 +268,8 @@ MAP
   LAYER
     NAME "HI_CriticalInfrastructureIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -367,13 +347,8 @@ MAP
   LAYER
     NAME "HI_ExposureIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -469,13 +444,8 @@ MAP
   LAYER
     NAME "HI_ErosionIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -533,13 +503,8 @@ MAP
   LAYER
     NAME "HI_FloodProneAreasIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -597,13 +562,8 @@ MAP
   LAYER
     NAME "HI_DraingeIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -661,13 +621,8 @@ MAP
   LAYER
     NAME "HI_LandslideIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -710,13 +665,8 @@ MAP
   LAYER
     NAME "HI_SlopeIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -774,13 +724,8 @@ MAP
   LAYER
     NAME "HI_AquaticIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -831,13 +776,8 @@ MAP
   LAYER
     NAME "HI_PopDensityIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -890,13 +830,8 @@ MAP
   LAYER
     NAME "HI_SLRIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -947,13 +882,8 @@ MAP
   LAYER
     NAME "HI_SocVulnIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -1011,13 +941,8 @@ MAP
   LAYER
     NAME "HI_StormSurgeIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -1075,13 +1000,8 @@ MAP
   LAYER
     NAME "HI_TerrestrialIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -1132,13 +1052,8 @@ MAP
   LAYER
     NAME "HI_ThreatsIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
@@ -1231,13 +1146,8 @@ MAP
   LAYER
     NAME "HI_TsunamiIndexTiles"
     PROJECTION
-      "proj=lcc"
-      "lat_1=18.43333333333333"
-      "lat_2=18.03333333333333"
-      "lat_0=17.83333333333333"
-      "lon_0=-66.43333333333334"
-      "x_0=200000"
-      "y_0=200000"
+      "proj=utm"
+      "zone=4"
       "datum=NAD83"
       "units=m"
     END
