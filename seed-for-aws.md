@@ -419,7 +419,6 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
@@ -428,7 +427,16 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTi
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 11,12 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 11,11 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 13,13 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 13,13 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 14,14 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 14,14 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+
 ```
 
 #### Hawaii
@@ -649,7 +657,8 @@ cd cache
 ./deletetransparenttiles.py HI_ThreatsIndexTiles &
 ./deletetransparenttiles.py HI_HubsIndexTiles &
 ./deletetransparenttiles.py HI_HubsIndexTiles &
-
+./deletetransparenttiles.py HI_LandslideIndexTiles &
+./deletetransparenttiles.py HI_TsunamiIndexTiles &
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
@@ -720,7 +729,27 @@ aws s3 rm s3://tiles.resilientcoasts.org/CNMI_SocVulnIndexTiles --recursive --ex
 aws s3 rm s3://tiles.resilientcoasts.org/CNMI_StormSurgeIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/CNMI_TerrestrialIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/CNMI_ThreatsIndexTiles --recursive --exclude "" &
-aws s3 rm s3://tiles.resilientcoasts.org/PR_HubsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/CNMI__HubsIndexTiles --recursive --exclude "" &
+
+aws s3 rm s3://tiles.resilientcoasts.org/HI_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_AssetsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_CombinedWildlifeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_CriticalFacilitiesIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_CriticalInfrastructureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_DraingeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_ErosionIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_ExposureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_FloodProneAreasIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_PopDensityIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_SLRIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_SlopeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_SocVulnIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_StormSurgeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_TerrestrialIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_ThreatsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_LandslideIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --recursive --exclude "" &
 
 aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
 aws s3 sync PR_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/PR_AssetsIndexTiles --acl public-read &
@@ -800,6 +829,8 @@ aws s3 sync HI_StormSurgeIndexTiles/ s3://tiles.resilientcoasts.org/HI_StormSurg
 aws s3 sync HI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/HI_TerrestrialIndexTiles --acl public-read &
 aws s3 sync HI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/HI_ThreatsIndexTiles --acl public-read &
 aws s3 sync HI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/HI_HubsIndexTiles --acl public-read &
+aws s3 sync HI_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --acl public-read &
+aws s3 sync HI_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/HI_LandslideIndexTiles --acl public-read &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
