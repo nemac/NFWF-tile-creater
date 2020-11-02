@@ -80,7 +80,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/HI_Asset_Index_10class_100220.tif"
+      DATA     "/tiledata/source/HI_Asset_Index_10class_102720.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -238,7 +238,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/HI_Crit_Facilities_091020.tif"
+      DATA     "/tiledata/source/HI_Crit_Facilities_102720.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -355,7 +355,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/HI_Exposure_Index_10class_100220.tif"
+      DATA     "/tiledata/source/HI_Exposure_Index_10class_102820.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
     CLASS
@@ -732,7 +732,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/HI_Marine_Index_4class_092520.tif"
+      DATA     "/tiledata/source/HI_Marine_Index_4class_102820.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -1008,7 +1008,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/HI_Terrestrial_Index_4class_092520.tif"
+      DATA     "/tiledata/source/HI_Terrestrial_Index_4class_102720.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 

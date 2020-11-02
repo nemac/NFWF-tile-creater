@@ -427,15 +427,18 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTi
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 11,12 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 11,11 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 13,13 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 13,13 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 14,14 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 11,11 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mmapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 14,14 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+
 
 ```
 
