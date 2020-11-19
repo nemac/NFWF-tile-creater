@@ -429,6 +429,11 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialInd
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_HubsIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_HubsIndexTiles -z 11,12 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_HubsIndexTiles -z 13,13 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_HubsIndexTiles -z 14,14 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
+
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 0,10 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 11,12 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TsunamiIndexTiles -z 13,13 -n 8 -d  /tiledata/source/HI_Region_Boundary_3857.shp &
@@ -662,6 +667,8 @@ cd cache
 ./deletetransparenttiles.py HI_HubsIndexTiles &
 ./deletetransparenttiles.py HI_LandslideIndexTiles &
 ./deletetransparenttiles.py HI_TsunamiIndexTiles &
+./deletetransparenttiles.py HI_HubsIndexTiles &
+
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
@@ -752,6 +759,7 @@ aws s3 rm s3://tiles.resilientcoasts.org/HI_StormSurgeIndexTiles --recursive --e
 aws s3 rm s3://tiles.resilientcoasts.org/HI_TerrestrialIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/HI_ThreatsIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/HI_LandslideIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --recursive --exclude "" &
 
 aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
