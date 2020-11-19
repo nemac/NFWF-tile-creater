@@ -663,8 +663,6 @@ cd cache
 ./deletetransparenttiles.py HI_StormSurgeIndexTiles &
 ./deletetransparenttiles.py HI_TerrestrialIndexTiles &
 ./deletetransparenttiles.py HI_ThreatsIndexTiles &
-./deletetransparenttiles.py HI_HubsIndexTiles &
-./deletetransparenttiles.py HI_HubsIndexTiles &
 ./deletetransparenttiles.py HI_LandslideIndexTiles &
 ./deletetransparenttiles.py HI_TsunamiIndexTiles &
 ./deletetransparenttiles.py HI_HubsIndexTiles &
