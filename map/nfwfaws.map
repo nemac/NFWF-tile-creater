@@ -87,7 +87,7 @@ MAP
     TYPE     RASTER
     DUMP     TRUE
     STATUS   OFF
-    DATA     /tiledata/source/hi_cores_hubs_111920.tif
+    DATA     /tiledata/source/pr_combined_hub_group_070120.tif
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html
     CLASS

@@ -760,7 +760,7 @@ aws s3 rm s3://tiles.resilientcoasts.org/HI_TerrestrialIndexTiles --recursive --
 aws s3 rm s3://tiles.resilientcoasts.org/HI_ThreatsIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/HI_LandslideIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --recursive --exclude "" &
-aws s3 rm s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/HI_HubsIndexTiles --recursive --exclude "" &
 
 aws s3 sync PR_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/PR_AquaticIndexTiles --acl public-read &
 aws s3 sync PR_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/PR_AssetsIndexTiles --acl public-read &
