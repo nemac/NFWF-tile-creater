@@ -1,0 +1,1210 @@
+MAP
+  # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+  # of the two lines below to enable this logging:
+  #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+  #DEBUG 5
+
+  # all temp files get prefixed with this string
+  NAME ms_nfwf
+
+  #jdm:added to accomodate map layers
+  #see http://trac.osgeo.org/mapserver/ticket/3055
+  MAXSIZE 3072
+
+  # background color of image if transparency
+  # is not requested
+  IMAGECOLOR 255 255 255
+
+  # default output image dimensions
+  SIZE 600 400
+
+  # always returns a map
+  STATUS ON
+
+  # set top level projection
+  PROJECTION
+    "init=epsg:3857"
+  END
+
+  # image format options
+  OUTPUTFORMAT
+    NAME "PNG"
+    DRIVER "GDAL/PNG"
+    MIMETYPE "image/png"
+    IMAGEMODE "RGB"
+    EXTENSION "png"
+  END
+
+  # minx miny maxx maxy
+  EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+  # # add def pointers for symbols
+  SYMBOLSET symbolset.txt
+  # FONTSET   "./fonts/fonts.list"
+
+  # Start of web interface definition
+  WEB
+
+    IMAGEPATH '/tmp/'
+    IMAGEURL '/tmp/'
+
+    HEADER "./templates/query_header.html"
+    FOOTER "./templates/query_footer.html"
+    TEMPLATE 'http://someurl/somescript.cgi?mapext=[mapext]'
+
+    METADATA
+      "ows_enable_request"     "*"
+      "wms_title"              "NEMAC NFWF WMS"
+      "wms_abstract"           "NEMAC NFWF WMS"
+      "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+      "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+      "wms_feature_info_mime_type" "text/plain"
+      "wms_feature_info_mime_type" "text/html"
+    END
+  END
+
+  # set defaults for GetLegendGraphic requests
+  LEGEND
+    KEYSIZE 30 20
+    STATUS on
+  END
+
+  LAYER  # DONE Sept 13
+    NAME "AS_AssetsIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Asset_Index_10class_shift_v2-2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 182 237 240
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 152 210 237
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 124 187 235
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 92 163 230
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 54 141 227
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+
+        STYLE
+          COLOR 33 118 217
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+
+        STYLE
+          COLOR 34 89 199
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+
+        STYLE
+          COLOR 29 62 181
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+
+        STYLE
+          COLOR 23 39 163
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+
+        STYLE
+          COLOR 9 9 145
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_AssetsIndexTiles"
+      "wms_abstract"          "AS_AssetsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+
+  LAYER  # DONE Sept 13
+    NAME "AS_CombinedWildlifeIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Wildlife_Index_6class_v2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 238 231 248
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 233 187 203
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 219 144 166
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 210 124 153
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 183 82 138
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+
+        STYLE
+          COLOR 126 51 168
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_CombinedWildlifeIndexTiles"
+      "wms_abstract"          "AS_CombinedWildlifeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_CriticalFacilitiesIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_C_Facilities_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 0 132 168 #
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_CriticalFacilitiesIndexTiles"
+      "wms_abstract"          "AS_CriticalFacilitiesIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_CriticalInfrastructureIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_C_Infrastructure_v2-2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 204 209 210
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 53 92 89
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+
+        STYLE
+          COLOR 232 177 109
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+
+        STYLE
+          COLOR 173 53 65
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 15)
+
+        STYLE
+          COLOR 123 23 51
+        END
+      END
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_CriticalInfrastructureIndexTiles"
+      "wms_abstract"          "AS_CriticalInfrastructureIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_ExposureIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Exposure_Index_10class_v2-2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      EXPRESSION ""
+      COLOR 255 255 255
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 31 110 110
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 61 130 130
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 125 173 156
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 183 212 178
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 233 242 187
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 6)
+      STYLE
+        COLOR 245 233 169
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 7)
+      STYLE
+        COLOR 219 186 122
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 8)
+      STYLE
+        COLOR 176 128 66
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 9)
+      STYLE
+        COLOR 148 87 28
+      END #end style
+    END #end class
+    CLASS
+
+      EXPRESSION ([pixel] = 10)
+      STYLE
+        COLOR 99 51 25
+      END #end style
+    END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_ExposureIndexTiles"
+      "wms_abstract"          "AS_ExposureIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_ErosionIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Erodible_Soils_shift_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 254 235 162
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 254 187 71
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 240 120 24
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 184 66 3
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 102 37 6
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_ErosionIndexTiles"
+      "wms_abstract"          "AS_ErosionIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_FloodProneAreasIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Floodprone_Areas_shift_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 226 226 239
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 182 182 216
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 134 131 189
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 97 64 155
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 63 0 125
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_FloodProneAreasIndexTiles"
+      "wms_abstract"          "AS_FloodProneAreasIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_DraingeIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Impermeable_Surfaces_shift_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 240 240 240
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 189 189 189
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 99 99 99
+        END
+      END
+
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_DraingeIndexTiles"
+      "wms_abstract"          "AS_DraingeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER  # DONE Sept 13
+    NAME "AS_SlopeIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Slope_resample_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 211 238 205
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 152 213 148
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 75 176 98
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 21 127 59
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 0 68 27
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_SlopeIndexTiles"
+      "wms_abstract"          "AS_SlopeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_PopDensityIndexTiles"
+    PROJECTION
+      "proj=utm"
+      "zone=55"
+      "datum=WGS84"
+      "units=m"
+
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_PopDensity_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 255 246 208
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 239 193 51
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 158 172 55
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 44 141 122
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 56 90 76
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_PopDensityIndexTiles"
+      "wms_abstract"          "AS_PopDensityIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_AquaticIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Marine_Index_4class_v2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 205 225 232
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 130 188 209
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 0 126 145
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 0 90 88
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_AquaticIndexTiles"
+      "wms_abstract"          "AS_AquaticIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_SLRIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_SLR_shift_v1LZW.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 219 216 234
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 153 185 217
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 64 149 195
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 2 121 118
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 1 70 54
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_SLRIndexTiles"
+      "wms_abstract"          "AS_SLRIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_SocVulnIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_SocVul_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 237 248 251
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 179 205 227
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 140 150 198
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 136 65 157
+        END
+      END
+
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_SocVulnIndexTiles"
+      "wms_abstract"          "AS_SocVulnIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_WaveDrivenFloodingIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_WaveDriven_Flooding_shift_v1_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 255 255 204
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 161 218 180
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 65 182 196
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 34 94 168
+        END
+      END
+
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_WaveDrivenFloodingIndexTiles"
+      "wms_abstract"          "AS_WaveDrivenFloodingIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_TerrestrialIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Terrestrial_Index_4class_v2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 255 233 196
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 223 200 120
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 56 91 35
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 0 73 0
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_TerrestrialIndexTiles"
+      "wms_abstract"          "AS_TerrestrialIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_ThreatsIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Threat_Index_10class_v2_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 255 235 214
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 247 215 188
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 240 192 161
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
+        STYLE
+          COLOR 235 169 136
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+
+        STYLE
+          COLOR 227 144 111
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+
+        STYLE
+          COLOR 222 119 91
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+
+        STYLE
+          COLOR 214 93 69
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+
+        STYLE
+          COLOR 209 64 48
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+
+        STYLE
+          COLOR 201 37 28
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+
+        STYLE
+          COLOR 196 10 10
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_ThreatsIndexTiles"
+      "wms_abstract"          "AS_ThreatsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER # DONE Sept 13
+    NAME "AS_TsunamiIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AS_Tsunami_8.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 33 113 181
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_TsunamiIndexTiles"
+      "wms_abstract"          "AS_TsunamiIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AS_HubsIndexTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+    TYPE     POLYGON
+    DUMP     TRUE
+    STATUS   OFF
+    DATA     /tiledata/source/as_hubs_hexes_dissolve.shp
+    CLASSITEM 'Rank'
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      NAME "Low"
+      EXPRESSION "1"
+      STYLE
+        COLOR 255 197 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "2"
+      STYLE
+        COLOR 249 181 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "3"
+      STYLE
+        COLOR 243 164 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "4"
+      STYLE
+        COLOR 237 148 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "5"
+      STYLE
+        COLOR 231 131 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "6"
+      STYLE
+        COLOR 224 112 0
+      END #end style
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION "7"
+      STYLE
+        COLOR 217 94 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "8"
+      STYLE
+        COLOR 209 76 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "9"
+      STYLE
+        COLOR 202 54 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "10"
+      STYLE
+        COLOR 194 21 0
+      END #end style
+    END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_HubsIndexTiles"
+      "wms_abstract"          "AS_HubsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+END # end MAP

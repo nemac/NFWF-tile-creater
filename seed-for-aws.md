@@ -24,6 +24,12 @@ gdal_translate -of GTiff -ot Byte -a_nodata 255 TargetedWatershedHubs.tif Target
 gdal_translate -of GTiff -ot Byte -a_nodata 255 TargetedWatershedFishandWildlife.tif TargetedWatershedFishandWildlife8.tif -co COMPRESS=LZW &
 ```
 
+
+### for hexed based hubs we need to convert the shapefile to a raster for zonal stats
+```
+ gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve_8.tif -co COMPRESS=LZW
+```
+
 ## Copy CONUS8 bit images locally if you want a copy for your self or to check values did not get messed up (just an example of what to do)
 ```bsh
 scp -i [YOUR PEM FILE] ec2-user@ec2-3-86-102-181.compute-1.amazonaws.com:/tiledata/source/TargetedWatershedAsset8.tif . &
@@ -109,6 +115,7 @@ gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_StormSurge_v2_clip.tif USVI
 gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_TerrestrialIndex_4class.tif USVI_TerrestrialIndex_4class_8bit.tif -co COMPRESS=LZW &
 gdal_translate -of GTiff -ot Byte -a_nodata 255 USVI_ThreatIndex_10class_021220_clip.tif USVI_ThreatIndex_10class_021220_clip_8bit.tif -co COMPRESS=LZW &
 
+
 rm PR_AssetIndex_10class_021020_clip.tif
 rm PR_CombinedWildlife_6class_040320.tif
 rm PR_CriticalFacilities_v2_clip.tif
@@ -169,7 +176,6 @@ scp -i [YOUR PEM FILE] ../Downloads/For_CREST/USVI/USVI_CREST_Clipping_Boundary_
 scp -i [YOUR PEM FILE] ../Downloads/For_CREST/USVI/USVI_CREST_Clipping_Boundary_3857.shx ec2-user@ec2-3-86-102-181.compute-1.amazonaws.com:/home/ec2-user/NFWF-tile-creater/limitshapefiles/. &
 scp -i [YOUR PEM FILE] ../Downloads/For_CREST/USVI/USVI_CREST_Clipping_Boundary_3857.prj ec2-user@ec2-3-86-102-181.compute-1.amazonaws.com:/home/ec2-user/NFWF-tile-creater/limitshapefiles/. &
 ```
-
 
 ### Starting docker on aws instance
 SSH to aws instance
@@ -260,6 +266,27 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityInde
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 ```
 
+#### American Soma Seed
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_AssetsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_CombinedWildlifeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_CriticalFacilitiesIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_CriticalInfrastructureIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_ExposureIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_ErosionIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_FloodProneAreasIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_DraingeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_SlopeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_AquaticIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_SocVulnIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_WaveDrivenFloodingIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_TerrestrialIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_ThreatsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_SLRIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_PopDensityIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_TsunamiIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+```
 
 ### from seed server seed all level 11 - 12 tiles if you do too many you will get timeouts. starting at these zoom levels try not do all of them and -d option with limit shapefile is important for reducing blank images, we will remove blanks (completely transparent) latter.
 run repeatedly until you 0 tiles needed to be seeded, exiting
@@ -667,6 +694,27 @@ cd cache
 ./deletetransparenttiles.py HI_TsunamiIndexTiles &
 ./deletetransparenttiles.py HI_HubsIndexTiles &
 
+./deletetransparenttiles.py AS_AssetsIndexTiles &
+./deletetransparenttiles.py AS_CombinedWildlifeIndexTiles &
+./deletetransparenttiles.py AS_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py AS_CriticalInfrastructureIndexTiles &
+./deletetransparenttiles.py AS_ExposureIndexTiles &
+./deletetransparenttiles.py AS_ErosionIndexTiles &
+./deletetransparenttiles.py AS_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py AS_DraingeIndexTiles &
+./deletetransparenttiles.py AS_SlopeIndexTiles &
+./deletetransparenttiles.py AS_AquaticIndexTiles &
+./deletetransparenttiles.py AS_SocVulnIndexTiles &
+./deletetransparenttiles.py AS_WaveDrivenFloodingIndexTiles &
+./deletetransparenttiles.py AS_TerrestrialIndexTiles &
+./deletetransparenttiles.py AS_ThreatsIndexTiles &
+./deletetransparenttiles.py AS_SLRIndexTiles &
+./deletetransparenttiles.py AS_PopDensityIndexTiles &
+./deletetransparenttiles.py AS_HubsIndexTiles &
+./deletetransparenttiles.py AS_TsunamiIndexTiles &
+
+
+
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
@@ -840,6 +888,25 @@ aws s3 sync HI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/HI_ThreatsIndex
 aws s3 sync HI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/HI_HubsIndexTiles --acl public-read &
 aws s3 sync HI_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/HI_TsunamiIndexTiles --acl public-read &
 aws s3 sync HI_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/HI_LandslideIndexTiles --acl public-read &
+
+aws s3 sync AS_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/AS_AssetsIndexTiles --acl public-read &
+aws s3 sync AS_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/AS_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync AS_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/AS_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync AS_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/AS_CriticalInfrastructureIndexTiles --acl public-read &
+aws s3 sync AS_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/AS_ExposureIndexTiles --acl public-read &
+aws s3 sync AS_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/AS_ErosionIndexTiles --acl public-read &
+aws s3 sync AS_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/AS_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync AS_DraingeIndexTiles/ s3://tiles.resilientcoasts.org/AS_DraingeIndexTiles --acl public-read &
+aws s3 sync AS_SlopeIndexTiles/ s3://tiles.resilientcoasts.org/AS_SlopeIndexTiles --acl public-read &
+aws s3 sync AS_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/AS_AquaticIndexTiles --acl public-read &
+aws s3 sync AS_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/AS_SocVulnIndexTiles --acl public-read &
+aws s3 sync AS_WaveDrivenFloodingIndexTiles/ s3://tiles.resilientcoasts.org/AS_WaveDrivenFloodingIndexTiles --acl public-read &
+aws s3 sync AS_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/AS_TerrestrialIndexTiles --acl public-read &
+aws s3 sync AS_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/AS_ThreatsIndexTiles --acl public-read &
+aws s3 sync AS_SLRIndexTiles/ s3://tiles.resilientcoasts.org/AS_SLRIndexTiles --acl public-read &
+aws s3 sync AS_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --acl public-read &
+aws s3 sync AS_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsIndexTiles --acl public-read &
+aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndexTiles --acl public-read &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
