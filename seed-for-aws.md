@@ -27,9 +27,77 @@ gdal_translate -of GTiff -ot Byte -a_nodata 255 TargetedWatershedFishandWildlife
 
 ### for hexed based hubs we need to convert the shapefile to a raster for zonal stats
 ```
-gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve_8.tif -co COMPRESS=LZW
 
-gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve_8s.tif -co COMPRESS=LZW -co PIXELTYPE=SIGNEDBYTE
+gdal_calc.py -A AS_Wildlife_Index_6class_v2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Wildlife_Index_6class_v2-TEMP.tif
+gdal_translate AS_Wildlife_Index_6class_v2-TEMP.tif AS_Wildlife_Index_6class_v2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Wildlife_Index_6class_v2-TEMP.tif
+
+gdal_calc.py -A AS_WaveDriven_Flooding_shift_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_WaveDriven_Flooding_shift_v1-Temp.tif
+gdal_translate AS_WaveDriven_Flooding_shift_v1-Temp.tif AS_WaveDriven_Flooding_shift_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_WaveDriven_Flooding_shift_v1-TEMP.tif
+
+gdal_calc.py -A AS_Marine_Index_4class_v2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Marine_Index_4class_v2-TEMP.tif
+gdal_translate AS_Marine_Index_4class_v2-TEMP.tif AS_Marine_Index_4class_v2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Marine_Index_4class_v2-TEMP.tif
+
+gdal_calc.py -A AS_Terrestrial_Index_4class_v2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Terrestrial_Index_4class_v2-Temp.tif
+gdal_translate AS_Terrestrial_Index_4class_v2-Temp.tif AS_Terrestrial_Index_4class_v2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Terrestrial_Index_4class_v2-TEMP.tif
+
+gdal_calc.py -A AS_Erodible_Soils_shift_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Erodible_Soils_shift_v1-Temp.tif
+gdal_translate AS_Erodible_Soils_shift_v1-Temp.tif AS_Erodible_Soils_shift_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Erodible_Soils_shift_v1-TEMP.tif
+
+gdal_calc.py -A AS_Floodprone_Areas_shift_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Floodprone_Areas_shift_v1-Temp.tif
+gdal_translate AS_Floodprone_Areas_shift_v1-Temp.tif AS_Floodprone_Areas_shift_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Floodprone_Areas_shift_v1-TEMP.tif
+
+gdal_calc.py -A AS_SLR_shift_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_SLR_shift_v1-Temp.tif
+gdal_translate AS_SLR_shift_v1-Temp.tif AS_SLR_shift_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_SLR_shift_v1-TEMP.tif
+
+gdal_calc.py -A AS_Impermeable_Surfaces_shift_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Impermeable_Surfaces_shift_v1-Temp.tif
+gdal_translate AS_Impermeable_Surfaces_shift_v1-Temp.tif AS_Impermeable_Surfaces_shift_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Impermeable_Surfaces_shift_v1-TEMP.tif
+
+gdal_calc.py -A AS_SocVul_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_SocVul_v1-Temp.tif
+gdal_translate AS_SocVul_v1-Temp.tif AS_SocVul_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_SocVul_v1-TEMP.tif
+
+gdal_calc.py -A AS_C_Facilities_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_C_Facilities_v1-Temp.tif
+gdal_translate AS_C_Facilities_v1-Temp.tif AS_C_Facilities_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_C_Facilities_v1-TEMP.tif
+
+gdal_calc.py -A AS_C_Infrastructure_v2-2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_C_Infrastructure_v2-2-TEMP.tif
+gdal_translate AS_C_Infrastructure_v2-2-TEMP.tif AS_C_Infrastructure_v2-2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_C_Infrastructure_v2-2-TEMP.tif
+
+gdal_calc.py -A AS_PopDensity_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_PopDensity_v1-TEMP.tif
+gdal_translate AS_PopDensity_v1-TEMP.tif AS_PopDensity_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_PopDensity_v1-TEMP.tif
+
+gdal_calc.py -A AS_Slope_resample_v1.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Slope_resample_v1-TEMP.tif
+gdal_translate AS_Slope_resample_v1-TEMP.tif AS_Slope_resample_v1_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Slope_resample_v1-TEMP.tif
+
+gdal_calc.py -A AS_Tsunami.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Tsunami-TEMP.tif
+gdal_translate AS_Tsunami-TEMP.tif AS_Tsunami_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Tsunami-TEMP.tif
+
+gdal_calc.py -A AS_Exposure_Index_10class_v2-2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Exposure_Index_10class_v2-2-TEMP.tif
+gdal_translate AS_Exposure_Index_10class_v2-2-TEMP.tif AS_Exposure_Index_10class_v2-2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Exposure_Index_10class_v2-2-TEMP.tif
+
+gdal_calc.py -A AS_Asset_Index_10class_shift_v2-2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Asset_Index_10class_shift_v2-2-TEMP.tif
+gdal_translate AS_Asset_Index_10class_shift_v2-2-TEMP.tif AS_Asset_Index_10class_shift_v2-2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Asset_Index_10class_shift_v2-2-TEMP.tif
+
+gdal_calc.py -A AS_Threat_Index_10class_v2.tif  --calc="A*(A<127)+255*(A>127)+255*(A<0)" --NoDataValue=255 --outfile=AS_Threat_Index_10class_v2-TEMP.tif
+gdal_translate AS_Threat_Index_10class_v2-TEMP.tif AS_Threat_Index_10class_v2_8.tif -co COMPRESS=LZW -of GTiff -ot Byte -a_nodata 255
+rm AS_Threat_Index_10class_v2-TEMP.tif
+
+
+gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp as_hubs_hexes_dissolve_8.tif -co COMPRESS=LZW
 ```
 
 ## Copy CONUS8 bit images locally if you want a copy for your self or to check values did not get messed up (just an example of what to do)
