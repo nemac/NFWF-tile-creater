@@ -27,7 +27,9 @@ gdal_translate -of GTiff -ot Byte -a_nodata 255 TargetedWatershedFishandWildlife
 
 ### for hexed based hubs we need to convert the shapefile to a raster for zonal stats
 ```
- gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve_8.tif -co COMPRESS=LZW
+gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve_8.tif -co COMPRESS=LZW
+
+gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve_8s.tif -co COMPRESS=LZW -co PIXELTYPE=SIGNEDBYTE
 ```
 
 ## Copy CONUS8 bit images locally if you want a copy for your self or to check values did not get messed up (just an example of what to do)
@@ -907,6 +909,9 @@ aws s3 sync AS_SLRIndexTiles/ s3://tiles.resilientcoasts.org/AS_SLRIndexTiles --
 aws s3 sync AS_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --acl public-read &
 aws s3 sync AS_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsIndexTiles --acl public-read &
 aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndexTiles --acl public-read &
+
+aws s3 rm s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --recursive --exclude "" &
+
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```

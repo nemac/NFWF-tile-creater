@@ -656,10 +656,11 @@ MAP
     NAME "AS_PopDensityIndexTiles"
     PROJECTION
       "proj=utm"
-      "zone=55"
-      "datum=WGS84"
-      "units=m"
-
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
     END
       TYPE     RASTER
       DUMP     TRUE
