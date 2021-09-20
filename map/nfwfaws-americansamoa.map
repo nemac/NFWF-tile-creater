@@ -287,6 +287,12 @@ MAP
         END
       END
       CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 204 209 210
+        END
+      END
+      CLASS
         EXPRESSION ([pixel] = 5)
 
         STYLE
