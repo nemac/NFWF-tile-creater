@@ -978,6 +978,8 @@ aws s3 sync AS_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/AS_PopDensit
 aws s3 sync AS_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsIndexTiles --acl public-read &
 aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndexTiles --acl public-read &
 
+aws s3 rm s3://tiles.resilientcoasts.org/AS_CriticalInfrastructureIndexTiles --recursive --exclude "" &
+
 aws s3 rm s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --recursive --exclude "" &
 
 
