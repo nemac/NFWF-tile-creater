@@ -848,6 +848,28 @@ MAP
 
       CLASS
         EXPRESSION ([pixel] = 1)
+
+        STYLE
+          COLOR 136 65 157
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+
+        STYLE
+          COLOR 136 65 157
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+
+        STYLE
+          COLOR 136 65 157
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+
         STYLE
           COLOR 136 65 157
         END
