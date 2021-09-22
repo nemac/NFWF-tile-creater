@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+
+  <source name="GU_AssetsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_AssetsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_AssetsIndexTiles">
+    <metadata>
+      <title>GU_AssetsIndexTiles</title>
+    </metadata>
+    <source>GU_AssetsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_CombinedWildlifeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_CombinedWildlifeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_CombinedWildlifeIndexTiles">
+    <metadata>
+      <title>GU_CombinedWildlifeIndexTiles</title>
+    </metadata>
+    <source>GU_CombinedWildlifeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_CriticalFacilitiesIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_CriticalFacilitiesIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_CriticalFacilitiesIndexTiles">
+    <metadata>
+      <title>GU_CriticalFacilitiesIndexTiles</title>
+    </metadata>
+    <source>GU_CriticalFacilitiesIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_CriticalInfrastructureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_CriticalInfrastructureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_CriticalInfrastructureIndexTiles">
+    <metadata>
+      <title>GU_CriticalInfrastructureIndexTiles</title>
+    </metadata>
+    <source>GU_CriticalInfrastructureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_ErosionIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_ErosionIndexTiles">
+    <metadata>
+      <title>GU_ErosionIndexTiles</title>
+    </metadata>
+    <source>GU_ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_TsunamiIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_TsunamiIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_TsunamiIndexTiles">
+    <metadata>
+      <title>GU_TsunamiIndexTiles</title>
+    </metadata>
+    <source>GU_TsunamiIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+
+  <source name="GU_ExposureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_ExposureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_ExposureIndexTiles">
+    <metadata>
+      <title>GU_ExposureIndexTiles</title>
+    </metadata>
+    <source>GU_ExposureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_FloodProneAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_FloodProneAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_FloodProneAreasIndexTiles">
+    <metadata>
+      <title>GU_FloodProneAreasIndexTiles</title>
+    </metadata>
+    <source>GU_FloodProneAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_DraingeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_DraingeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_DraingeIndexTiles">
+    <metadata>
+      <title>GU_DraingeIndexTiles</title>
+    </metadata>
+    <source>GU_DraingeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_SlopeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_SlopeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_SlopeIndexTiles">
+    <metadata>
+      <title>GU_SlopeIndexTiles</title>
+    </metadata>
+    <source>GU_SlopeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_AquaticIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_AquaticIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_AquaticIndexTiles">
+    <metadata>
+      <title>GU_AquaticIndexTiles</title>
+    </metadata>
+    <source>GU_AquaticIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_SLRIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_SLRIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_SLRIndexTiles">
+    <metadata>
+      <title>GU_SLRIndexTiles</title>
+    </metadata>
+    <source>GU_SLRIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_SocVulnIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_SocVulnIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_SocVulnIndexTiles">
+    <metadata>
+      <title>GU_SocVulnIndexTiles</title>
+    </metadata>
+    <source>GU_SocVulnIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_TerrestrialIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_TerrestrialIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_TerrestrialIndexTiles">
+    <metadata>
+      <title>GU_TerrestrialIndexTiles</title>
+    </metadata>
+    <source>GU_TerrestrialIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_ThreatsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_ThreatsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_ThreatsIndexTiles">
+    <metadata>
+      <title>GU_ThreatsIndexTiles</title>
+    </metadata>
+    <source>GU_ThreatsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_PopDensityIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_PopDensityIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_PopDensityIndexTiles">
+    <metadata>
+      <title>GU_PopDensityIndexTiles</title>
+    </metadata>
+    <source>GU_PopDensityIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <tileset name="GU_WaveDrivenFloodingIndexTiles">
+    <metadata>
+      <title>GU_WaveDrivenFloodingIndexTiles</title>
+    </metadata>
+    <source>GU_WaveDrivenFloodingIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_WaveDrivenFloodingIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_WaveDrivenFloodingIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_LandslideIndexTiles">
+    <metadata>
+      <title>GU_LandslideIndexTiles</title>
+    </metadata>
+    <source>GU_LandslideIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_LandslideIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_LandslideIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_WaveExposureTiles">
+    <metadata>
+      <title>GU_WaveExposureTiles</title>
+    </metadata>
+    <source>GU_WaveExposureTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_WaveExposureTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_WaveExposureTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+  <tileset name="GU_HubsIndexTiles">
+    <metadata>
+      <title>GU_HubsIndexTiles</title>
+    </metadata>
+    <source>GU_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>

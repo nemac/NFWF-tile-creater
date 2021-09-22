@@ -336,6 +336,31 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityInde
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 ```
 
+#### Guam Seed
+```bsh
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_AssetsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_CombinedWildlifeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_CriticalFacilitiesIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_CriticalInfrastructureIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_ExposureIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_ErosionIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_FloodProneAreasIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_DraingeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_SlopeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_AquaticIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_SocVulnIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_WaveDrivenFloodingIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_TerrestrialIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_ThreatsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_SLRIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_PopDensityIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_TsunamiIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_LandslideIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_WaveExposureTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+
+```
+
 #### American Soma Seed
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_AssetsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
