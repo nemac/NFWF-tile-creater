@@ -98,6 +98,8 @@ rm AS_Threat_Index_10class_v2-TEMP.tif
 
 
 gdal_rasterize -l as_hubs_hexes_dissolve -a Rank -tr 10.0 10.0 -a_nodata 255.0 -te 489864.4342 8388331.0775 808566.4342 8779021.0775 -ot Byte -of GTiff /Users/daveism/Downloads/as_hubs_hexes_dissolve_091021/as_hubs_hexes_dissolve.shp as_hubs_hexes_dissolve_8.tif -co COMPRESS=LZW
+
+gdal_rasterize -l gu_hubs_hexes_dissolve_091421 -a Rank -tr 3.0 3.0 -te 35752.0277 23001.2562 73138.0277 70890.2562 /Users/daveism/Downloads/guam-hex-hubs/gu_hubs_hexes_dissolve_091421.shp gu_hubs_hexes_dissolve.tif -co COMPRESS=LZW -ot Byte -of GTiff -a_nodata 255
 ```
 
 ## Copy CONUS8 bit images locally if you want a copy for your self or to check values did not get messed up (just an example of what to do)
@@ -808,7 +810,26 @@ cd cache
 ./deletetransparenttiles.py AS_HubsIndexTiles &
 ./deletetransparenttiles.py AS_TsunamiIndexTiles &
 
-
+./deletetransparenttiles.py GU_AssetsIndexTiles &
+./deletetransparenttiles.py GU_CombinedWildlifeIndexTiles &
+./deletetransparenttiles.py GU_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py GU_CriticalInfrastructureIndexTiles &
+./deletetransparenttiles.py GU_ExposureIndexTiles &
+./deletetransparenttiles.py GU_ErosionIndexTiles &
+./deletetransparenttiles.py GU_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py GU_DraingeIndexTiles &
+./deletetransparenttiles.py GU_SlopeIndexTiles &
+./deletetransparenttiles.py GU_AquaticIndexTiles &
+./deletetransparenttiles.py GU_SocVulnIndexTiles &
+./deletetransparenttiles.py GU_WaveDrivenFloodingIndexTiles &
+./deletetransparenttiles.py GU_TerrestrialIndexTiles &
+./deletetransparenttiles.py GU_ThreatsIndexTiles &
+./deletetransparenttiles.py GU_SLRIndexTiles &
+./deletetransparenttiles.py GU_PopDensityIndexTiles &
+./deletetransparenttiles.py GU_HubsIndexTiles &
+./deletetransparenttiles.py GU_TsunamiIndexTiles &
+./deletetransparenttiles.py GU_LandslideIndexTiles &
+./deletetransparenttiles.py GU_WaveExposureTiles &
 
 ```
 
@@ -1004,8 +1025,28 @@ aws s3 sync AS_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsIndexTiles 
 aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndexTiles --acl public-read &
 
 aws s3 rm s3://tiles.resilientcoasts.org/AS_CriticalInfrastructureIndexTiles --recursive --exclude "" &
-
 aws s3 rm s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --recursive --exclude "" &
+
+aws s3 sync GU_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/GU_AssetsIndexTiles --acl public-read &
+aws s3 sync GU_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/GU_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync GU_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/GU_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync GU_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/GU_CriticalInfrastructureIndexTiles --acl public-read &
+aws s3 sync GU_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/GU_ExposureIndexTiles --acl public-read &
+aws s3 sync GU_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/GU_ErosionIndexTiles --acl public-read &
+aws s3 sync GU_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/GU_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync GU_DraingeIndexTiles/ s3://tiles.resilientcoasts.org/GU_DraingeIndexTiles --acl public-read &
+aws s3 sync GU_SlopeIndexTiles/ s3://tiles.resilientcoasts.org/GU_SlopeIndexTiles --acl public-read &
+aws s3 sync GU_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/GU_AquaticIndexTiles --acl public-read &
+aws s3 sync GU_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/GU_SocVulnIndexTiles --acl public-read &
+aws s3 sync GU_WaveDrivenFloodingIndexTiles/ s3://tiles.resilientcoasts.org/GU_WaveDrivenFloodingIndexTiles --acl public-read &
+aws s3 sync GU_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/GU_TerrestrialIndexTiles --acl public-read &
+aws s3 sync GU_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/GU_ThreatsIndexTiles --acl public-read &
+aws s3 sync GU_SLRIndexTiles/ s3://tiles.resilientcoasts.org/GU_SLRIndexTiles --acl public-read &
+aws s3 sync GU_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/GU_PopDensityIndexTiles --acl public-read &
+aws s3 sync GU_HubsIndexTiles/ s3://tiles.resilientcoasts.org/GU_HubsIndexTiles --acl public-read &
+aws s3 sync GU_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/GU_TsunamiIndexTiles --acl public-read &
+aws s3 sync GU_WaveExposureTiles/ s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --acl public-read &
+aws s3 sync GU_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/GU_LandslideIndexTiles --acl public-read &
 
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
