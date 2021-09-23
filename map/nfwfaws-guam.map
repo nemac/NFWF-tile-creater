@@ -425,7 +425,7 @@ MAP
   LAYER
     NAME "GU_ErosionIndexTiles"
     PROJECTION
-    	"proj=utm"
+    	"proj=poly"
     	"lat_0=13.47246635277778"
     	"lon_0=144.7487507055556"
     	"x_0=50000"
@@ -557,41 +557,24 @@ MAP
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
-      CLASS
-        EXPRESSION ([pixel] = 1)
-        NAME "Low"
-        STYLE
-          COLOR 68 118 4
-        END
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 240 240 240
       END
-      CLASS
-        EXPRESSION ([pixel] = 2)
-        NAME "Medium"
-        STYLE
-          COLOR 119 214 111
-        END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 189 189 189
       END
-      CLASS
-        EXPRESSION ([pixel] = 3)
-        NAME "Medium"
-        STYLE
-          COLOR 220 233 242
-        END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 99 99 99
       END
-      CLASS
-        EXPRESSION ([pixel] = 4)
-        NAME "High"
-        STYLE
-          COLOR 117 91 105
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 5)
-        NAME "High"
-        STYLE
-          COLOR 85 53 85
-        END
-      END
+    END
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
@@ -1159,7 +1142,7 @@ MAP
   LAYER
     NAME "GU_WaveExposureTiles"
     PROJECTION
-    	"proj=utm"
+    	"proj=poly"
     	"lat_0=13.47246635277778"
     	"lon_0=144.7487507055556"
     	"x_0=50000"
