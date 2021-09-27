@@ -560,19 +560,19 @@ MAP
     CLASS
       EXPRESSION ([pixel] = 1)
       STYLE
-        COLOR 240 240 240
+        COLOR 68 118 4
       END
     END
     CLASS
       EXPRESSION ([pixel] = 3)
       STYLE
-        COLOR 189 189 189
+        COLOR 220 233 242
       END
     END
     CLASS
       EXPRESSION ([pixel] = 5)
       STYLE
-        COLOR 99 99 99
+        COLOR 85 53 85
       END
     END
 

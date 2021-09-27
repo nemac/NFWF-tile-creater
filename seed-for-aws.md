@@ -1050,7 +1050,7 @@ aws s3 sync GU_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/GU_LandslideI
 
 aws s3 rm s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_ErosionIndexTiles --recursive --exclude "" &
-
+aws s3 rm s3://tiles.resilientcoasts.org/GU_DraingeIndexTiles --recursive --exclude "" &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
