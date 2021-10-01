@@ -360,6 +360,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_TsunamiIndexTile
 mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_LandslideIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_WaveExposureTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_HubsHexIndexTiles -z 1,14 -n 4 -d  /tiledata/source/GU_30m_Boundary_3857.shp &
 
 ```
 
@@ -1026,6 +1027,7 @@ aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndex
 
 aws s3 rm s3://tiles.resilientcoasts.org/AS_CriticalInfrastructureIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/AS_DraingeIndexTiles --recursive --exclude "" &
 
 aws s3 sync GU_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/GU_AssetsIndexTiles --acl public-read &
 aws s3 sync GU_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/GU_CombinedWildlifeIndexTiles --acl public-read &
@@ -1044,6 +1046,7 @@ aws s3 sync GU_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/GU_ThreatsIndex
 aws s3 sync GU_SLRIndexTiles/ s3://tiles.resilientcoasts.org/GU_SLRIndexTiles --acl public-read &
 aws s3 sync GU_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/GU_PopDensityIndexTiles --acl public-read &
 aws s3 sync GU_HubsIndexTiles/ s3://tiles.resilientcoasts.org/GU_HubsIndexTiles --acl public-read &
+aws s3 sync GU_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/GU_HubsIndGU_HubsHexIndexTilesexTiles --acl public-read &
 aws s3 sync GU_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/GU_TsunamiIndexTiles --acl public-read &
 aws s3 sync GU_WaveExposureTiles/ s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --acl public-read &
 aws s3 sync GU_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/GU_LandslideIndexTiles --acl public-read &
@@ -1051,6 +1054,7 @@ aws s3 sync GU_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/GU_LandslideI
 aws s3 rm s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_ErosionIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_DraingeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsIndexTiles --recursive --exclude "" &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```

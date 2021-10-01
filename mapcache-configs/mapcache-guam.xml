@@ -497,6 +497,35 @@
     </http>
   </source>
 
+
+
+  <tileset name="GU_HubsHexIndexTiles">
+    <metadata>
+      <title>GU_HubsHexIndexTiles</title>
+    </metadata>
+    <source>GU_HubsHexIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_HubsHexIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_HubsHexIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-guam.map</url>
+    </http>
+  </source>
+
+
   <tileset name="GU_HubsIndexTiles">
     <metadata>
       <title>GU_HubsIndexTiles</title>
