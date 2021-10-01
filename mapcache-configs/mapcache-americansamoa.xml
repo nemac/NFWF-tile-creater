@@ -473,6 +473,32 @@
   </source>
 
 
+  <tileset name="AS_HubsHexIndexTiles">
+    <metadata>
+      <title>AS_HubsHexIndexTiles</title>
+    </metadata>
+    <source>AS_HubsHexIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AS_HubsHexIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AS_HubsHexIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-americansamoa.map</url>
+    </http>
+  </source>
+
 
   <service type="wms" enabled="true">
     <resample_mode>bilinear</resample_mode>

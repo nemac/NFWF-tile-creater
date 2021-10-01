@@ -1115,8 +1115,104 @@ MAP
     END  # end METADATA
   END # end LAYER
 
+    LAYER
+      NAME "AS_HubsIndexTiles"
+      PROJECTION
+        "proj=utm"
+      	"zone=2"
+      	"south"
+      	"ellps=GRS80"
+      	"units=m"
+      	"no_defs"
+      END
+      TYPE     POLYGON
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     /tiledata/source/as_hubs_cores_merge_091021.shp
+      CLASSITEM 'Rank'
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      CLASS
+        NAME "Low"
+        EXPRESSION "1"
+        STYLE
+          COLOR 255 197 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "2"
+        STYLE
+          COLOR 249 181 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "3"
+        STYLE
+          COLOR 243 164 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "4"
+        STYLE
+          COLOR 237 148 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "5"
+        STYLE
+          COLOR 231 131 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "6"
+        STYLE
+          COLOR 224 112 0
+        END #end style
+      END #end class
+      CLASS
+        NAME "High"
+        EXPRESSION "7"
+        STYLE
+          COLOR 217 94 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "8"
+        STYLE
+          COLOR 209 76 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "9"
+        STYLE
+          COLOR 202 54 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "10"
+        STYLE
+          COLOR 194 21 0
+        END #end style
+      END #end class
+
+      #INCLUDE "cmaps/gapnat.cmap"
+      METADATA
+        "wms_title"             "AS_HubsIndexTiles"
+        "wms_abstract"          "AS_HubsIndexTiles"
+        "gml_include_items"     "value_0"
+      END  # end METADATA
+    END # end LAYER
+
   LAYER
-    NAME "AS_HubsIndexTiles"
+    NAME "AS_HubsHexIndexTiles"
     PROJECTION
       "proj=utm"
     	"zone=2"
@@ -1205,8 +1301,8 @@ MAP
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
-      "wms_title"             "AS_HubsIndexTiles"
-      "wms_abstract"          "AS_HubsIndexTiles"
+      "wms_title"             "AS_HubsHexIndexTiles"
+      "wms_abstract"          "AS_HubsHexIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER

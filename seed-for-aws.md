@@ -364,7 +364,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-guam.xml -t GU_HubsHexIndexTile
 
 ```
 
-#### American Soma Seed
+#### American Samoa Seed
 ```bsh
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_AssetsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_CombinedWildlifeIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
@@ -383,6 +383,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_Threats
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_SLRIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_PopDensityIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_HubsIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_HubsHexIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-americansamoa.xml -t AS_TsunamiIndexTiles -z 1,14 -n 4 -d  /tiledata/source/AS_30mDepth_Bndy_3857.shp &
 ```
 
@@ -809,6 +810,7 @@ cd cache
 ./deletetransparenttiles.py AS_SLRIndexTiles &
 ./deletetransparenttiles.py AS_PopDensityIndexTiles &
 ./deletetransparenttiles.py AS_HubsIndexTiles &
+./deletetransparenttiles.py AS_HubsHexIndexTiles &
 ./deletetransparenttiles.py AS_TsunamiIndexTiles &
 
 ./deletetransparenttiles.py GU_AssetsIndexTiles &
@@ -1023,11 +1025,14 @@ aws s3 sync AS_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/AS_ThreatsIndex
 aws s3 sync AS_SLRIndexTiles/ s3://tiles.resilientcoasts.org/AS_SLRIndexTiles --acl public-read &
 aws s3 sync AS_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --acl public-read &
 aws s3 sync AS_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsIndexTiles --acl public-read &
+aws s3 sync AS_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsHexIndexTiles --acl public-read &
 aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndexTiles --acl public-read &
 
 aws s3 rm s3://tiles.resilientcoasts.org/AS_CriticalInfrastructureIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/AS_DraingeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/AS_HubsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/AS_HubsHexIndexTiles --recursive --exclude "" &
 
 aws s3 sync GU_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/GU_AssetsIndexTiles --acl public-read &
 aws s3 sync GU_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/GU_CombinedWildlifeIndexTiles --acl public-read &
@@ -1056,6 +1061,7 @@ aws s3 rm s3://tiles.resilientcoasts.org/GU_ErosionIndexTiles --recursive --excl
 aws s3 rm s3://tiles.resilientcoasts.org/GU_DraingeIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsHexIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsIndGU_HubsHexIndexTilesexTiles --recursive --exclude "" &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
