@@ -1046,7 +1046,7 @@ aws s3 sync GU_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/GU_ThreatsIndex
 aws s3 sync GU_SLRIndexTiles/ s3://tiles.resilientcoasts.org/GU_SLRIndexTiles --acl public-read &
 aws s3 sync GU_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/GU_PopDensityIndexTiles --acl public-read &
 aws s3 sync GU_HubsIndexTiles/ s3://tiles.resilientcoasts.org/GU_HubsIndexTiles --acl public-read &
-aws s3 sync GU_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/GU_HubsIndGU_HubsHexIndexTilesexTiles --acl public-read &
+aws s3 sync GU_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/GU_HubsHexIndexTiles --acl public-read &
 aws s3 sync GU_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/GU_TsunamiIndexTiles --acl public-read &
 aws s3 sync GU_WaveExposureTiles/ s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --acl public-read &
 aws s3 sync GU_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/GU_LandslideIndexTiles --acl public-read &
@@ -1055,6 +1055,7 @@ aws s3 rm s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --recursive --excl
 aws s3 rm s3://tiles.resilientcoasts.org/GU_ErosionIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_DraingeIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsHexIndexTiles --recursive --exclude "" &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 ```
