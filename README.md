@@ -1,5 +1,5 @@
 # NFWF-tile-creater
-creates nfwf tms tiles from a docker map server
+creates nfwf tms tiles from a docker map server test
 
 use docker compose to start a mapserver server and mapcache seeder.
 
