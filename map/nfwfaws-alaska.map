@@ -1,0 +1,1186 @@
+MAP
+  # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+  # of the two lines below to enable this logging:
+  #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+  #DEBUG 5
+
+  # all temp files get prefixed with this string
+  NAME ms_nfwf
+
+  #jdm:added to accomodate map layers
+  #see http://trac.osgeo.org/mapserver/ticket/3055
+  MAXSIZE 3072
+
+  # background color of image if transparency
+  # is not requested
+  IMAGECOLOR 255 255 255
+
+  # default output image dimensions
+  SIZE 600 400
+
+  # always returns a map
+  STATUS ON
+
+  # set top level projection
+  PROJECTION
+    "init=epsg:3857"
+  END
+
+  # image format options
+  OUTPUTFORMAT
+    NAME "PNG"
+    DRIVER "GDAL/PNG"
+    MIMETYPE "image/png"
+    IMAGEMODE "RGB"
+    EXTENSION "png"
+  END
+
+  # minx miny maxx maxy
+  EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+  # # add def pointers for symbols
+  SYMBOLSET symbolset.txt
+  # FONTSET   "./fonts/fonts.list"
+
+  # Start of web interface definition
+  WEB
+
+    IMAGEPATH '/tmp/'
+    IMAGEURL '/tmp/'
+
+    HEADER "./templates/query_header.html"
+    FOOTER "./templates/query_footer.html"
+    TEMPLATE 'http://someurl/somescript.cgi?mapext=[mapext]'
+
+    METADATA
+      "ows_enable_request"     "*"
+      "wms_title"              "NEMAC NFWF WMS"
+      "wms_abstract"           "NEMAC NFWF WMS"
+      "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+      "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+      "wms_feature_info_mime_type" "text/plain"
+      "wms_feature_info_mime_type" "text/html"
+    END
+  END
+
+  # set defaults for GetLegendGraphic requests
+  LEGEND
+    KEYSIZE 30 20
+    STATUS on
+  END
+
+  LAYER
+    NAME "ak_hubs_cores_030722.tif"
+    PROJECTION
+    	"proj=aea"
+    	"lat_1=55"
+    	"lat_2=65"
+    	"lat_0=50"
+    	"lon_0=-154"
+    	"x_0=0"
+    	"y_0=0"
+    	"datum=NAD83"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/ak_hubs_cores_030722.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 245 245 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 245 218 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 245 190 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 245 163 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 245 136 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 245 109 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 245 82 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 245 54 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 245 27 0
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 245 0 0
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_HubsIndexTiles"
+      "wms_abstract"          "AK_HubsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+    LAYER
+      NAME "AK_HubsHexTMS"
+      PROJECTION
+        "proj=aea"
+      	"lat_1=55"
+      	"lat_2=65"
+      	"lat_0=50"
+      	"lon_0=-154"
+      	"x_0=0"
+      	"y_0=0"
+      	"datum=NAD83"
+      	"units=m"
+      	"no_defs"
+      END
+      TYPE     POLYGON
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     /tiledata/source/ak_hubs_hexes_030822_copy.shp
+      CLASSITEM 'Rank'
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+      CLASS
+        NAME "Low"
+        EXPRESSION "1"
+        STYLE
+          COLOR 245 245 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "2"
+        STYLE
+          COLOR 245 218 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "3"
+        STYLE
+          COLOR 245 190 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "4"
+        STYLE
+          COLOR 245 163 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "5"
+        STYLE
+          COLOR 245 136 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "6"
+        STYLE
+          COLOR 245 109 0
+        END #end style
+      END #end class
+      CLASS
+        NAME "High"
+        EXPRESSION "7"
+        STYLE
+          COLOR 245 82 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "8"
+        STYLE
+          COLOR 245 54 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "9"
+        STYLE
+          COLOR 245 27 0
+        END #end style
+      END #end class
+      CLASS
+        NAME ""
+        EXPRESSION "10"
+        STYLE
+          COLOR 245 0 0
+        END #end style
+      END #end class
+
+      #INCLUDE "cmaps/gapnat.cmap"
+      METADATA
+        "wms_title"             "AK_HubsHexIndexTiles"
+        "wms_abstract"          "AK_HubsHexIndexTiles"
+        "gml_include_items"     "value_0"
+      END  # end METADATA
+    END # end LAYER
+
+  LAYER
+    NAME "AK_ExposureTMS"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Exposure_Index_v9_reclassify_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 247 228 203
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 229 206 177
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 220 184 151
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 192 162 125
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 173 139 98
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 148 109 63
+        END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 133 86 33
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 118 76 28
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 104 66 23
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 89 56 18
+        END #end style
+      END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_ExposureIndexTiles"
+      "wms_abstract"          "AK_ExposureIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_AssetsIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 182 237 240
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 152 210 237
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 124 187 235
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 92 163 230
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 54 141 227
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 33 118 217
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 34 89 199
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 29 62 181
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 23 39 163
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 9 9 145
+        END #end style
+      END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_AssetsIndexTiles"
+      "wms_abstract"          "AK_AssetsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_ThreatsIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Threat_Index_v6_clip_B_Reclassify_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 255 235 214
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 247 215 188
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 240 192 161
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 235 169 136
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 227 144 111
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 222 119 91
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 214 93 69
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 209 64 48
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 201 37 28
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 196 10 10
+        END #end style
+      END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_ThreatsIndexTiles"
+      "wms_abstract"          "AK_ThreatsIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_WildlifeIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+    CLASS
+      EXPRESSION ""
+      COLOR 255 255 255
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 238 231 248
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 237 208 224
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 233 187 203
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 4)
+      STYLE
+        COLOR 227 166 183
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 5)
+      STYLE
+        COLOR 219 144 166
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 6)
+      STYLE
+        COLOR 210 124 153
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 7)
+      STYLE
+        COLOR 198 103 143
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 8)
+      STYLE
+        COLOR 183 82 138
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 9)
+      STYLE
+        COLOR 163 63 143
+      END #end style
+    END #end class
+    CLASS
+      EXPRESSION ([pixel] = 10)
+      STYLE
+        COLOR 126 51 168
+      END #end style
+    END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_WildlifeIndexTiles"
+      "wms_abstract"          "AK_WildlifeIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_AquaticIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Aquatic_Index_10class_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 205, 225, 232
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 182 210 217
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 159 195 202
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 136 180 187
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 113 165 172
+        END
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 91 150 157
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 68 135 142
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 45 120 127
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 22 105 112
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 90 98
+        END #end style
+      END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_AquaticIndexTiles"
+      "wms_abstract"          "AK_AquaticIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_TerrestrialIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Terrestrial_Index_10class_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 255 255 229
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 241 231 181
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 227 206 132
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 186 176 101
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 136 143 76
+        END
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 87 111 51
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 50 89 31
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 33 84 21
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 17 78 10
+        END #end style
+      END #end class
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 73 0
+        END #end style
+      END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_TerrestrialIndexTiles"
+      "wms_abstract"          "AK_TerrestrialIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_SocVulnIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Social_Vulnerability_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      EXPRESSION ([pixel] = 1)
+      STYLE
+        COLOR 158 187 215
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 2)
+      STYLE
+        COLOR 67 48 157
+      END
+    END
+    CLASS
+      EXPRESSION ([pixel] = 3)
+      STYLE
+        COLOR 39 11 89
+      END
+    END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_SocVulnIndexTiles"
+      "wms_abstract"          "AK_SocVulnIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_CriticalFacilitiesIndexTilesIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Critical_Facilities_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 0 132 168
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_CriticalFacilitiesIndexTiles"
+      "wms_abstract"          "AK_CriticalFacilitiesIndexTilesIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_CommunityInfrastructurIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Community_Infra_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 168 43 65
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_CommunityInfrastructurIndexTiles"
+      "wms_abstract"          "AK_CommunityInfrastructurIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_TransporationInfrastructure"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Transportation_Infra_v3_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 254 178 76
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_TransporationInfrastructure"
+      "wms_abstract"          "AK_TransporationInfrastructure"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_ErosionIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_erosion_v3_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 254 235 162
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 254 187 71
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 240 120 24
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 184 66 3
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 102 37 6
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_ErosionIndexTiles"
+      "wms_abstract"          "AK_ErosionIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_FloodProneAreasIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Social_Vulnerability_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 226 226 239
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 182 182 216
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 134 131 189
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 97 64 155
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 63 0 125
+        END
+      END
+
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_FloodProneAreasIndexTiles"
+      "wms_abstract"          "AK_FloodProneAreasIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_TsunamiIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Tsunami_v1_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 251 106 74
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 222 45 38
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 165 15 21
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_TsunamiIndexTiles"
+      "wms_abstract"          "AK_TsunamiIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_PermaFrostIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/AK_Low_Lying_Areas_v2_8BitUnsigned.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        EXPRESSION ([pixel] = 1)
+        STYLE
+          COLOR 211 238 205
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 152 213 148
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 75 176 98
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 21 127 59
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 0 68 27
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_LowLyingAreasIndexTiles"
+      "wms_abstract"          "AK_LowLyingAreasIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+END # end MAP
