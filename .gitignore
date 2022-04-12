@@ -16,3 +16,5 @@ map/generic2.map
 map/nfwf_cloud4.map
 limitshapefiles/
 zips/
+tiledata/
+.DS_Store
