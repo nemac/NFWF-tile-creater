@@ -5,8 +5,8 @@
 #
 
 # Exit on any non-zero status.
-trap 'exit' ERR
-set -E
+# trap 'exit' ERR
+# set -E
 
 service fcgiwrap start
 nginx -g "daemon off;"

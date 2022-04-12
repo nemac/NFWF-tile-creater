@@ -49,6 +49,7 @@ RUN apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Install the application.
+RUN mkdir /tmp/build/
 ADD ./mapserver-scripts/. /tmp/build/
 ADD ./map /map
 RUN /tmp/build/build.sh

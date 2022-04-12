@@ -70,7 +70,7 @@ MAP
   END
 
   LAYER
-    NAME "AK_HubsIndexTiles"
+    NAME "ak_hubs_cores_030722.tif"
     PROJECTION
     	"proj=aea"
     	"lat_1=55"
@@ -160,7 +160,7 @@ MAP
   END # end LAYER
 
     LAYER
-      NAME "AK_HubsHexIndexTiles"
+      NAME "AK_HubsHexTMS"
       PROJECTION
         "proj=aea"
       	"lat_1=55"
@@ -261,7 +261,7 @@ MAP
     END # end LAYER
 
   LAYER
-    NAME "AK_ExposureIndexTiles"
+    NAME "AK_ExposureTMS"
     PROJECTION
       "proj=aea"
       "lat_1=55"
@@ -853,7 +853,7 @@ MAP
   END # end LAYER
 
   LAYER
-    NAME "AK_CriticalFacilitiesIndexTiles"
+    NAME "AK_CriticalFacilitiesIndexTilesIndexTiles"
     PROJECTION
       "proj=aea"
       "lat_1=55"
@@ -883,7 +883,7 @@ MAP
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
       "wms_title"             "AK_CriticalFacilitiesIndexTiles"
-      "wms_abstract"          "AK_CriticalFacilitiesIndexTiles"
+      "wms_abstract"          "AK_CriticalFacilitiesIndexTilesIndexTiles"
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
@@ -1129,68 +1129,8 @@ MAP
     END  # end METADATA
   END # end LAYER
 
-    LAYER
-      NAME "AK_PermaFrostIndexTiles"
-      PROJECTION
-        "proj=aea"
-        "lat_1=55"
-        "lat_2=65"
-        "lat_0=50"
-        "lon_0=-154"
-        "x_0=0"
-        "y_0=0"
-        "datum=NAD83"
-        "units=m"
-        "no_defs"
-      END
-        TYPE     RASTER
-        DUMP     TRUE
-        STATUS   OFF
-        DATA     "/tiledata/source/AK_permafrost20220208_clip_8BitUnsigned.tif"
-        HEADER   ./templates/layer_query_header.html
-        TEMPLATE ./templates/layer_query_body.html
-
-        CLASS
-          EXPRESSION ([pixel] = 1)
-          STYLE
-            COLOR 255 255 204
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 2)
-          STYLE
-            COLOR 161 218 180
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 3)
-          STYLE
-            COLOR 65 182 196
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 4)
-          STYLE
-            COLOR 44 127 184
-          END
-        END
-        CLASS
-          EXPRESSION ([pixel] = 5)
-          STYLE
-            COLOR 37 52 148
-          END
-        END
-
-      #INCLUDE "cmaps/gapnat.cmap"
-      METADATA
-        "wms_title"             "AK_PermaFrostIndexTiles"
-        "wms_abstract"          "AK_PermaFrostIndexTiles"
-        "gml_include_items"     "value_0"
-      END  # end METADATA
-    END # end LAYER
-
   LAYER
-    NAME "AK_LowLyingAreasIndexTiles"
+    NAME "AK_PermaFrostIndexTiles"
     PROJECTION
       "proj=aea"
       "lat_1=55"
