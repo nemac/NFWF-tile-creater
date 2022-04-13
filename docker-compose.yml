@@ -6,11 +6,13 @@ services:
       context: .
       dockerfile: DockerfileMapserverCarto
     container_name: mapserver-compose
+    platform: linux/x86_64
     privileged: true
     shm_size: 25G
     volumes:
       - ./map:/map:ro
       - ./tiledata/source/:/tiledata/source/:ro
+      - ./tiledata/cache/:/tiledata/cache/
     hostname: mapserver_composer
     ports:
       - "8080:80"

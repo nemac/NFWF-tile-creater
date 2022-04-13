@@ -39,6 +39,7 @@
 
     <http>
       <url>10.10.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+      <connection_timeout>500</connection_timeout>
     </http>
   </source>
 

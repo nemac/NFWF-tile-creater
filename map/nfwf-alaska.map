@@ -21,7 +21,7 @@ MAP
   # always returns a map
   STATUS ON
 
-  # CONFIG "MS_ERRORFILE" "/tiledata/cache/log"
+  CONFIG "MS_ERRORFILE" "/tiledata/cache/log"
   DEBUG 5
 
   # set top level projection
@@ -63,7 +63,6 @@ MAP
       "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
       "wms_feature_info_mime_type" "text/plain"
       "wms_feature_info_mime_type" "text/html"
-      "wms_connectiontimeout" "120"
     END
   END
 
@@ -180,7 +179,7 @@ MAP
       TYPE     POLYGON
       DUMP     TRUE
       STATUS   OFF
-      DATA    "/tiledata/source/ak_hubs_hexes_dissolved.shp"
+      DATA     /tiledata/source/ak_hubs_hexes_dissolved.shp
       CLASSITEM 'Rank'
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
@@ -260,7 +259,7 @@ MAP
       METADATA
         "wms_title"             "AK_HubsHexIndexTiles"
         "wms_abstract"          "AK_HubsHexIndexTiles"
-        "wms_connectiontimeout" "500"
+        "gml_include_items"     "value_0"
       END  # end METADATA
     END # end LAYER
 
