@@ -1,0 +1,50 @@
+version: '2'
+services:
+  mapserver:
+    image: mapserver-image
+    build:
+      context: .
+      dockerfile: DockerfileMapserverCarto
+    container_name: mapserver-compose2
+    platform: linux/x86_64
+    privileged: true
+    shm_size: 25G
+    volumes:
+      - ./map:/map:ro
+      - ./tiledata/source/:/tiledata/source/:ro
+      - ./tiledata/cache/:/tiledata/cache/
+    hostname: mapserver_composer
+    ports:
+      - "8080:80"
+    tty: true
+    # command: ["/usr/local/bin/run.sh"]
+    networks:
+      net:
+        ipv4_address: 10.10.10.4.5
+  mapcache:
+    image: mapcache-image
+    build:
+      context: .
+      dockerfile: DockerfileMapcache
+    container_name: mapcache-compose2
+    hostname: mapcache_composer
+    privileged: true
+    shm_size: 25G
+    volumes:
+      - ./tiledata/cache:/var/www/html/mapcache/cache
+      - ./tiledata/source/:/tiledata/source/:ro
+      - ./mapcache-configs:/var/www/html/mapcache/
+    stdin_open: true
+    depends_on:
+      - "mapserver"
+    networks:
+      net:
+        ipv4_address: 10.10.10.4.2
+    tty: true
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.10.10.4.0/16

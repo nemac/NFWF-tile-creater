@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+
+  <source name="AK_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_HubsIndexTiles">
+    <metadata>
+      <title>AK_HubsIndexTiles</title>
+    </metadata>
+    <source>AK_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_HubsHexIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_HubsHexIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+      <connection_timeout>500</connection_timeout>
+    </http>
+  </source>
+
+  <tileset name="AK_HubsHexIndexTiles">
+    <metadata>
+      <title>AK_HubsHexIndexTiles</title>
+    </metadata>
+    <source>AK_HubsHexIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_ExposureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_ExposureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_ExposureIndexTiles">
+    <metadata>
+      <title>AK_ExposureIndexTiles</title>
+    </metadata>
+    <source>AK_ExposureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_AssetsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_AssetsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_AssetsIndexTiles">
+    <metadata>
+      <title>AK_AssetsIndexTiles</title>
+    </metadata>
+    <source>AK_AssetsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_ThreatsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_ThreatsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_ThreatsIndexTiles">
+    <metadata>
+      <title>AK_ThreatsIndexTiles</title>
+    </metadata>
+    <source>AK_ThreatsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_WildlifeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_WildlifeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_WildlifeIndexTiles">
+    <metadata>
+      <title>AK_WildlifeIndexTiles</title>
+    </metadata>
+    <source>AK_WildlifeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+
+  <source name="AK_AquaticIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_AquaticIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_AquaticIndexTiles">
+    <metadata>
+      <title>AK_AquaticIndexTiles</title>
+    </metadata>
+    <source>AK_AquaticIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_TerrestrialIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_TerrestrialIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_TerrestrialIndexTiles">
+    <metadata>
+      <title>AK_TerrestrialIndexTiles</title>
+    </metadata>
+    <source>AK_TerrestrialIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_SocVulnIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_SocVulnIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_SocVulnIndexTiles">
+    <metadata>
+      <title>AK_SocVulnIndexTiles</title>
+    </metadata>
+    <source>AK_SocVulnIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_CriticalFacilitiesIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_CriticalFacilitiesIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_CriticalFacilitiesIndexTiles">
+    <metadata>
+      <title>AK_CriticalFacilitiesIndexTiles</title>
+    </metadata>
+    <source>AK_CriticalFacilitiesIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_CommunityInfrastructurIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_CommunityInfrastructurIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_CommunityInfrastructurIndexTiles">
+    <metadata>
+      <title>AK_CommunityInfrastructurIndexTiles</title>
+    </metadata>
+    <source>AK_CommunityInfrastructurIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_TransporationInfrastructure" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_TransporationInfrastructure</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_TransporationInfrastructure">
+    <metadata>
+      <title>AK_TransporationInfrastructure</title>
+    </metadata>
+    <source>AK_TransporationInfrastructure</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_ErosionIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_ErosionIndexTiles">
+    <metadata>
+      <title>AK_ErosionIndexTiles</title>
+    </metadata>
+    <source>AK_ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_FloodProneAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_FloodProneAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_FloodProneAreasIndexTiles">
+    <metadata>
+      <title>AK_FloodProneAreasIndexTiles</title>
+    </metadata>
+    <source>AK_FloodProneAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_TsunamiIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_TsunamiIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_TsunamiIndexTiles">
+    <metadata>
+      <title>AK_TsunamiIndexTiles</title>
+    </metadata>
+    <source>AK_TsunamiIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_PermaFrostIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_PermaFrostIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <tileset name="AK_PermaFrostIndexTiles">
+    <metadata>
+      <title>AK_PermaFrostIndexTiles</title>
+    </metadata>
+    <source>AK_PermaFrostIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <tileset name="AK_LowLyingAreasIndexTiles">
+    <metadata>
+      <title>AK_LowLyingAreasIndexTiles</title>
+    </metadata>
+    <source>AK_LowLyingAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AK_LowLyingAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AK_LowLyingAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>20.20.0.3/nfwf/?map=/map/nfwfaws-alaska.map</url>
+    </http>
+  </source>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>
