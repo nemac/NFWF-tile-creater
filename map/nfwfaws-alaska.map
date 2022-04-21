@@ -1041,7 +1041,7 @@ MAP
       TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA     "/tiledata/source/AK_Social_Vulnerability_v2_8BitUnsigned.tif"
+      DATA     "/tiledata/source/AK_floodprone_v3_8BitUnsigned.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
