@@ -323,7 +323,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TerrestrialInd
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_SocVulnIndexTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CriticalFacilitiesIndexTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CommunityInfrastructurIndexTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TransporationInfrastructure -z 13,13 -n 5 -d /tiledata/source/alaska_boun dary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TransporationInfrastructure -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ErosionIndexTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_FloodProneAreasIndexTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TsunamiIndexTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
@@ -895,6 +895,25 @@ cd cache
 ./deletetransparenttiles.py GU_LandslideIndexTiles &
 ./deletetransparenttiles.py GU_WaveExposureTiles &
 
+
+./deletetransparenttiles.py AK_HubsIndexTiles &
+./deletetransparenttiles.py AK_HubsHexIndexTiles &
+./deletetransparenttiles.py AK_ExposureIndexTiles &
+./deletetransparenttiles.py AK_AssetsIndexTiles &
+./deletetransparenttiles.py AK_ThreatsIndexTiles &
+./deletetransparenttiles.py AK_WildlifeIndexTiles &
+./deletetransparenttiles.py AK_AquaticIndexTiles &
+./deletetransparenttiles.py AK_TerrestrialIndexTiles &
+./deletetransparenttiles.py AK_SocVulnIndexTiles &
+./deletetransparenttiles.py AK_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py AK_CommunityInfrastructurIndexTiles &
+./deletetransparenttiles.py AK_TransporationInfrastructure &
+./deletetransparenttiles.py AK_ErosionIndexTiles &
+./deletetransparenttiles.py AK_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py AK_TsunamiIndexTiles &
+./deletetransparenttiles.py AK_PermaFrostIndexTiles &
+./deletetransparenttiles.py AK_LowLyingAreasIndexTiles &
+
 ```
 
 ### CONUS nature serve examples of syncing the tiles to s3
@@ -1088,6 +1107,24 @@ aws s3 sync AS_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/AS_PopDensit
 aws s3 sync AS_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsIndexTiles --acl public-read &
 aws s3 sync AS_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/AS_HubsHexIndexTiles --acl public-read &
 aws s3 sync AS_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AS_TsunamiIndexTiles --acl public-read &
+
+aws s3 sync AK_HubsIndexTiles/ s3://tiles.resilientcoasts.org/AK_HubsIndexTiles --acl public-read &
+aws s3 sync AK_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/AK_HubsHexIndexTiles --acl public-read &
+aws s3 sync AK_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/AK_ExposureIndexTiles --acl public-read &
+aws s3 sync AK_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/AK_AssetsIndexTiles --acl public-read &
+aws s3 sync AK_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/AK_ThreatsIndexTiles --acl public-read &
+aws s3 sync AK_WildlifeIndexTiles/ s3://tiles.resilientcoasts.org/AK_WildlifeIndexTiles --acl public-read &
+aws s3 sync AK_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/AK_AquaticIndexTiles --acl public-read &
+aws s3 sync AK_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/AK_TerrestrialIndexTiles --acl public-read &
+aws s3 sync AK_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/AK_SocVulnIndexTiles --acl public-read &
+aws s3 sync AK_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/AK_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync AK_CommunityInfrastructurIndexTiles/ s3://tiles.resilientcoasts.org/AK_CommunityInfrastructurIndexTiles --acl public-read &
+aws s3 sync AK_TransporationInfrastructure/ s3://tiles.resilientcoasts.org/AK_TransporationInfrastructure --acl public-read &
+aws s3 sync AK_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/AK_ErosionIndexTiles --acl public-read &
+aws s3 sync AK_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/AK_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync AK_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/AK_TsunamiIndexTiles --acl public-read &
+aws s3 sync AK_PermaFrostIndexTiles/ s3://tiles.resilientcoasts.org/AK_PermaFrostIndexTiles --acl public-read &
+aws s3 sync AK_LowLyingAreasIndexTiles/ s3://tiles.resilientcoasts.org/AK_LowLyingAreasIndexTiles --acl public-read &
 
 aws s3 rm s3://tiles.resilientcoasts.org/AS_CriticalInfrastructureIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/AS_PopDensityIndexTiles --recursive --exclude "" &
