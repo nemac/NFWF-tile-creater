@@ -289,7 +289,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CriticalFacili
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CommunityInfrastructurIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TransporationInfrastructure -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ErosionIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_FloodProneAreasIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_FloodProneAreasIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TsunamiIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_PermaFrostIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_LowLyingAreasIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
