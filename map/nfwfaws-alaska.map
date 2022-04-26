@@ -163,106 +163,196 @@ MAP
     END  # end METADATA
   END # end LAYER
 
-    LAYER
-      NAME "AK_HubsHexIndexTiles"
-      PROJECTION
-        "proj=aea"
-      	"lat_1=55"
-      	"lat_2=65"
-      	"lat_0=50"
-      	"lon_0=-154"
-      	"x_0=0"
-      	"y_0=0"
-      	"datum=NAD83"
-      	"units=m"
-      	"no_defs"
-      END
-      TYPE     POLYGON
+  LAYER
+    NAME "AK_HubsHexIndexTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_1=55"
+      "lat_2=65"
+      "lat_0=50"
+      "lon_0=-154"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
       DUMP     TRUE
       STATUS   OFF
-      DATA    "/tiledata/source/ak_hubs_hexes_dissolved.shp"
-      CLASSITEM 'Rank'
+      DATA     "/tiledata/source/ak_hubs_hexes_10m_LZW.tif"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
       CLASS
-        NAME "Low"
-        EXPRESSION "1"
+        EXPRESSION ([pixel] = 1)
         STYLE
           COLOR 245 245 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "2"
+        EXPRESSION ([pixel] = 2)
         STYLE
           COLOR 245 218 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "3"
+        EXPRESSION ([pixel] = 3)
         STYLE
           COLOR 245 190 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "4"
+        EXPRESSION ([pixel] = 4)
         STYLE
           COLOR 245 163 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "5"
+        EXPRESSION ([pixel] = 5)
         STYLE
           COLOR 245 136 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "6"
+        EXPRESSION ([pixel] = 6)
         STYLE
           COLOR 245 109 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME "High"
-        EXPRESSION "7"
+        EXPRESSION ([pixel] = 7)
         STYLE
           COLOR 245 82 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "8"
+        EXPRESSION ([pixel] = 8)
         STYLE
           COLOR 245 54 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "9"
+        EXPRESSION ([pixel] = 9)
         STYLE
           COLOR 245 27 0
-        END #end style
-      END #end class
+        END
+      END
       CLASS
-        NAME ""
-        EXPRESSION "10"
+        EXPRESSION ([pixel] = 10)
         STYLE
           COLOR 245 0 0
-        END #end style
-      END #end class
+        END
+      END
 
-      #INCLUDE "cmaps/gapnat.cmap"
-      METADATA
-        "wms_title"             "AK_HubsHexIndexTiles"
-        "wms_abstract"          "AK_HubsHexIndexTiles"
-        "wms_connectiontimeout" "500"
-      END  # end METADATA
-    END # end LAYER
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_HubsHexIndexTiles"
+      "wms_abstract"          "AK_HubsHexIndexTiles"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "AK_HubsHexIndexTilesShape"
+    PROJECTION
+      "proj=aea"
+    	"lat_1=55"
+    	"lat_2=65"
+    	"lat_0=50"
+    	"lon_0=-154"
+    	"x_0=0"
+    	"y_0=0"
+    	"datum=NAD83"
+    	"units=m"
+    	"no_defs"
+    END
+    TYPE     POLYGON
+    DUMP     TRUE
+    STATUS   OFF
+    DATA    "/tiledata/source/ak_hubs_hexes_dissolved.shp"
+    CLASSITEM 'Rank'
+    HEADER   ./templates/layer_query_header.html
+    TEMPLATE ./templates/layer_query_body.html
+
+    CLASS
+      NAME "Low"
+      EXPRESSION "1"
+      STYLE
+        COLOR 245 245 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "2"
+      STYLE
+        COLOR 245 218 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "3"
+      STYLE
+        COLOR 245 190 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "4"
+      STYLE
+        COLOR 245 163 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "5"
+      STYLE
+        COLOR 245 136 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "6"
+      STYLE
+        COLOR 245 109 0
+      END #end style
+    END #end class
+    CLASS
+      NAME "High"
+      EXPRESSION "7"
+      STYLE
+        COLOR 245 82 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "8"
+      STYLE
+        COLOR 245 54 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "9"
+      STYLE
+        COLOR 245 27 0
+      END #end style
+    END #end class
+    CLASS
+      NAME ""
+      EXPRESSION "10"
+      STYLE
+        COLOR 245 0 0
+      END #end style
+    END #end class
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AK_HubsHexIndexTilesShape"
+      "wms_abstract"          "AK_HubsHexIndexTilesShape"
+      "wms_connectiontimeout" "500"
+    END  # end METADATA
+  END # end LAYER
 
   LAYER
     NAME "AK_ExposureIndexTiles"

@@ -276,7 +276,7 @@ from seed server seed all level 1 - 10 tiles if you do too many you will get tim
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 1,3 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 4,5 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 6,8 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 9,10 -n 5 -d /tiledata/source/alaska_boundary.shp &å
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 9,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &ßß
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ExposureIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_AssetsIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
