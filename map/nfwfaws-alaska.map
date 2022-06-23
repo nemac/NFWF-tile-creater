@@ -265,12 +265,13 @@ MAP
     	"y_0=0"
     	"datum=NAD83"
     	"units=m"
+      "over"
     	"no_defs"
     END
     TYPE     POLYGON
     DUMP     TRUE
     STATUS   OFF
-    DATA    "/tiledata/source/ak_hubs_hexes_dissolved.shp"
+    DATA    "/tiledata/source/ak_hubs_hexes_dissolved-dateline.shp"
     CLASSITEM 'Rank'
     HEADER   ./templates/layer_query_header.html
     TEMPLATE ./templates/layer_query_body.html

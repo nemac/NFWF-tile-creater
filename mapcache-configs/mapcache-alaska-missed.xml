@@ -28,11 +28,11 @@
     <expires>1</expires>
   </tileset>
 
-  <source name="AK_HubsHexIndexTifTiles" type="wms">
+  <source name="AK_HubsHexIndexTilesShape" type="wms">
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>AK_HubsHexIndexTifTiles</LAYERS>
+        <LAYERS>AK_HubsHexIndexTilesShape</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
@@ -43,11 +43,11 @@
     </http>
   </source>
 
-  <tileset name="AK_HubsHexIndexTifTiles">
+  <tileset name="AK_HubsHexIndexTilesShape">
     <metadata>
-      <title>AK_HubsHexIndexTifTiles</title>
+      <title>AK_HubsHexIndexTilesShape</title>
     </metadata>
-    <source>AK_HubsHexIndexTifTiles</source>
+    <source>AK_HubsHexIndexTilesShape</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
