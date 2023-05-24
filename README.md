@@ -4,11 +4,11 @@ creates nfwf tms tiles from a docker map server test
 use docker compose to start a mapserver server and mapcache seeder.
 
 ## build docker images
-`docker build -t mapserver-image -f DockerfileMapserver .`
+`docker build -t mapserver-image -f DockerfileMapserverCarto .`
 
 `docker build -t mapcache-image -f DockerfileMapcache .`
 
-`docker build -t gdal-image -f DockerFileGDAL .`
+`docker build -t gdal-image -f DockerfileGDAL .`
 
 `docker build -t gdal-python -f DockerfileGDALPython .`
 

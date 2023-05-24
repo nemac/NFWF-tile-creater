@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+
+  <source name="GL_AssetsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_AssetsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_AssetsIndexTiles">
+    <metadata>
+      <title>GL_AssetsIndexTiles</title>
+    </metadata>
+    <source>GL_AssetsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_CombinedWildlifeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_CombinedWildlifeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_CombinedWildlifeIndexTiles">
+    <metadata>
+      <title>GL_CombinedWildlifeIndexTiles</title>
+    </metadata>
+    <source>GL_CombinedWildlifeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_CriticalFacilitiesIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_CriticalFacilitiesIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_CriticalFacilitiesIndexTiles">
+    <metadata>
+      <title>GL_CriticalFacilitiesIndexTiles</title>
+    </metadata>
+    <source>GL_CriticalFacilitiesIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_CriticalInfrastructureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_CriticalInfrastructureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_CriticalInfrastructureIndexTiles">
+    <metadata>
+      <title>GL_CriticalInfrastructureIndexTiles</title>
+    </metadata>
+    <source>GL_CriticalInfrastructureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_ErosionIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_ErosionIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_ErosionIndexTiles">
+    <metadata>
+      <title>GL_ErosionIndexTiles</title>
+    </metadata>
+    <source>GL_ErosionIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_TsunamiIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_TsunamiIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_TsunamiIndexTiles">
+    <metadata>
+      <title>GL_TsunamiIndexTiles</title>
+    </metadata>
+    <source>GL_TsunamiIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+
+  <source name="GL_ExposureIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_ExposureIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_ExposureIndexTiles">
+    <metadata>
+      <title>GL_ExposureIndexTiles</title>
+    </metadata>
+    <source>GL_ExposureIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_FloodProneAreasIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_FloodProneAreasIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_FloodProneAreasIndexTiles">
+    <metadata>
+      <title>GL_FloodProneAreasIndexTiles</title>
+    </metadata>
+    <source>GL_FloodProneAreasIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_DraingeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_DraingeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_DraingeIndexTiles">
+    <metadata>
+      <title>GL_DraingeIndexTiles</title>
+    </metadata>
+    <source>GL_DraingeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_SlopeIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_SlopeIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_SlopeIndexTiles">
+    <metadata>
+      <title>GL_SlopeIndexTiles</title>
+    </metadata>
+    <source>GL_SlopeIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_AquaticIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_AquaticIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_AquaticIndexTiles">
+    <metadata>
+      <title>GL_AquaticIndexTiles</title>
+    </metadata>
+    <source>GL_AquaticIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_SLRIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_SLRIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_SLRIndexTiles">
+    <metadata>
+      <title>GL_SLRIndexTiles</title>
+    </metadata>
+    <source>GL_SLRIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_SocVulnIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_SocVulnIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_SocVulnIndexTiles">
+    <metadata>
+      <title>GL_SocVulnIndexTiles</title>
+    </metadata>
+    <source>GL_SocVulnIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_TerrestrialIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_TerrestrialIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_TerrestrialIndexTiles">
+    <metadata>
+      <title>GL_TerrestrialIndexTiles</title>
+    </metadata>
+    <source>GL_TerrestrialIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_ThreatsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_ThreatsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_ThreatsIndexTiles">
+    <metadata>
+      <title>GL_ThreatsIndexTiles</title>
+    </metadata>
+    <source>GL_ThreatsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_PopDensityIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_PopDensityIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_PopDensityIndexTiles">
+    <metadata>
+      <title>GL_PopDensityIndexTiles</title>
+    </metadata>
+    <source>GL_PopDensityIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+
+
+  <source name="GL_MaxWaterLevelIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_MaxWaterLevelIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+  <tileset name="GL_MaxWaterLevelIndexTiles">
+    <metadata>
+      <title>GL_MaxWaterLevelIndexTiles</title>
+    </metadata>
+    <source>GL_MaxWaterLevelIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+
+
+
+
+
+  <tileset name="GL_HubsHexIndexTiles">
+    <metadata>
+      <title>GL_HubsHexIndexTiles</title>
+    </metadata>
+    <source>GL_HubsHexIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_HubsHexIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_HubsHexIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+
+  <tileset name="GL_HubsIndexTiles">
+    <metadata>
+      <title>GL_HubsIndexTiles</title>
+    </metadata>
+    <source>GL_HubsIndexTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GL_HubsIndexTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_HubsIndexTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwfaws-greatlakes.map</url>
+    </http>
+  </source>
+
+
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>
