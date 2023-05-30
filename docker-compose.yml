@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: DockerfileMapserverCarto
     container_name: mapserver-compose
-    platform: linux/x86_64
+    platform: linux/arm64
     privileged: true
     shm_size: 25G
     volumes:
@@ -32,6 +32,7 @@ services:
     shm_size: 25G
     volumes:
       - ./tiledata/cache:/var/www/html/mapcache/cache
+      - ./tiledata/cache/:/tiledata/cache/
       - ./tiledata/source/:/tiledata/source/:ro
       - ./mapcache-configs:/var/www/html/mapcache/
     stdin_open: true

@@ -1505,11 +1505,11 @@ END
         EXPRESSION "1"
         STYLE
           OUTLINECOLOR 151 54 60
+          SYMBOL "hatchsymbol"
+          SIZE 10
           WIDTH 2
+          ANGLE 45
         END #end style
-        STYLE
-          COLOR 252, 183, 188 #fill
-        END       
       END #end class
 
       #INCLUDE "cmaps/gapnat.cmap"
