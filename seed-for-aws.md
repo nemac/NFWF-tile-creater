@@ -277,22 +277,22 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTi
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 4,5 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 6,8 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 9,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &ßß
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ExposureIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_AssetsIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ThreatsIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_WildlifeIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_AquaticIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TerrestrialIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_SocVulnIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CriticalFacilitiesIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CommunityInfrastructurIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TransporationInfrastructure -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ErosionIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &ßß
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ExposureIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_AssetsIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ThreatsIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_WildlifeIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_AquaticIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TerrestrialIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_SocVulnIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CriticalFacilitiesIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_CommunityInfrastructurIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TransporationInfrastructure -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_ErosionIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_FloodProneAreasIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TsunamiIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_PermaFrostIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_LowLyingAreasIndexTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_TsunamiIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_PermaFrostIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_LowLyingAreasIndexTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsHexIndexTiles -z 11,12 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_HubsIndexTiles -z 11,12 -n 5 -d /tiledata/source/alaska_boundary.shp &
@@ -334,96 +334,95 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-alaska.xml -t AK_LowLyingAreasI
 #### Puerto Rico examples seeding is same for all regions but CONUS needs to be split even further do not try to start all of these at the same time, It will have timeout errors
 from seed server seed all level 1 - 10 tiles if you do too many you will get timeouts.  but you can rerun the script only creates tiles that do not exist yet.
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AssetsIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ExposureIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SocVulnIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_StormSurgeIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AssetsIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ExposureIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ErosionIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_FloodProneAreasIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_DraingeIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_LandslideIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SlopeIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_AquaticIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SLRIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_SocVulnIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_StormSurgeIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_ThreatsIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TsunamiIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_PopDensityIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_HubsIndexTiles -z 1,14 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 1,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_CombinedWildlifeIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-pr.xml -t PR_TerrestrialIndexTiles -z 0,10 -n 4 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
 ```
 
 #### US Virgin Islands
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AssetsIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SocVulnIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_StormSurgeIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_TerrestrialIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ThreatsIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityIndexTiles -z 1,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AssetsIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CombinedWildlifeIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ExposureIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ErosionIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_FloodProneAreasIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_DraingeIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SlopeIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_AquaticIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SLRIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_SocVulnIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_StormSurgeIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_TerrestrialIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_ThreatsIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityIndexTiles -z 0,10 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_HubsIndexTiles -z 1,14 -n 4 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 ```
 
 
 #### CNMI
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AssetsIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ExposureIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ErosionIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_DraingeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SlopeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AquaticIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SocVulnIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_StormSurgeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_TerrestrialIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ThreatsIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AssetsIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CombinedWildlifeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ExposureIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ErosionIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_FloodProneAreasIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_DraingeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SlopeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AquaticIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SocVulnIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_StormSurgeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_TerrestrialIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ThreatsIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_HubsIndexTiles -z 1,14 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 ```
 
 ### Great Lakes
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_ExposureIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_ErosionIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FloodProneAreasIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_DraingeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_PopDensityIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_SlopeIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AquaticIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_SocVulnIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_MaxWaterLevelIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_TerrestrialIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_ThreatsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_HubsHexIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_HubsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Department_of_Defense_LandsIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 1,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CombinedWildlifeIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_ExposureIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_ErosionIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FloodProneAreasIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_DraingeIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_SlopeIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_PopDensityIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_SlopeIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AquaticIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_SocVulnIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_MaxWaterLevelIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_TerrestrialIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_ThreatsIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_HubsHexIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_HubsIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Department_of_Defense_LandsIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -597,22 +596,22 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityInde
 
 #### CNMI
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AssetsIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ExposureIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ErosionIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_DraingeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SlopeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AquaticIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SocVulnIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_StormSurgeIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_TerrestrialIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ThreatsIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 1,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AssetsIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CombinedWildlifeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ExposureIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ErosionIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_FloodProneAreasIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_DraingeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SlopeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_AquaticIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SLRIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_SocVulnIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_StormSurgeIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_TerrestrialIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_ThreatsIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityIndexTiles -z 0,10 -n 4 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 ```
 
 ### from seed server seed all level 13 tiles if you do too many you will get timeouts. starting at these zoom levels try not do all of them and -d option with limit shapefile is important for reducing blank images, we will remove blanks (completely transparent) latter.
@@ -702,22 +701,22 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-cnmi.xml -t CNMI_PopDensityInde
 
 #### Hawaii
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AssetsIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SLRIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 1,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AssetsIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CombinedWildlifeIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ExposureIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ErosionIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_FloodProneAreasIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_DraingeIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_PopDensityIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SlopeIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_AquaticIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SLRIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_SocVulnIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_StormSurgeIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_TerrestrialIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_ThreatsIndexTiles -z 0,10 -n 4 -d /tiledata/source/HI_Region_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_LandslideIndexTiles -z 0,10 -n 8 -d /tiledata/source/HI_Region_Boundary_3857.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-hawaii.xml -t HI_HubsIndexTiles -z 0,10 -n 8 -d /tiledata/source/HI_Region_Boundary_3857.shp &
@@ -851,18 +850,18 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-usvi.xml -t USVI_PopDensityInde
 
 ### CONUS  examples zoom level 1-10
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-conus.xml -t CombinedWildlifeIndexTiles -z 13,13 -n 4 -d /usa_coastal_3857.shp &
 ```
 
 ### CONUS nature serve examples zoom level 1-10
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedAssetTiles -z 1,10 -n 4 -d /targeted_watersheds.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedThreatTiles -z 1,10 -n 4 -d /targeted_watersheds.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedFishandWildlifeTiles -z 1,10 -n 4 -d /targeted_watersheds.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedExposureTiles -z 1,10 -n 4 -d /targeted_watersheds.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedHubsTiles -z 1,10 -n 4 -d /targeted_watersheds.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedAssetTiles -z 0,10 -n 4 -d /targeted_watersheds.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedThreatTiles -z 0,10 -n 4 -d /targeted_watersheds.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedFishandWildlifeTiles -z 0,10 -n 4 -d /targeted_watersheds.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedExposureTiles -z 0,10 -n 4 -d /targeted_watersheds.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedHubsTiles -z 0,10 -n 4 -d /targeted_watersheds.shp &
 ```
 
 ### CONUS nature serve  examples zoom level 11-12
@@ -1017,6 +1016,56 @@ cd cache
 ./deletetransparenttiles.py AK_TsunamiIndexTiles &
 ./deletetransparenttiles.py AK_PermaFrostIndexTiles &
 ./deletetransparenttiles.py AK_LowLyingAreasIndexTiles &
+
+
+docker run -it -v /tiledata/cache:/cache gdal-python bash
+cd cache
+
+cp -R GL_HubsIndexTiles GL_HubsIndexTilesTest &
+cp -R GL_HubsHexIndexTiles GL_HubsHexIndexTilesTest &
+cp -R GL_ExposureIndexTiles GL_ExposureIndexTilesTest &
+cp -R GL_AssetsIndexTiles GL_AssetsIndexTilesTest &
+cp -R GL_ThreatsIndexTiles GL_ThreatsIndexTilesTest &
+cp -R GL_CombinedWildlifeIndexTiles GL_CombinedWildlifeIndexTilesTest &
+cp -R GL_AquaticIndexTiles GL_AquaticIndexTilesTest &
+cp -R GL_TerrestrialIndexTiles GL_TerrestrialIndexTilesTest &
+cp -R GL_SocVulnIndexTiles GL_SocVulnIndexTilesTest &
+cp -R GL_PopDensityIndexTiles GL_PopDensityIndexTilesTest &
+cp -R GL_CriticalFacilitiesIndexTiles GL_CriticalFacilitiesIndexTilesTest &
+cp -R GL_CriticalInfrastructureIndexTiles GL_CommunityInfrastructurIndexTilesTest &
+cp -R GL_ErosionIndexTiles GL_ErosionIndexTilesTest &
+cp -R GL_FloodProneAreasIndexTiles GL_FloodProneAreasIndexTilesTest &
+cp -R GL_SlopeIndexTiles GL_SlopeIndexTilesTest &
+cp -R GL_DraingeIndexTiles GL_DraingeIndexTilesTest &
+cp -R GL_MaxWaterLevelIndexTiles GL_MaxWaterLevelIndexTilesTest &
+cp -R GL_AIANNHAIndexTiles GL_AIANNHAIndexTilesTest &
+cp -R GL_CededTerritoryIndexTiles GL_CededTerritoryIndexTilesTest &
+cp -R GL_USA_Department_of_Defense_LandsIndexTiles GL_USA_Department_of_Defense_LandsIndexTilesTest &
+cp -R GL_FetchIndexTiles GL_FetchIndexTilesTest &
+cp -R GL_LakeFluctuationZoneIndexTiles GL_LakeFluctuationZoneIndexTilesTest &
+
+./deletetransparenttiles.py GL_HubsIndexTilesTest &
+./deletetransparenttiles.py GL_HubsHexIndexTilesTest &
+./deletetransparenttiles.py GL_ExposureIndexTilesTest &
+./deletetransparenttiles.py GL_AssetsIndexTilesTest &
+./deletetransparenttiles.py GL_ThreatsIndexTilesTest &
+./deletetransparenttiles.py GL_CombinedWildlifeIndexTilesTest &
+./deletetransparenttiles.py GL_AquaticIndexTilesTest &
+./deletetransparenttiles.py GL_TerrestrialIndexTilesTest &
+./deletetransparenttiles.py GL_SocVulnIndexTilesTest &
+./deletetransparenttiles.py GL_PopDensityIndexTilesTest &
+./deletetransparenttiles.py GL_CriticalFacilitiesIndexTilesTest &
+./deletetransparenttiles.py GL_CommunityInfrastructurIndexTilesTest &
+./deletetransparenttiles.py GL_ErosionIndexTilesTest &
+./deletetransparenttiles.py GL_FloodProneAreasIndexTilesTest &
+./deletetransparenttiles.py GL_SlopeIndexTilesTest &
+./deletetransparenttiles.py GL_DraingeIndexTilesTest &
+./deletetransparenttiles.py GL_MaxWaterLevelIndexTilesTest &
+./deletetransparenttiles.py GL_AIANNHAIndexTilesTest &
+./deletetransparenttiles.py GL_CededTerritoryIndexTilesTest &
+./deletetransparenttiles.py GL_USA_Department_of_Defense_LandsIndexTilesTest &
+./deletetransparenttiles.py GL_FetchIndexTilesTest &
+./deletetransparenttiles.py GL_LakeFluctuationZoneIndexTilesTest &
 
 ```
 
@@ -1258,6 +1307,36 @@ aws s3 sync GU_TsunamiIndexTiles/ s3://tiles.resilientcoasts.org/GU_TsunamiIndex
 aws s3 sync GU_WaveExposureTiles/ s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --acl public-read &
 aws s3 sync GU_LandslideIndexTiles/ s3://tiles.resilientcoasts.org/GU_LandslideIndexTiles --acl public-read &
 
+
+aws s3 sync GL_HubsIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_HubsIndexTiles --acl public-read &
+aws s3 sync GL_HubsHexIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_HubsHexIndexTiles --acl public-read &
+aws s3 sync GL_ExposureIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_ExposureIndexTiles --acl public-read &
+aws s3 sync GL_AssetsIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_AssetsIndexTiles --acl public-read &
+aws s3 sync GL_ThreatsIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_ThreatsIndexTiles --acl public-read &
+aws s3 sync GL_CombinedWildlifeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync GL_AquaticIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_AquaticIndexTiles --acl public-read &
+aws s3 sync GL_TerrestrialIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_TerrestrialIndexTiles --acl public-read &
+aws s3 sync GL_SocVulnIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_SocVulnIndexTilesTest --acl public-read &
+aws s3 sync GL_PopDensityIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_PopDensityIndexTiles --acl public-read &
+aws s3 sync GL_CriticalFacilitiesIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync GL_CommunityInfrastructurIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read &
+aws s3 sync GL_ErosionIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_ErosionIndexTiles --acl public-read &
+aws s3 sync GL_FloodProneAreasIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync GL_SlopeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_SlopeIndexTiles --acl public-read &
+aws s3 sync GL_DraingeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_DraingeIndexTiles --acl public-read &
+aws s3 sync GL_MaxWaterLevelIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_MaxWaterLevelIndexTiles --acl public-read &
+aws s3 sync GL_AIANNHAIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_AIANNHAIndexTiles --acl public-read &
+aws s3 sync GL_CededTerritoryIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CededTerritoryIndexTiles --acl public-read &
+aws s3 sync GL_USA_Department_of_Defense_LandsIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_USA_Department_of_Defense_LandsIndexTiles --acl public-read &
+aws s3 sync GL_FetchIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_FetchIndexTiles --acl public-read &
+aws s3 sync GL_LakeFluctuationZoneIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_LakeFluctuationZoneIndexTiles --acl public-read &
+
+aws s3 rm s3://tiles.resilientcoasts.org/GL_HubsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/AS_HubsHexIndexTiles --recursive --exclude "" &
+ 
+ 
+
+
 aws s3 rm s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_ErosionIndexTiles --recursive --exclude "" &
 aws s3 rm s3://tiles.resilientcoasts.org/GU_DraingeIndexTiles --recursive --exclude "" &
@@ -1280,56 +1359,56 @@ aws s3 cp TargetedWatershedHubs8.zip   s3://nfwf-tool/nfwf_download_data/Targete
 
 ### CONUS  examples of coping of seeding tiles by layer,use line breaks to break the tile creation into chunks. CONUS is very geographically large and take days to create. doing to many can cause timeout issues.
 ```bsh
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ThreatsIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ThreatsIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ThreatsIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ThreatsIndexTiles -z 13,13 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ExposureIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ExposureIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ExposureIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ExposureIndexTiles -z 13,13 -n 4 -d /usa_coastal_3857.shp &
 
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TerrestrialIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TerrestrialIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TerrestrialIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t AquaticIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t AquaticIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t AquaticIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SlopeIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SlopeIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SlopeIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SocVulnIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SocVulnIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SocVulnIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t DraingeIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t DraingeIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t DraingeIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ErosionIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ErosionIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t ErosionIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t FloodProneAreasIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t FloodProneAreasIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t FloodProneAreasIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t GeoStressIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t GeoStressIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t GeoStressIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t PopDensityIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t PopDensityIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t PopDensityIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t CriticalFacilitiesIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t CriticalFacilitiesIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t CriticalFacilitiesIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t CriticalInfrastructureIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t CriticalInfrastructureIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t CriticalInfrastructureIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SLRIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SLRIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t SLRIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t StormSurgeIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t StormSurgeIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t StormSurgeIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t HubsIndexTiles -z 1,10 -n 4 -d /usa_coastal_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t HubsIndexTiles -z 0,10 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t HubsIndexTiles -z 11,12 -n 4 -d /usa_coastal_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t HubsIndexTiles -z 13,13 -n 4 -d /usa_coastal_3857.shp &
 ```
