@@ -1493,11 +1493,11 @@ END
         EXPRESSION "0"
         STYLE
           OUTLINECOLOR 151 54 60
-          WIDTH 2
+          WIDTH 4
         END #end style
         STYLE
           COLOR 255 255 255 #fill
-          OPACITY 100
+          OPACITY 25
         END        
       END #end class
       CLASS
@@ -1505,10 +1505,12 @@ END
         EXPRESSION "1"
         STYLE
           OUTLINECOLOR 151 54 60
-          WIDTH 2
+          WIDTH 4
         END #end style
         STYLE
-          COLOR 252, 183, 188 #fill
+          #COLOR 252 183 188 #fill
+          COLOR 252 25 25
+          OPACITY 25
         END       
       END #end class
 

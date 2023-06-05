@@ -422,7 +422,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_HubsIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Department_of_Defense_LandsIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 0,10 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -447,7 +447,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Depart
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FetchIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 11,12 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -472,7 +472,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Depart
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FetchIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 13,13 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -497,7 +497,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Depart
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FetchIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 14,14 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
 
 ```
 
@@ -1044,6 +1044,9 @@ cp -R GL_USA_Department_of_Defense_LandsIndexTiles GL_USA_Department_of_Defense_
 cp -R GL_FetchIndexTiles GL_FetchIndexTilesTest &
 cp -R GL_LakeFluctuationZoneIndexTiles GL_LakeFluctuationZoneIndexTilesTest &
 
+rm GL_ExposureIndexTilesTest/14/4597/6053.png
+rm GL_DraingeIndexTilesTest/13/2315/3032.png
+
 ./deletetransparenttiles.py GL_HubsIndexTilesTest &
 ./deletetransparenttiles.py GL_HubsHexIndexTilesTest &
 ./deletetransparenttiles.py GL_ExposureIndexTilesTest &
@@ -1316,7 +1319,7 @@ aws s3 sync GL_ThreatsIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_ThreatsI
 aws s3 sync GL_CombinedWildlifeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CombinedWildlifeIndexTiles --acl public-read &
 aws s3 sync GL_AquaticIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_AquaticIndexTiles --acl public-read &
 aws s3 sync GL_TerrestrialIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_TerrestrialIndexTiles --acl public-read &
-aws s3 sync GL_SocVulnIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_SocVulnIndexTilesTest --acl public-read &
+aws s3 sync GL_SocVulnIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_SocVulnIndexTiles --acl public-read &
 aws s3 sync GL_PopDensityIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_PopDensityIndexTiles --acl public-read &
 aws s3 sync GL_CriticalFacilitiesIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CriticalFacilitiesIndexTiles --acl public-read &
 aws s3 sync GL_CommunityInfrastructurIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read &
@@ -1331,8 +1334,31 @@ aws s3 sync GL_USA_Department_of_Defense_LandsIndexTilesTest/ s3://tiles.resilie
 aws s3 sync GL_FetchIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_FetchIndexTiles --acl public-read &
 aws s3 sync GL_LakeFluctuationZoneIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_LakeFluctuationZoneIndexTiles --acl public-read &
 
+
+
+
 aws s3 rm s3://tiles.resilientcoasts.org/GL_HubsIndexTiles --recursive --exclude "" &
-aws s3 rm s3://tiles.resilientcoasts.org/AS_HubsHexIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_HubsHexIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_ExposureIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_AssetsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_ThreatsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CombinedWildlifeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_AquaticIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_TerrestrialIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_SocVulnIndexTilesTest --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_PopDensityIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CriticalFacilitiesIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_ErosionIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_FloodProneAreasIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_SlopeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_DraingeIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_MaxWaterLevelIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_AIANNHAIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CededTerritoryIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_USA_Department_of_Defense_LandsIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_FetchIndexTiles --recursive --exclude "" &
+aws s3 rm s3://tiles.resilientcoasts.org/GL_LakeFluctuationZoneIndexTiles --recursive --exclude "" &
  
  
 
