@@ -422,7 +422,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_HubsIndexT
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Department_of_Defense_LandsIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 0,10 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 0,10 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 0,10 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons_3857.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -447,7 +447,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Depart
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FetchIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 11,12 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 11,12 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 11,12 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons_3857.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -472,7 +472,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Depart
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FetchIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 13,13 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 13,13 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 13,13 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons_3857.shp &
 
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AssetsIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -497,8 +497,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_USA_Depart
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_LakeFluctuationZoneIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_FetchIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_AIANNHAIndexTiles -z 14,14 -n 4 -d  /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 14,14 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons.shp &
-
+mapcache_seed -c /var/www/html/mapcache/mapcache-greatlakes.xml -t GL_CededTerritoryIndexTiles -z 14,14 -n 4 -d  /tiledata/source/ceded_territories_v2_1_polygons_3857.shp &
 ```
 
 
