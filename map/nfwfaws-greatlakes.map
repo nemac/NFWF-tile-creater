@@ -195,33 +195,59 @@ END
       CLASS
         EXPRESSION ([pixel] = 2)
         STYLE
-          COLOR 233 187 203
+          COLOR 237 208 224
         END
       END
       CLASS
         EXPRESSION ([pixel] = 3)
         STYLE
-          COLOR 219 144 166
+          COLOR 233 187 203
         END
       END
       CLASS
         EXPRESSION ([pixel] = 4)
         STYLE
-          COLOR 210 124 153
+          COLOR 227 166 183
         END
       END
       CLASS
         EXPRESSION ([pixel] = 5)
         STYLE
-          COLOR 183 82 138
+          COLOR 219 144 166
         END
       END
       CLASS
         EXPRESSION ([pixel] = 6)
         STYLE
+          COLOR 210 124 153
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 198 103 143
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 183 82 138
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 163 63 143
+        END
+      END
+      CLASS
+        EXPRESSION ([pixel] = 10)
+        STYLE
           COLOR 126 51 168
         END
       END
+
+
 
     #INCLUDE "cmaps/gapnat.cmap"
     METADATA
@@ -290,39 +316,9 @@ END
       TEMPLATE ./templates/layer_query_body.html
 
       CLASS
-        EXPRESSION ([pixel] = 1)
-        STYLE
-          COLOR 204 209 210
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 3)
-        STYLE
-          COLOR 204 209 210
-        END
-      END
-      CLASS
         EXPRESSION ([pixel] = 5)
         STYLE
-          COLOR 53 92 89
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 8)
-        STYLE
-          COLOR 232 177 109
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 10)
-        STYLE
-          COLOR 173 53 65
-        END
-      END
-      CLASS
-        EXPRESSION ([pixel] = 15)
-        STYLE
-          COLOR 123 23 51
+          COLOR 168 43 65
         END
       END
 

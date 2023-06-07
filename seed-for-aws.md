@@ -1202,7 +1202,6 @@ aws s3 sync USVI_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/USVI_Terr
 aws s3 sync USVI_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_ThreatsIndexTiles --acl public-read &
 aws s3 sync USVI_HubsIndexTiles/ s3://tiles.resilientcoasts.org/USVI_HubsIndexTiles --acl public-read &
 
-
 aws s3 sync CNMI_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_AquaticIndexTiles --acl public-read &
 aws s3 sync CNMI_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_AssetsIndexTiles --acl public-read &
 aws s3 sync CNMI_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/CNMI_CombinedWildlifeIndexTiles --acl public-read &
@@ -1360,6 +1359,14 @@ aws s3 rm s3://tiles.resilientcoasts.org/GL_FetchIndexTiles --recursive --exclud
 aws s3 rm s3://tiles.resilientcoasts.org/GL_LakeFluctuationZoneIndexTiles --recursive --exclude "" &
  
  
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CombinedWildlifeIndexTiles --recursive --exclude ""
+aws s3 sync GL_CombinedWildlifeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CombinedWildlifeIndexTiles --acl public-read
+aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
+
+
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --recursive --exclude "" 
+aws s3 sync GL_CommunityInfrastructurIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read
+aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 
 
 aws s3 rm s3://tiles.resilientcoasts.org/GU_WaveExposureTiles --recursive --exclude "" &
