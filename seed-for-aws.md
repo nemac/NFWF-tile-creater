@@ -1016,58 +1016,61 @@ cd cache
 ./deletetransparenttiles.py AK_PermaFrostIndexTiles &
 ./deletetransparenttiles.py AK_LowLyingAreasIndexTiles &
 
+// used to stage zoom level 13
+// docker run -it -v /tiledata/cache:/cache gdal-python bash
+// cd cache
 
-docker run -it -v /tiledata/cache:/cache gdal-python bash
-cd cache
+// cp -R GL_HubsIndexTiles GL_HubsIndexTilesTest &
+// cp -R GL_HubsHexIndexTiles GL_HubsHexIndexTilesTest &
+// cp -R GL_ExposureIndexTiles GL_ExposureIndexTilesTest &
+// cp -R GL_AssetsIndexTiles GL_AssetsIndexTilesTest &
+// cp -R GL_ThreatsIndexTiles GL_ThreatsIndexTilesTest &
+// cp -R GL_CombinedWildlifeIndexTiles GL_CombinedWildlifeIndexTilesTest &
+// cp -R GL_AquaticIndexTiles GL_AquaticIndexTilesTest &
+// cp -R GL_TerrestrialIndexTiles GL_TerrestrialIndexTilesTest &
+// cp -R GL_SocVulnIndexTiles GL_SocVulnIndexTilesTest &
+// cp -R GL_PopDensityIndexTiles GL_PopDensityIndexTilesTest &
+// cp -R GL_CriticalFacilitiesIndexTiles GL_CriticalFacilitiesIndexTilesTest &
+// cp -R GL_CriticalInfrastructureIndexTiles GL_CommunityInfrastructurIndexTilesTest &
+// cp -R GL_ErosionIndexTiles GL_ErosionIndexTilesTest &
+// cp -R GL_FloodProneAreasIndexTiles GL_FloodProneAreasIndexTilesTest &
+// cp -R GL_SlopeIndexTiles GL_SlopeIndexTilesTest &
+// cp -R GL_DraingeIndexTiles GL_DraingeIndexTilesTest &
+// cp -R GL_MaxWaterLevelIndexTiles GL_MaxWaterLevelIndexTilesTest &
+// cp -R GL_AIANNHAIndexTiles GL_AIANNHAIndexTilesTest &
+// cp -R GL_CededTerritoryIndexTiles GL_CededTerritoryIndexTilesTest &
+// cp -R GL_USA_Department_of_Defense_LandsIndexTiles GL_USA_Department_of_Defense_LandsIndexTilesTest &
+// cp -R GL_FetchIndexTiles GL_FetchIndexTilesTest &
+// cp -R GL_LakeFluctuationZoneIndexTiles GL_LakeFluctuationZoneIndexTilesTest &
 
-cp -R GL_HubsIndexTiles GL_HubsIndexTilesTest &
-cp -R GL_HubsHexIndexTiles GL_HubsHexIndexTilesTest &
-cp -R GL_ExposureIndexTiles GL_ExposureIndexTilesTest &
-cp -R GL_AssetsIndexTiles GL_AssetsIndexTilesTest &
-cp -R GL_ThreatsIndexTiles GL_ThreatsIndexTilesTest &
-cp -R GL_CombinedWildlifeIndexTiles GL_CombinedWildlifeIndexTilesTest &
-cp -R GL_AquaticIndexTiles GL_AquaticIndexTilesTest &
-cp -R GL_TerrestrialIndexTiles GL_TerrestrialIndexTilesTest &
-cp -R GL_SocVulnIndexTiles GL_SocVulnIndexTilesTest &
-cp -R GL_PopDensityIndexTiles GL_PopDensityIndexTilesTest &
-cp -R GL_CriticalFacilitiesIndexTiles GL_CriticalFacilitiesIndexTilesTest &
-cp -R GL_CriticalInfrastructureIndexTiles GL_CommunityInfrastructurIndexTilesTest &
-cp -R GL_ErosionIndexTiles GL_ErosionIndexTilesTest &
-cp -R GL_FloodProneAreasIndexTiles GL_FloodProneAreasIndexTilesTest &
-cp -R GL_SlopeIndexTiles GL_SlopeIndexTilesTest &
-cp -R GL_DraingeIndexTiles GL_DraingeIndexTilesTest &
-cp -R GL_MaxWaterLevelIndexTiles GL_MaxWaterLevelIndexTilesTest &
-cp -R GL_AIANNHAIndexTiles GL_AIANNHAIndexTilesTest &
-cp -R GL_CededTerritoryIndexTiles GL_CededTerritoryIndexTilesTest &
-cp -R GL_USA_Department_of_Defense_LandsIndexTiles GL_USA_Department_of_Defense_LandsIndexTilesTest &
-cp -R GL_FetchIndexTiles GL_FetchIndexTilesTest &
-cp -R GL_LakeFluctuationZoneIndexTiles GL_LakeFluctuationZoneIndexTilesTest &
+// rm GL_ExposureIndexTilesTest/14/4597/6053.png
+// rm GL_DraingeIndexTilesTest/13/2315/3032.png
 
-rm GL_ExposureIndexTilesTest/14/4597/6053.png
-rm GL_DraingeIndexTilesTest/13/2315/3032.png
+rm GL_ExposureIndexTiles/14/4597/6053.png
+rm GL_DraingeIndexTiles/13/2315/3032.png
 
-./deletetransparenttiles.py GL_HubsIndexTilesTest &
-./deletetransparenttiles.py GL_HubsHexIndexTilesTest &
-./deletetransparenttiles.py GL_ExposureIndexTilesTest &
-./deletetransparenttiles.py GL_AssetsIndexTilesTest &
-./deletetransparenttiles.py GL_ThreatsIndexTilesTest &
-./deletetransparenttiles.py GL_CombinedWildlifeIndexTilesTest &
-./deletetransparenttiles.py GL_AquaticIndexTilesTest &
-./deletetransparenttiles.py GL_TerrestrialIndexTilesTest &
-./deletetransparenttiles.py GL_SocVulnIndexTilesTest &
-./deletetransparenttiles.py GL_PopDensityIndexTilesTest &
-./deletetransparenttiles.py GL_CriticalFacilitiesIndexTilesTest &
-./deletetransparenttiles.py GL_CommunityInfrastructurIndexTilesTest &
-./deletetransparenttiles.py GL_ErosionIndexTilesTest &
-./deletetransparenttiles.py GL_FloodProneAreasIndexTilesTest &
-./deletetransparenttiles.py GL_SlopeIndexTilesTest &
-./deletetransparenttiles.py GL_DraingeIndexTilesTest &
-./deletetransparenttiles.py GL_MaxWaterLevelIndexTilesTest &
-./deletetransparenttiles.py GL_AIANNHAIndexTilesTest &
-./deletetransparenttiles.py GL_CededTerritoryIndexTilesTest &
-./deletetransparenttiles.py GL_USA_Department_of_Defense_LandsIndexTilesTest &
-./deletetransparenttiles.py GL_FetchIndexTilesTest &
-./deletetransparenttiles.py GL_LakeFluctuationZoneIndexTilesTest &
+./deletetransparenttiles.py GL_HubsIndexTiles &
+./deletetransparenttiles.py GL_HubsHexIndexTiles &
+./deletetransparenttiles.py GL_ExposureIndexTiles &
+./deletetransparenttiles.py GL_AssetsIndexTiles &
+./deletetransparenttiles.py GL_ThreatsIndexTiles &
+./deletetransparenttiles.py GL_CombinedWildlifeIndexTiles &
+./deletetransparenttiles.py GL_AquaticIndexTiles &
+./deletetransparenttiles.py GL_TerrestrialIndexTiles &
+./deletetransparenttiles.py GL_SocVulnIndexTiles &
+./deletetransparenttiles.py GL_PopDensityIndexTiles &
+./deletetransparenttiles.py GL_CriticalFacilitiesIndexTiles &
+./deletetransparenttiles.py GL_CriticalInfrastructureIndexTiles &
+./deletetransparenttiles.py GL_ErosionIndexTiles &
+./deletetransparenttiles.py GL_FloodProneAreasIndexTiles &
+./deletetransparenttiles.py GL_SlopeIndexTiles &
+./deletetransparenttiles.py GL_DraingeIndexTiles &
+./deletetransparenttiles.py GL_MaxWaterLevelIndexTiles &
+./deletetransparenttiles.py GL_AIANNHAIndexTiles &
+./deletetransparenttiles.py GL_CededTerritoryIndexTiles &
+./deletetransparenttiles.py GL_USA_Department_of_Defense_LandsIndexTiles &
+./deletetransparenttiles.py GL_FetchIndexTiles &
+./deletetransparenttiles.py GL_LakeFluctuationZoneIndexTiles &
 
 ```
 
@@ -1328,11 +1331,32 @@ aws s3 sync GL_DraingeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_DraingeI
 aws s3 sync GL_MaxWaterLevelIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_MaxWaterLevelIndexTiles --acl public-read &
 aws s3 sync GL_AIANNHAIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_AIANNHAIndexTiles --acl public-read &
 aws s3 sync GL_CededTerritoryIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CededTerritoryIndexTiles --acl public-read &
-aws s3 sync GL_USA_Department_of_Defense_LandsIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_USA_Department_of_Defense_LandsIndexTiles --acl public-read &
 aws s3 sync GL_FetchIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_FetchIndexTiles --acl public-read &
 aws s3 sync GL_LakeFluctuationZoneIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_LakeFluctuationZoneIndexTiles --acl public-read &
 
 
+aws s3 sync GL_HubsIndexTiles/ s3://tiles.resilientcoasts.org/GL_HubsIndexTiles --acl public-read &
+aws s3 sync GL_HubsHexIndexTiles/ s3://tiles.resilientcoasts.org/GL_HubsHexIndexTiles --acl public-read &
+aws s3 sync GL_ExposureIndexTiles/ s3://tiles.resilientcoasts.org/GL_ExposureIndexTiles --acl public-read &
+aws s3 sync GL_AssetsIndexTiles/ s3://tiles.resilientcoasts.org/GL_AssetsIndexTiles --acl public-read &
+aws s3 sync GL_ThreatsIndexTiles/ s3://tiles.resilientcoasts.org/GL_ThreatsIndexTiles --acl public-read &
+aws s3 sync GL_CombinedWildlifeIndexTiles/ s3://tiles.resilientcoasts.org/GL_CombinedWildlifeIndexTiles --acl public-read &
+aws s3 sync GL_AquaticIndexTiles/ s3://tiles.resilientcoasts.org/GL_AquaticIndexTiles --acl public-read &
+aws s3 sync GL_TerrestrialIndexTiles/ s3://tiles.resilientcoasts.org/GL_TerrestrialIndexTiles --acl public-read &
+aws s3 sync GL_SocVulnIndexTiles/ s3://tiles.resilientcoasts.org/GL_SocVulnIndexTiles --acl public-read &
+aws s3 sync GL_PopDensityIndexTiles/ s3://tiles.resilientcoasts.org/GL_PopDensityIndexTiles --acl public-read &
+aws s3 sync GL_CriticalFacilitiesIndexTiles/ s3://tiles.resilientcoasts.org/GL_CriticalFacilitiesIndexTiles --acl public-read &
+aws s3 sync GL_CommunityInfrastructurIndexTiles/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read &
+aws s3 sync GL_ErosionIndexTiles/ s3://tiles.resilientcoasts.org/GL_ErosionIndexTiles --acl public-read &
+aws s3 sync GL_FloodProneAreasIndexTiles/ s3://tiles.resilientcoasts.org/GL_FloodProneAreasIndexTiles --acl public-read &
+aws s3 sync GL_SlopeIndexTiles/ s3://tiles.resilientcoasts.org/GL_SlopeIndexTiles --acl public-read &
+aws s3 sync GL_DraingeIndexTiles/ s3://tiles.resilientcoasts.org/GL_DraingeIndexTiles --acl public-read &
+aws s3 sync GL_MaxWaterLevelIndexTiles/ s3://tiles.resilientcoasts.org/GL_MaxWaterLevelIndexTiles --acl public-read &
+aws s3 sync GL_AIANNHAIndexTiles/ s3://tiles.resilientcoasts.org/GL_AIANNHAIndexTiles --acl public-read &
+aws s3 sync GL_CededTerritoryIndexTiles/ s3://tiles.resilientcoasts.org/GL_CededTerritoryIndexTiles --acl public-read &
+aws s3 sync GL_FetchIndexTiles/ s3://tiles.resilientcoasts.org/GL_FetchIndexTiles --acl public-read &
+aws s3 sync GL_LakeFluctuationZoneIndexTiles/ s3://tiles.resilientcoasts.org/GL_LakeFluctuationZoneIndexTiles --acl public-read &
+// aws s3 sync GL_USA_Department_of_Defense_LandsIndexTiles/ s3://tiles.resilientcoasts.org/GL_USA_Department_of_Defense_LandsIndexTiles --acl public-read &
 
 
 aws s3 rm s3://tiles.resilientcoasts.org/GL_HubsIndexTiles --recursive --exclude "" &
@@ -1364,8 +1388,8 @@ aws s3 sync GL_CombinedWildlifeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 
 
-aws s3 rm s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --recursive --exclude "" 
-aws s3 sync GL_CommunityInfrastructurIndexTilesTest/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles--recursive --exclude "" 
+aws s3 sync GL_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 
 
