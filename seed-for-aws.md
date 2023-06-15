@@ -1388,7 +1388,7 @@ aws s3 sync GL_CombinedWildlifeIndexTilesTest/ s3://tiles.resilientcoasts.org/GL
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 
 
-aws s3 rm s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles--recursive --exclude "" 
+aws s3 rm s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles/13--recursive --exclude "" 
 aws s3 sync GL_CriticalInfrastructureIndexTiles/ s3://tiles.resilientcoasts.org/GL_CommunityInfrastructurIndexTiles --acl public-read
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
 
