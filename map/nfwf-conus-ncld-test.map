@@ -1,0 +1,244 @@
+MAP
+  # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+  # of the two lines below to enable this logging:
+  #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+  #DEBUG 5
+
+  # all temp files get prefixed with this string
+  NAME ms_nfwf
+
+  #jdm:added to accomodate map layers
+  #see http://trac.osgeo.org/mapserver/ticket/3055
+  MAXSIZE 3072
+
+  # background color of image if transparency
+  # is not requested
+  IMAGECOLOR 255 255 255
+
+  # default output image dimensions
+  SIZE 600 400
+
+  # always returns a map
+  STATUS ON
+
+  # set top level projection
+  PROJECTION
+    "init=epsg:3857"
+  END
+
+  # image format options
+  OUTPUTFORMAT
+    NAME "PNG"
+    DRIVER "GDAL/PNG"
+    MIMETYPE "image/png"
+    IMAGEMODE "RGB"
+    EXTENSION "png"
+  END
+
+  # minx miny maxx maxy
+  EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+  # # add def pointers for symbols
+  SYMBOLSET symbolset.txt
+  # FONTSET   "./fonts/fonts.list"
+
+  # Start of web interface definition
+  WEB
+
+    IMAGEPATH '/tmp/'
+    IMAGEURL '/tmp/'
+
+    HEADER "./templates/query_header.html"
+    FOOTER "./templates/query_footer.html"
+
+    TEMPLATE 'http://someurl/somescript.cgi?mapext=[mapext]'
+
+    METADATA
+      "ows_enable_request"     "*"
+      "wms_title"              "NEMAC NFWF WMS"
+      "wms_abstract"           "NEMAC NFWF WMS"
+      "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+      "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+      "wms_feature_info_mime_type" "text/plain"
+      "wms_feature_info_mime_type" "text/html"
+    END
+  END
+
+  # set defaults for GetLegendGraphic requests
+  LEGEND
+    KEYSIZE 30 20
+    STATUS on
+  END
+
+  LAYER
+    NAME "NLCDTestTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/nlcd_2021_nfwf_conus_30m.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # open water
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 84 117 168
+        END
+      END
+      CLASS
+        # Perennial Ice/Snow
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 255 255 255
+        END
+      END
+      CLASS
+        #Developed, Open Space
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 232 209 209
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 226 158 140
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 255 0 0
+        END
+      END
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 181 0 0
+        END
+      END
+      CLASS
+        # DevBarren Land (Rock/Sand/Clay)
+        EXPRESSION ([pixel] = 31)
+        STYLE
+          COLOR 210 205 192
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 41)
+        STYLE
+          COLOR 133 199 126
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 42)
+        STYLE
+          COLOR 56 129 78
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 43)
+        STYLE
+          COLOR 212 231 176
+        END
+      END
+      CLASS
+        # Dwarf Scrub
+        EXPRESSION ([pixel] = 51)
+        STYLE
+          COLOR 175 150 60
+        END
+      END
+      CLASS
+        # Shrub/Scrub
+        EXPRESSION ([pixel] = 52)
+        STYLE
+          COLOR 220 202 143
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 71)
+        STYLE
+          COLOR 253 233 170
+        END
+      END
+      CLASS
+        # Sedge/Herbaceous
+        EXPRESSION ([pixel] = 72)
+        STYLE
+          COLOR 209 209 130
+        END
+      END
+      CLASS
+        # Lichens
+        EXPRESSION ([pixel] = 73)
+        STYLE
+          COLOR 163 204 81
+        END
+      END
+      CLASS
+        # Moss
+        EXPRESSION ([pixel] = 74)
+        STYLE
+          COLOR 130 186 158
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 81)
+        STYLE
+          COLOR 251 246 93
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 82)
+        STYLE
+          COLOR 202 145 70
+        END
+      END
+      CLASS
+        # Woody Wetlands
+        EXPRESSION ([pixel] = 90)
+        STYLE
+          COLOR 200 230 248
+        END
+      END
+      CLASS
+        # Emergent Herbaceous Wetlands
+        EXPRESSION ([pixel] = 95)
+        STYLE
+          COLOR 100 179 213
+        END
+      END
+
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "CUS_Landcover"
+      "wms_abstract"          "CUS_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+END # end MAP

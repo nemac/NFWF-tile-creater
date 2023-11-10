@@ -20,7 +20,7 @@ services:
     # command: ["/usr/local/bin/run.sh"]
     networks:
       net:
-        ipv4_address: 10.10.10.4.5
+        ipv4_address: 10.10.10.4
   mapcache:
     image: mapcache-image
     build:
@@ -39,7 +39,7 @@ services:
       - "mapserver"
     networks:
       net:
-        ipv4_address: 10.10.10.4.2
+        ipv4_address: 10.10.10.5
     tty: true
 
 networks:
@@ -47,4 +47,4 @@ networks:
     driver: bridge
     ipam:
      config:
-       - subnet: 10.10.10.4.0/16
+       - subnet: 10.10.0.0/16
