@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapcache>
+
+ <tileset name="AS_CCAPTiles">
+    <metadata>
+      <title>AS_CCAPTiles</title>
+    </metadata>
+    <source>AS_CCAPTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="AS_CCAPTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>AS_CCAPTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-ccap.map</url>
+    </http>
+  </source>
+
+ <tileset name="HI_CCAPTiles">
+    <metadata>
+      <title>HI_CCAPTiles</title>
+    </metadata>
+    <source>HI_CCAPTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="HI_CCAPTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>HI_CCAPTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-ccap.map</url>
+    </http>
+  </source>
+
+ <tileset name="GU_CCAPTiles">
+    <metadata>
+      <title>GU_CCAPTiles</title>
+    </metadata>
+    <source>GU_CCAPTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="GU_CCAPTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GU_CCAPTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-ccap.map</url>
+    </http>
+  </source>
+
+ <tileset name="CNMI_CCAPTiles">
+    <metadata>
+      <title>CNMI_CCAPTiles</title>
+    </metadata>
+    <source>CNMI_CCAPTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="CNMI_CCAPTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>CNMI_CCAPTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-ccap.map</url>
+    </http>
+  </source>
+
+ <tileset name="PR_CCAPTiles">
+    <metadata>
+      <title>PR_CCAPTiles</title>
+    </metadata>
+    <source>PR_CCAPTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="PR_CCAPTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>PR_CCAPTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-ccap.map</url>
+    </http>
+  </source>
+
+  <tileset name="USVI_CCAPTiles">
+    <metadata>
+      <title>USVI_CCAPTiles</title>
+    </metadata>
+    <source>USVI_CCAPTiles</source>
+    <cache>agolCompatible</cache>
+    <format>PNG</format>
+    <grid>GoogleMapsCompatible</grid>
+    <metatile>1 1</metatile>
+    <expires>1</expires>
+  </tileset>
+
+  <source name="USVI_CCAPTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>USVI_CCAPTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-ccap.map</url>
+    </http>
+  </source>
+
+  <service type="wms" enabled="true">
+    <resample_mode>bilinear</resample_mode>
+  </service>
+
+  <cache name="agolCompatible" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{inv_y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <cache name="tmpl" type="disk" layout="template">
+    <template>/var/www/html/mapcache/cache/{tileset}/{z}/{x}/{y}.{ext}</template>
+    <detect_blank/>
+  </cache>
+
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  <service type="demo" enabled="true"/>
+
+  <log_level>debug</log_level>
+
+</mapcache>

@@ -1,0 +1,1245 @@
+MAP
+  # the following two lines tell MapServer to write debugging output to a log file.  Remove the '#' from the beginning
+  # of the two lines below to enable this logging:
+  #CONFIG "MS_ERRORFILE" "../var/log/landat.log"
+  #DEBUG 5
+
+  # all temp files get prefixed with this string
+  NAME ms_nfwf
+
+  #jdm:added to accomodate map layers
+  #see http://trac.osgeo.org/mapserver/ticket/3055
+  MAXSIZE 3072
+
+  # background color of image if transparency
+  # is not requested
+  IMAGECOLOR 255 255 255
+
+  # default output image dimensions
+  SIZE 600 400
+
+  # always returns a map
+  STATUS ON
+
+  # set top level projection
+  PROJECTION
+    "init=epsg:3857"
+  END
+
+  # image format options
+  OUTPUTFORMAT
+    NAME "PNG"
+    DRIVER "GDAL/PNG"
+    MIMETYPE "image/png"
+    IMAGEMODE "RGB"
+    EXTENSION "png"
+  END
+
+  # minx miny maxx maxy
+  EXTENT    -124.733174 24.543940 -66.950005 49.384359 # US
+
+  # # add def pointers for symbols
+  SYMBOLSET symbolset.txt
+  # FONTSET   "./fonts/fonts.list"
+
+  # Start of web interface definition
+  WEB
+
+    IMAGEPATH '/tmp/'
+    IMAGEURL '/tmp/'
+
+    HEADER "./templates/query_header.html"
+    FOOTER "./templates/query_footer.html"
+
+    TEMPLATE 'http://someurl/somescript.cgi?mapext=[mapext]'
+
+    METADATA
+      "ows_enable_request"     "*"
+      "wms_title"              "NEMAC NFWF WMS"
+      "wms_abstract"           "NEMAC NFWF WMS"
+      "wms_onlineresource"     "http://gis.nemac.org/nfwf"
+      "wms_srs"                "EPSG:3785 EPSG:4326 EPSG:900913 EPSG:102003 EPSG:3857"
+      "wms_feature_info_mime_type" "text/plain"
+      "wms_feature_info_mime_type" "text/html"
+    END
+  END
+
+  # set defaults for GetLegendGraphic requests
+  LEGEND
+    KEYSIZE 30 20
+    STATUS on
+  END
+
+  LAYER
+    NAME "PR_CCAPTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_0=17.8333333333333"
+      "lon_0=-66.4333333333333"
+      "lat_1=18.4333333333333"
+      "lat_2=18.0333333333333"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/pr_ccap_10m_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 242 242 242
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 170 158 170
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 145 119 130
+        END
+      END
+      CLASS
+        # Developed, Open Space
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 193 204 61
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 89 35 0
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 193 163 81
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 242 188 140
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 0 242 0
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 61 0
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 10 163 61
+        END
+      END
+      CLASS
+        # Scrub/Shrub
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 112 112 0
+        END
+      END
+      CLASS
+        # Palustrine Forested Wetland
+        EXPRESSION ([pixel] = 13)
+        STYLE
+          COLOR 0 96 96
+        END
+      END
+      CLASS
+        # Palustrine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 14)
+        STYLE
+          COLOR 242 112 0
+        END
+      END
+      CLASS
+        # Palustrine Emergent Wetland
+        EXPRESSION ([pixel] = 15)
+        STYLE
+          COLOR 242 0 242
+        END
+      END
+      CLASS
+        # Estuarine Forested Wetland
+        EXPRESSION ([pixel] = 16)
+        STYLE
+          COLOR 60 0 60
+        END
+      END
+      CLASS
+        # Estuarine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 17)
+        STYLE
+          COLOR 109 0 109
+        END
+      END
+      CLASS
+        # Estuarine Emergent Wetland
+        EXPRESSION ([pixel] = 18)
+        STYLE
+          COLOR 178 0 178
+        END
+      END
+      CLASS
+        # Unconsolidated Shore
+        EXPRESSION ([pixel] = 19)
+        STYLE
+          COLOR 0 242 242
+        END
+      END
+      CLASS
+        # Bare Land
+        EXPRESSION ([pixel] = 20)
+        STYLE
+          COLOR 242 242 0
+        END
+      END
+      CLASS
+        # Open Water
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 0 0 112
+        END
+      END
+      CLASS
+        # Palustrine Aquatic Bed
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 0 0 237
+        END
+      END
+      CLASS
+        # Estuarine Aquatic Bed
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 102 111 219
+        END
+      END
+      CLASS
+        # Tundra
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 249 209 0
+        END
+      END
+      CLASS
+        # Snow/Ice
+        EXPRESSION ([pixel] = 25)
+        STYLE
+          COLOR 170 249 239
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "PR_Landcover"
+      "wms_abstract"          "PR_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+  
+  LAYER
+    NAME "USVI_CCAPTiles"
+    PROJECTION
+      "proj=lcc"
+      "lat_0=17.8333333333333"
+      "lon_0=-66.4333333333333"
+      "lat_1=18.4333333333333"
+      "lat_2=18.0333333333333"
+      "x_0=200000"
+      "y_0=200000"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/vi_ccap_2012_merge_32161.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 242 242 242
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 170 158 170
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 145 119 130
+        END
+      END
+      CLASS
+        # Developed, Open Space
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 193 204 61
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 89 35 0
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 193 163 81
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 242 188 140
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 0 242 0
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 61 0
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 10 163 61
+        END
+      END
+      CLASS
+        # Scrub/Shrub
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 112 112 0
+        END
+      END
+      CLASS
+        # Palustrine Forested Wetland
+        EXPRESSION ([pixel] = 13)
+        STYLE
+          COLOR 0 96 96
+        END
+      END
+      CLASS
+        # Palustrine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 14)
+        STYLE
+          COLOR 242 112 0
+        END
+      END
+      CLASS
+        # Palustrine Emergent Wetland
+        EXPRESSION ([pixel] = 15)
+        STYLE
+          COLOR 242 0 242
+        END
+      END
+      CLASS
+        # Estuarine Forested Wetland
+        EXPRESSION ([pixel] = 16)
+        STYLE
+          COLOR 60 0 60
+        END
+      END
+      CLASS
+        # Estuarine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 17)
+        STYLE
+          COLOR 109 0 109
+        END
+      END
+      CLASS
+        # Estuarine Emergent Wetland
+        EXPRESSION ([pixel] = 18)
+        STYLE
+          COLOR 178 0 178
+        END
+      END
+      CLASS
+        # Unconsolidated Shore
+        EXPRESSION ([pixel] = 19)
+        STYLE
+          COLOR 0 242 242
+        END
+      END
+      CLASS
+        # Bare Land
+        EXPRESSION ([pixel] = 20)
+        STYLE
+          COLOR 242 242 0
+        END
+      END
+      CLASS
+        # Open Water
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 0 0 112
+        END
+      END
+      CLASS
+        # Palustrine Aquatic Bed
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 0 0 237
+        END
+      END
+      CLASS
+        # Estuarine Aquatic Bed
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 102 111 219
+        END
+      END
+      CLASS
+        # Tundra
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 249 209 0
+        END
+      END
+      CLASS
+        # Snow/Ice
+        EXPRESSION ([pixel] = 25)
+        STYLE
+          COLOR 170 249 239
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "USVI_Landcover"
+      "wms_abstract"          "USVI_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "CNMI_CCAPTiles"
+    PROJECTION
+      "proj=utm"
+      "zone=55"
+      "datum=WGS84"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/CNMI_CCAP_CREST.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 242 242 242
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 170 158 170
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 145 119 130
+        END
+      END
+      CLASS
+        # Developed, Open Space
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 193 204 61
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 89 35 0
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 193 163 81
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 242 188 140
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 0 242 0
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 61 0
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 10 163 61
+        END
+      END
+      CLASS
+        # Scrub/Shrub
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 112 112 0
+        END
+      END
+      CLASS
+        # Palustrine Forested Wetland
+        EXPRESSION ([pixel] = 13)
+        STYLE
+          COLOR 0 96 96
+        END
+      END
+      CLASS
+        # Palustrine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 14)
+        STYLE
+          COLOR 242 112 0
+        END
+      END
+      CLASS
+        # Palustrine Emergent Wetland
+        EXPRESSION ([pixel] = 15)
+        STYLE
+          COLOR 242 0 242
+        END
+      END
+      CLASS
+        # Estuarine Forested Wetland
+        EXPRESSION ([pixel] = 16)
+        STYLE
+          COLOR 60 0 60
+        END
+      END
+      CLASS
+        # Estuarine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 17)
+        STYLE
+          COLOR 109 0 109
+        END
+      END
+      CLASS
+        # Estuarine Emergent Wetland
+        EXPRESSION ([pixel] = 18)
+        STYLE
+          COLOR 178 0 178
+        END
+      END
+      CLASS
+        # Unconsolidated Shore
+        EXPRESSION ([pixel] = 19)
+        STYLE
+          COLOR 0 242 242
+        END
+      END
+      CLASS
+        # Bare Land
+        EXPRESSION ([pixel] = 20)
+        STYLE
+          COLOR 242 242 0
+        END
+      END
+      CLASS
+        # Open Water
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 0 0 112
+        END
+      END
+      CLASS
+        # Palustrine Aquatic Bed
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 0 0 237
+        END
+      END
+      CLASS
+        # Estuarine Aquatic Bed
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 102 111 219
+        END
+      END
+      CLASS
+        # Tundra
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 249 209 0
+        END
+      END
+      CLASS
+        # Snow/Ice
+        EXPRESSION ([pixel] = 25)
+        STYLE
+          COLOR 170 249 239
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "CNMI_Landcover"
+      "wms_abstract"          "CNMI_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+  LAYER
+    NAME "GU_CCAPTiles"
+    PROJECTION
+      	"proj=poly"
+      	"lat_0=13.47246635277778"
+      	"lon_0=144.7487507055556"
+      	"x_0=50000"
+      	"y_0=50000"
+      	"datum=NAD83"
+      	"units=m"
+      	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/Guam_ccap_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 242 242 242
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 170 158 170
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 145 119 130
+        END
+      END
+      CLASS
+        # Developed, Open Space
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 193 204 61
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 89 35 0
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 193 163 81
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 242 188 140
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 0 242 0
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 61 0
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 10 163 61
+        END
+      END
+      CLASS
+        # Scrub/Shrub
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 112 112 0
+        END
+      END
+      CLASS
+        # Palustrine Forested Wetland
+        EXPRESSION ([pixel] = 13)
+        STYLE
+          COLOR 0 96 96
+        END
+      END
+      CLASS
+        # Palustrine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 14)
+        STYLE
+          COLOR 242 112 0
+        END
+      END
+      CLASS
+        # Palustrine Emergent Wetland
+        EXPRESSION ([pixel] = 15)
+        STYLE
+          COLOR 242 0 242
+        END
+      END
+      CLASS
+        # Estuarine Forested Wetland
+        EXPRESSION ([pixel] = 16)
+        STYLE
+          COLOR 60 0 60
+        END
+      END
+      CLASS
+        # Estuarine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 17)
+        STYLE
+          COLOR 109 0 109
+        END
+      END
+      CLASS
+        # Estuarine Emergent Wetland
+        EXPRESSION ([pixel] = 18)
+        STYLE
+          COLOR 178 0 178
+        END
+      END
+      CLASS
+        # Unconsolidated Shore
+        EXPRESSION ([pixel] = 19)
+        STYLE
+          COLOR 0 242 242
+        END
+      END
+      CLASS
+        # Bare Land
+        EXPRESSION ([pixel] = 20)
+        STYLE
+          COLOR 242 242 0
+        END
+      END
+      CLASS
+        # Open Water
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 0 0 112
+        END
+      END
+      CLASS
+        # Palustrine Aquatic Bed
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 0 0 237
+        END
+      END
+      CLASS
+        # Estuarine Aquatic Bed
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 102 111 219
+        END
+      END
+      CLASS
+        # Tundra
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 249 209 0
+        END
+      END
+      CLASS
+        # Snow/Ice
+        EXPRESSION ([pixel] = 25)
+        STYLE
+          COLOR 170 249 239
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "GU_Landcover"
+      "wms_abstract"          "GU_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+
+  LAYER
+    NAME "HI_CCAPTiles"
+    PROJECTION
+      "proj=utm"
+      "zone=4"
+      "datum=NAD83"
+      "units=m"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/HI_CCAP_CREST.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 242 242 242
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 170 158 170
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 145 119 130
+        END
+      END
+      CLASS
+        # Developed, Open Space
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 193 204 61
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 89 35 0
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 193 163 81
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 242 188 140
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 0 242 0
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 61 0
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 10 163 61
+        END
+      END
+      CLASS
+        # Scrub/Shrub
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 112 112 0
+        END
+      END
+      CLASS
+        # Palustrine Forested Wetland
+        EXPRESSION ([pixel] = 13)
+        STYLE
+          COLOR 0 96 96
+        END
+      END
+      CLASS
+        # Palustrine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 14)
+        STYLE
+          COLOR 242 112 0
+        END
+      END
+      CLASS
+        # Palustrine Emergent Wetland
+        EXPRESSION ([pixel] = 15)
+        STYLE
+          COLOR 242 0 242
+        END
+      END
+      CLASS
+        # Estuarine Forested Wetland
+        EXPRESSION ([pixel] = 16)
+        STYLE
+          COLOR 60 0 60
+        END
+      END
+      CLASS
+        # Estuarine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 17)
+        STYLE
+          COLOR 109 0 109
+        END
+      END
+      CLASS
+        # Estuarine Emergent Wetland
+        EXPRESSION ([pixel] = 18)
+        STYLE
+          COLOR 178 0 178
+        END
+      END
+      CLASS
+        # Unconsolidated Shore
+        EXPRESSION ([pixel] = 19)
+        STYLE
+          COLOR 0 242 242
+        END
+      END
+      CLASS
+        # Bare Land
+        EXPRESSION ([pixel] = 20)
+        STYLE
+          COLOR 242 242 0
+        END
+      END
+      CLASS
+        # Open Water
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 0 0 112
+        END
+      END
+      CLASS
+        # Palustrine Aquatic Bed
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 0 0 237
+        END
+      END
+      CLASS
+        # Estuarine Aquatic Bed
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 102 111 219
+        END
+      END
+      CLASS
+        # Tundra
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 249 209 0
+        END
+      END
+      CLASS
+        # Snow/Ice
+        EXPRESSION ([pixel] = 25)
+        STYLE
+          COLOR 170 249 239
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "HI_Landcover"
+      "wms_abstract"          "HI_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+
+  LAYER
+    NAME "AS_CCAPTiles"
+    PROJECTION
+      "proj=utm"
+    	"zone=2"
+    	"south"
+    	"ellps=GRS80"
+    	"units=m"
+    	"no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/American_Samoa_ccap_3m_clip.tif"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 2)
+        STYLE
+          COLOR 242 242 242
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 3)
+        STYLE
+          COLOR 170 158 170
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 4)
+        STYLE
+          COLOR 145 119 130
+        END
+      END
+      CLASS
+        # Developed, Open Space
+        EXPRESSION ([pixel] = 5)
+        STYLE
+          COLOR 193 204 61
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 6)
+        STYLE
+          COLOR 89 35 0
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 7)
+        STYLE
+          COLOR 193 163 81
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 8)
+        STYLE
+          COLOR 242 188 140
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 9)
+        STYLE
+          COLOR 0 242 0
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 10)
+        STYLE
+          COLOR 0 61 0
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 10 163 61
+        END
+      END
+      CLASS
+        # Scrub/Shrub
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 112 112 0
+        END
+      END
+      CLASS
+        # Palustrine Forested Wetland
+        EXPRESSION ([pixel] = 13)
+        STYLE
+          COLOR 0 96 96
+        END
+      END
+      CLASS
+        # Palustrine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 14)
+        STYLE
+          COLOR 242 112 0
+        END
+      END
+      CLASS
+        # Palustrine Emergent Wetland
+        EXPRESSION ([pixel] = 15)
+        STYLE
+          COLOR 242 0 242
+        END
+      END
+      CLASS
+        # Estuarine Forested Wetland
+        EXPRESSION ([pixel] = 16)
+        STYLE
+          COLOR 60 0 60
+        END
+      END
+      CLASS
+        # Estuarine Scrub/Shrub Wetland
+        EXPRESSION ([pixel] = 17)
+        STYLE
+          COLOR 109 0 109
+        END
+      END
+      CLASS
+        # Estuarine Emergent Wetland
+        EXPRESSION ([pixel] = 18)
+        STYLE
+          COLOR 178 0 178
+        END
+      END
+      CLASS
+        # Unconsolidated Shore
+        EXPRESSION ([pixel] = 19)
+        STYLE
+          COLOR 0 242 242
+        END
+      END
+      CLASS
+        # Bare Land
+        EXPRESSION ([pixel] = 20)
+        STYLE
+          COLOR 242 242 0
+        END
+      END
+      CLASS
+        # Open Water
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 0 0 112
+        END
+      END
+      CLASS
+        # Palustrine Aquatic Bed
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 0 0 237
+        END
+      END
+      CLASS
+        # Estuarine Aquatic Bed
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 102 111 219
+        END
+      END
+      CLASS
+        # Tundra
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 249 209 0
+        END
+      END
+      CLASS
+        # Snow/Ice
+        EXPRESSION ([pixel] = 25)
+        STYLE
+          COLOR 170 249 239
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "AS_Landcover"
+      "wms_abstract"          "AS_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
+END # end MAP

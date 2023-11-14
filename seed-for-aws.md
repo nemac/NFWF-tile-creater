@@ -881,6 +881,67 @@ mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedExposur
 mapcache_seed -c /var/www/html/mapcache/mapcache.xml -t TargetedWatershedHubsTiles -z 13,13 -n 4 -d /targeted_watersheds.shp &
 ```
 
+### Landcover tiles CONUS, PR, VI
+```bsh 
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 1,10 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+// mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 1,10 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+// mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 1,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
+// mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/alaska_boundary.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 1,10 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t PR_CCAPTiles -z 1,10 -n 5 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t PR_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t PR_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t PR_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t PR_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/PR_CREST_Clipping_Boundary_3857.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 1,10 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 1,10 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t HI_CCAPTiles -z 1,10 -n 5 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t HI_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t HI_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t HI_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t HI_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/HI_Region_Boundary_3857.shp &
+
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t AS_CCAPTiles -z 1,10 -n 5 -d /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t AS_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t AS_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t AS_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t AS_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/AS_30mDepth_Bndy_3857.shp &
+
+
+
+```
+
+
 ### CONUS nature serve examples of how to delete blank images, the tile creation creates a lot of blank complete transparent images.  The tile website only needs one this significantly reduces the files of the tiles.
 ### this use the gdal and python container
 ```bsh
