@@ -3,9 +3,9 @@
 
   <tileset name="AK_NLCDTiles">
     <metadata>
-      <title>NLCDTiles</title>
+      <title>AK_NLCDTiles</title>
     </metadata>
-    <source>NLCDTiles</source>
+    <source>AK_NLCDTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
@@ -17,26 +17,40 @@
     <getmap>
       <params>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>NLCDTiles</LAYERS>
+        <LAYERS>AK_NLCDTiles</LAYERS>
         <TRANSPARENT>TRUE</TRANSPARENT>
       </params>
     </getmap>
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-ncld.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-nlcd.map</url>
     </http>
   </source>
 
   <tileset name="GL_NLCDTiles">
     <metadata>
-      <title>NLCDTiles</title>
+      <title>GL_NLCDTiles</title>
     </metadata>
-    <source>NLCDTiles</source>
+    <source>GL_NLCDTiles</source>
     <cache>agolCompatible</cache>
     <format>PNG</format>
     <grid>GoogleMapsCompatible</grid>
     <metatile>1 1</metatile>
     <expires>1</expires>
   </tileset>
+
+  <source name="GL_NLCDTiles" type="wms">
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>GL_NLCDTiles</LAYERS>
+        <TRANSPARENT>TRUE</TRANSPARENT>
+      </params>
+    </getmap>
+    <http>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-nlcd.map</url>
+    </http>
+  </source>
+
 
   <tileset name="CONUS_NLCDTiles">
     <metadata>
@@ -59,7 +73,7 @@
       </params>
     </getmap>
     <http>
-      <url>10.10.0.3/nfwf/?map=/map/nfwf-ncld.map</url>
+      <url>10.10.0.3/nfwf/?map=/map/nfwf-nlcd.map</url>
     </http>
   </source>
 

@@ -887,7 +887,9 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+
 // mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 0,10 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
@@ -919,7 +921,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 1
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t CNMI_CCAPTiles -z 14,14 -n 5 -d /tiledata/source/CNMI_Region_Boundary_buffer_3857_2.shp &
 
-mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 0,10 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z ,10 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 12,12 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t GU_CCAPTiles -z 13,13 -n 5 -d /tiledata/source/GU_30m_Boundary_3857.shp &

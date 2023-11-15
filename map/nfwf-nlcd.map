@@ -71,7 +71,32 @@ MAP
   END
 
   LAYER
-    NAME "NLCDTiles"
+    NAME "CONUS_Boundary"
+    TYPE POLYGON
+    STATUS OFF
+    DATA  "/tiledata/source/CONUS_Boundary_buff.shp"
+    GEOMTRANSFORM (buffer([shape], 10))
+    CLASS
+      STYLE
+      COLOR 255 255 255
+      END
+    END
+  END
+
+  LAYER
+    NAME "GL_Boundary"
+    TYPE POLYGON
+    STATUS OFF
+    DATA  "/tiledata/source/GL_Boundary_buff.shp"
+    CLASS
+      STYLE
+      COLOR 255 255 255
+      END
+    END
+  END
+
+  LAYER
+    NAME "CONUS_NLCDTiles"
     PROJECTION
       "proj=aea"
       "lat_0=37.5"
@@ -88,6 +113,7 @@ MAP
       DUMP     TRUE
       STATUS   OFF
       DATA     "/tiledata/source/nlcd_2021_nfwf_conus_30m.tif"
+      MASK "CONUS_Boundary"
       HEADER   ./templates/layer_query_header.html
       TEMPLATE ./templates/layer_query_body.html
 
@@ -239,6 +265,178 @@ MAP
       "gml_include_items"     "value_0"
     END  # end METADATA
   END # end LAYER
+
+  LAYER
+    NAME "GL_NLCDTiles"
+    PROJECTION
+      "proj=aea"
+      "lat_0=37.5"
+      "lon_0=-96"
+      "lat_1=29.5"
+      "lat_2=45.5"
+      "x_0=0"
+      "y_0=0"
+      "datum=NAD83"
+      "units=m"
+      "no_defs"
+    END
+      TYPE     RASTER
+      DUMP     TRUE
+      STATUS   OFF
+      DATA     "/tiledata/source/nlcd_2021_nfwf_conus_30m.tif"
+      MASK "GL_Boundary"
+      HEADER   ./templates/layer_query_header.html
+      TEMPLATE ./templates/layer_query_body.html
+
+      CLASS
+        # open water
+        EXPRESSION ([pixel] = 11)
+        STYLE
+          COLOR 84 117 168
+        END
+      END
+      CLASS
+        # Perennial Ice/Snow
+        EXPRESSION ([pixel] = 12)
+        STYLE
+          COLOR 255 255 255
+        END
+      END
+      CLASS
+        #Developed, Open Space
+        EXPRESSION ([pixel] = 21)
+        STYLE
+          COLOR 232 209 209
+        END
+      END
+      CLASS
+        # Developed, Low Intensity
+        EXPRESSION ([pixel] = 22)
+        STYLE
+          COLOR 226 158 140
+        END
+      END
+      CLASS
+        # Developed, Medium Intensity
+        EXPRESSION ([pixel] = 23)
+        STYLE
+          COLOR 255 0 0
+        END
+      END
+      CLASS
+        # Developed, High Intensity
+        EXPRESSION ([pixel] = 24)
+        STYLE
+          COLOR 181 0 0
+        END
+      END
+      CLASS
+        # DevBarren Land (Rock/Sand/Clay)
+        EXPRESSION ([pixel] = 31)
+        STYLE
+          COLOR 210 205 192
+        END
+      END
+      CLASS
+        # Deciduous Forest
+        EXPRESSION ([pixel] = 41)
+        STYLE
+          COLOR 133 199 126
+        END
+      END
+      CLASS
+        # Evergreen Forest
+        EXPRESSION ([pixel] = 42)
+        STYLE
+          COLOR 56 129 78
+        END
+      END
+      CLASS
+        # Mixed Forest
+        EXPRESSION ([pixel] = 43)
+        STYLE
+          COLOR 212 231 176
+        END
+      END
+      CLASS
+        # Dwarf Scrub
+        EXPRESSION ([pixel] = 51)
+        STYLE
+          COLOR 175 150 60
+        END
+      END
+      CLASS
+        # Shrub/Scrub
+        EXPRESSION ([pixel] = 52)
+        STYLE
+          COLOR 220 202 143
+        END
+      END
+      CLASS
+        # Grassland/Herbaceous
+        EXPRESSION ([pixel] = 71)
+        STYLE
+          COLOR 253 233 170
+        END
+      END
+      CLASS
+        # Sedge/Herbaceous
+        EXPRESSION ([pixel] = 72)
+        STYLE
+          COLOR 209 209 130
+        END
+      END
+      CLASS
+        # Lichens
+        EXPRESSION ([pixel] = 73)
+        STYLE
+          COLOR 163 204 81
+        END
+      END
+      CLASS
+        # Moss
+        EXPRESSION ([pixel] = 74)
+        STYLE
+          COLOR 130 186 158
+        END
+      END
+      CLASS
+        # Pasture/Hay
+        EXPRESSION ([pixel] = 81)
+        STYLE
+          COLOR 251 246 93
+        END
+      END
+      CLASS
+        # Cultivated Crops
+        EXPRESSION ([pixel] = 82)
+        STYLE
+          COLOR 202 145 70
+        END
+      END
+      CLASS
+        # Woody Wetlands
+        EXPRESSION ([pixel] = 90)
+        STYLE
+          COLOR 200 230 248
+        END
+      END
+      CLASS
+        # Emergent Herbaceous Wetlands
+        EXPRESSION ([pixel] = 95)
+        STYLE
+          COLOR 100 179 213
+        END
+      END
+
+    #INCLUDE "cmaps/gapnat.cmap"
+    METADATA
+      "wms_title"             "GL_Landcover"
+      "wms_abstract"          "GL_Landcover"
+      "gml_include_items"     "value_0"
+    END  # end METADATA
+  END # end LAYER
+
 
   LAYER
     NAME "AK_NLCDTiles"
