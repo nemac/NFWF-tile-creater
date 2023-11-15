@@ -887,19 +887,19 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
-// mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t CONUS_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/CONUS_Boundary.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 0,10 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
-// mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t GL_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/GL_20mDepth_Boundary_20220505.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 0,10 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
-// mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcåache/mapcache-nlcd.xml -t AK_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/alaska_boundary.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 0,10 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
@@ -1462,6 +1462,19 @@ aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsHexIndexTiles --recursive --excl
 aws s3 rm s3://tiles.resilientcoasts.org/GU_HubsHexIndexTiles --recursive --exclude "" &
 
 aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
+
+
+aws s3 sync CONUS_NLCDTiles s3://tiles.resilientcoasts.org/CONUS_NLCDTiles  --acl public-read &
+aws s3 sync AK_NLCDTiles s3://tiles.resilientcoasts.org/AK_NLCDTiles --acl public-read &
+aws s3 sync GL_NLCDTiles/ s3://tiles.resilientcoasts.org/GL_NLCDTiles  --acl public-read  &
+aws s3 sync USVI_CCAPTiles/ s3://tiles.resilientcoasts.org/USVI_CCAPTiles  --acl public-read &
+aws s3 sync CNMI_CCAPTiles/ s3://tiles.resilientcoasts.org/CNMI_CCAPTiles  --acl public-read &
+aws s3 sync PR_CCAPTiles s3://tiles.resilientcoasts.org/PR_CCAPTiles  --acl public-read &
+aws s3 sync HI_CCAPTiles/ s3://tiles.resilientcoasts.org/HI_CCAPTiles  --acl public-read &
+aws s3 sync GU_CCAPTiles/ s3://tiles.resilientcoasts.org/GU_CCAPTiles  --acl public-read &
+aws s3 sync AS_CCAPTiles/ s3://tiles.resilientcoasts.org/AS_CCAPTiles  --acl public-read &
+aws cloudfront create-invalidation --distribution-id E34VC6CQ814IM --paths '/*'  
+
 ```
 
 ### CONUS nature serve examples of coping zipped data for s3 download
