@@ -899,7 +899,7 @@ mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 0,1
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 11,11 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 12,12 -n 5 -d /tiledata/source/alaska_boundary.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 13,13 -n 5 -d /tiledata/source/alaska_boundary.shp &
-mapcache_seed -c /var/www/html/mapcåache/mapcache-nlcd.xml -t AK_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/alaska_boundary.shp &
+mapcache_seed -c /var/www/html/mapcache/mapcache-nlcd.xml -t AK_NLCDTiles -z 14,14 -n 5 -d /tiledata/source/alaska_boundary.shp &
 
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 0,10 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
 mapcache_seed -c /var/www/html/mapcache/mapcache-ccap.xml -t USVI_CCAPTiles -z 11,11 -n 5 -d /tiledata/source/USVI_CREST_Clipping_Boundary_3857.shp &
